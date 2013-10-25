@@ -4,13 +4,6 @@ var Types = require('hapi').types;
 module.exports = [
     {
         method: 'GET',
-        path: '/{path*}',
-        handler: {
-            directory: { path: '../../client', listing: true, index: true }
-        }
-    },
-    {
-        method: 'GET',
         path: '/gebruikers',
         config: {
             handler: getGebruikers,
