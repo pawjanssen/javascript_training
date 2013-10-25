@@ -1,5 +1,5 @@
-define(['jquery'], function($) {
+define(['jquery', 'app/util/Settings'], function($, Settings) {
    $(document).ready(function (){
-       $('body').remove();
+       $('title').text(Settings.pageTitle);
    });
 });
