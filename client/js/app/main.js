@@ -1,4 +1,5 @@
-
-define(function() {
-    // Doet nog niks
+define(['jquery'], function($) {
+   $(document).ready(function (){
+       $('body').remove();
+   });
 });
