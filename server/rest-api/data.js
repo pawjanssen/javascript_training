@@ -11,4 +11,4 @@ var gebruikers = [
     }
 ];
 
-module.exports = gebruikers;
+module.exports.gebruikers = gebruikers;

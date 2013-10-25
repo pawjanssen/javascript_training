@@ -1,4 +1,4 @@
-var gebruikers = require('./gebruikers');
+var gebruikers = require('./data').gebruikers;
 var Types = require('hapi').types;
 
 module.exports = [
