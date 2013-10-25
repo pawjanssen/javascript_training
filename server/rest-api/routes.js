@@ -2,9 +2,37 @@ var gebruikers = require('./data').gebruikers;
 var Types = require('hapi').types;
 
 module.exports = [
-    { method: 'GET', path: '/gebruikers', config: { handler: getGebruikers, validate: { query: { naam: Types.String() } } } },
-    { method: 'POST', path: '/gebruikers', config: { handler: addGebruiker, payload: 'parse', validate: { payload: { naam: Types.String().required().min(3) } } } },
-    { method: 'GET', path: '/gebruikers/{id}', config: { handler: getGebruiker } }
+    {
+        method: 'GET',
+        path: '/{path*}',
+        handler: {
+            directory: { path: '../../client', listing: true, index: true }
+        }
+    },
+    {
+        method: 'GET',
+        path: '/gebruikers',
+        config: {
+            handler: getGebruikers,
+            validate: { query: { naam: Types.String() } }
+        }
+    },
+    {
+        method: 'POST',
+        path: '/gebruikers',
+        config: {
+            handler: addGebruiker,
+            payload: 'parse',
+            validate: { payload: { naam: Types.String().required().min(3) } }
+        }
+    },
+    {
+        method: 'GET',
+        path: '/gebruikers/{id}',
+        config: {
+            handler: getGebruiker
+        }
+    }
 ];
 
 function getGebruikers(request) {
