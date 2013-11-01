@@ -12,14 +12,14 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
 
     TodoView.prototype.renderTodos = function(todos) {
         console.log(todos);
-        var clone = $("#todolijst li").clone();
+        var templateLI = $("#todolijst li").clone();
+        $("#todolijst").empty();
         $.map(todos, function (value, index) {
-            console.log(clone);
-            var liClone = $("#todolijst li").clone();
+            var liClone = templateLI.clone();
             liClone.find("span.todoTitle").text(value.titel);
+            liClone.find("span.todoCreated").text(liClone.find("span.todoCreated").text() + value.created);
+            liClone.find("div.alert").addClass(value.priority);
             liClone.appendTo("#todolijst");
-
-            console.log(value.titel);
         })
     }
 

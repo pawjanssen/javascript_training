@@ -393,3 +393,22 @@ ul.contact li a:before
     text-decoration: none;
     color: #8C8C8C;
 }
+
+
+.low {
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+    color: #3A87AD;
+}
+
+.middle {
+    background-color: #FCF8E3;
+    border-color: #FAEBCC;
+    color: #C09853;
+}
+
+.high {
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+    color: #B94A48;
+}
