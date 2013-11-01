@@ -12,6 +12,15 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
 
     TodoView.prototype.renderTodos = function(todos) {
         console.log(todos);
+        var clone = $("#todolijst li").clone();
+        $.map(todos, function (value, index) {
+            console.log(clone);
+            var liClone = $("#todolijst li").clone();
+            liClone.find("span.todoTitle").text(value.titel);
+            liClone.appendTo("#todolijst");
+
+            console.log(value.titel);
+        })
     }
 
     TodoView.prototype.renderError = function() {
