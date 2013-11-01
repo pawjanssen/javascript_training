@@ -111,7 +111,7 @@ function moveTodo(request) {
     }).pop();
     var todo = huidigeGebruiker.todos.filter(function(p){
         return p.id === parseInt(request.payload.todoID);
-    })[0];
+    }).pop();
 
     huidigeGebruiker.todos = huidigeGebruiker.todos.filter(function(p){
         return p.id !== parseInt(request.payload.todoID);
