@@ -1,20 +1,21 @@
-//define(['app/view/GebruikersView', 'app/service/GebruikersStorage'], function(GebruikersView, GebruikersStorage) {
-//    function GebruikersController() {}
-//
-//    GebruikersController.prototype.getGebruikers = function() {
-//        GebruikersStorage.getAll(function (gebruikers) {
-//            GebruikersView.renderGebruikers(gebruikers);
-//        }, function() {
-//            GebruikersView.renderError();
-//        });
-//    };
-//
-//    var gebruikersControllerInstance = new GebruikersController();
-//
-//    return {
-//        init: function() {
-//            GebruikersView.renderTemplate(gebruikersControllerInstance);
-//            gebruikersControllerInstance.getGebruikers();
-//        }
-//    }
-//});
+define(['app/view/GebruikerSelectieView', 'app/service/GebruikersStorage'], function(GebruikerSelectieView, GebruikersStorage) {
+    function GebruikerSelectieController() {}
+
+    GebruikerSelectieController.prototype.getGebruikers = function() {
+        GebruikersStorage.getAll(function (gebruikers) {
+            GebruikerSelectieView.renderGebruikers(gebruikers);
+        }, function() {
+            GebruikerSelectieView.renderError();
+        });
+    };
+
+    var gebruikerSelectieControllerInstance = new GebruikerSelectieController();
+
+    return {
+        init: function() {
+            GebruikerSelectieView.renderTemplate(gebruikerSelectieControllerInstance, function() {
+                gebruikerSelectieControllerInstance.getGebruikers();
+            });
+        }
+    }
+});

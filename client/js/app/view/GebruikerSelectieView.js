@@ -1,33 +1,39 @@
 define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $) {
 
-    function GebruikersView(gebruikersController) {
+    function GebruikerSelectieView(gebruikersController) {
         this.gebruikersController = gebruikersController
     }
 
-    GebruikersView.prototype.renderTemplate = function() {
-        $('#pageTitle').text("Gebruikers");
-        $('#page').load("gebruikersPage.html");
+    GebruikerSelectieView.prototype.renderTemplate = function(callBackWhenReady) {
+        $('#pageTitle').text("Gebruiker Selectie");
+        $('#page').load("gebruikerSelectiePage.html", function() {
+            callBackWhenReady.call();
+        });
     }
 
-    GebruikersView.prototype.renderGebruikers = function(gebruikers) {
-        console.log(gebruikers);
+    GebruikerSelectieView.prototype.renderGebruikers = function(gebruikers) {
+        $.map(gebruikers, function (gebruiker, index) {
+            $("<option></option>")
+                .val(gebruiker.id)
+                .text(gebruiker.naam)
+                .appendTo("#gebruikersdropdown");
+        });
+    }
+
+    GebruikerSelectieView.prototype.renderError = function() {
 
     }
 
-    GebruikersView.prototype.renderError = function() {
-
-    }
-
-    var gebruikersViewInstance = new GebruikersView(undefined);
+    var gebruikerSelectieViewInstance = new GebruikerSelectieView(undefined);
 
     return {
-        renderTemplate: function(gebruikersController) {
-            gebruikersViewInstance = new GebruikersView(gebruikersController);
-            gebruikersViewInstance.renderTemplate();
+        renderTemplate: function(gebruikersController, callBackWhenReady) {
+            gebruikerSelectieViewInstance = new GebruikerSelectieView(gebruikersController);
+            gebruikerSelectieViewInstance.renderTemplate(callBackWhenReady);
         },
 
-        renderGebruikers: gebruikersViewInstance.renderGebruikers,
+        renderGebruikers: gebruikerSelectieViewInstance.renderGebruikers,
 
-        renderError: gebruikersViewInstance.renderError
+        renderError: gebruikerSelectieViewInstance.renderError
     };
 });

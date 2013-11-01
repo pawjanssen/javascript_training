@@ -7,7 +7,6 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
 
     TodoView.prototype.renderTemplate = function(callBackWhenReady) {
         $('#pageTitle').text("TodoList");
-//        var _this = this;
         $('#page').load("todoPage.html", function() {
             _this.clickhandlersTodoPageToepassen();
 
@@ -81,6 +80,11 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
 
         $("#saveButton").click(function() {
             var todo = $("#myModal").data("clickedTodo");
+
+            if (todo) {
+                todo = {};
+            }
+
             todo.titel = $('#todoTitle').val();
             todo.priority = $('#todoPriority').val();
             todo.description = $('#todoOmschrijving').val();
