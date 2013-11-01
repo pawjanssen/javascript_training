@@ -19,14 +19,14 @@ var gebruikers = [
                 "description" : "bla bla bals tijd voor lunch"
             },
             {
-                "id": 2,
+                "id": 3,
                 "titel": "Gebruikers lijst maken",
                 "created": "30-10-2013",
                 "priority" : "medium",
                 "description" : ""
             },
             {
-                "id": 2,
+                "id": 4,
                 "titel": "Bier drinken",
                 "created": "24-10-2013",
                 "priority" : "low",

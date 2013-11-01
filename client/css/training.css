@@ -321,7 +321,6 @@ ul.contact li a:before
 
 #page
 {
-    overflow: hidden;
     padding: 6em 0em;
     border-top: 1px solid #E5E5E5;
 }
@@ -419,10 +418,19 @@ ul.contact li a:before
 
 #gebruikerslijst li {
     padding: 20px;
+    border-bottom: 1px solid #E5E5E5;
 }
 
 #gebruikerslijst li span.gebruikersnaam {
     width: 50px;
     margin-right: 30px;
     border-bottom: 1px solid #E5E5E5;
+}
+
+.ui-draggable-dragging .todoCreated {
+    display: none;
+}
+
+.todoOverGebruiker {
+    background-color: #E5E5E5;
 }

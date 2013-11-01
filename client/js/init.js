@@ -13,6 +13,7 @@ require.config({
     paths: {
         app: "../app",
         'jquery': "jquery-2.0.3.min",
+        'jquery-ui': "jquery-ui-1.10.3.custom.min",
         'jquery.bootstrap': 'bootstrap.min'
     }
 });
@@ -73,3 +74,13 @@ require(["app/controller/TodoController", "app/controller/GebruikersController",
         loadController(historyState.todos, true);
     }
 });
+
+//var ws = new WebSocket('ws://localhost:8001');
+//ws.onopen = function(evt) {
+//    console.log('connectie geopend');
+//    ws.send("test");
+//};
+//
+//ws.onmessage = function(evt) {
+//    console.log(evt.data);
+//};

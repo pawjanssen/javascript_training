@@ -34,6 +34,10 @@ define(['app/view/TodoView', 'app/service/TodoStorage', 'app/service/GebruikersS
         }
     };
 
+    TodoController.prototype.moveTodo = function(nieuweGebruikerID, todoID) {
+        TodoStorage.moveTodo(nieuweGebruikerID, todoID);
+    };
+
     var todoControllerInstance = new TodoController();
     Settings.webSocket.onmessage = todoControllerInstance.onWebSocketMessage;
 
