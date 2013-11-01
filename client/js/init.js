@@ -21,15 +21,13 @@ require.config({
 // Initialiseer de applicatie, injecteer daarbij de twee te gebruiker controllers
 require(["app/util/Navigatie", "app/util/Settings"], function(Navigatie, Settings) {
 
-
-
     // Popstate event wordt door de browser afgevuurd bij een history even (browser back buttons)
     window.addEventListener ('popstate', function (event) {
         Navigatie.loadController(history.state, false);
     });
 
     document.getElementById("gebruikers").addEventListener("click", function(event){
-        event.preventDefault ();
+        event.preventDefault();
         Navigatie.loadController(Navigatie.historyState.gebruikers, true);
     });
 
