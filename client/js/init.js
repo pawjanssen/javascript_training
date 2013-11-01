@@ -16,4 +16,21 @@ require.config({
     }
 });
 
+var historyState = {
+    todo: { controller: 'blaat'},
+    gebruikers: {controller: 'blaat2' }
+};
+
+window.addEventListener ('popstate', function (event) {
+    var hs = history.state;
+    console.log(hs);
+});
+
+document.getElementById("gebruikers").addEventListener("click", function(event){
+    var el = event.target;
+    event.preventDefault ();
+
+    history.pushState(historyState.gebruikers, null, '#gebruikers');
+});
+
 requirejs(["app/controller/TodoController"]);
