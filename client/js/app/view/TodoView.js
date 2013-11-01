@@ -8,11 +8,13 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
         $('#pageTitle').text("TodoList");
         var _this = this;
         $('#page').load("todoPage.html", function() {
-            _this.clickhandlersToepassen();
+            _this.clickhandlersTodoPageToepassen();
 
             callBackWhenReady.call();
         });
-        $('#myModal').load("todoTonenBewerken.html");
+        $('#myModal').load("todoTonenBewerken.html", function() {
+            _this.eventHandlersTodoTonenBewerkenToepassen();
+        });
     }
 
     TodoView.prototype.renderTodos = function(todos) {
@@ -23,6 +25,9 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
             liClone.find("span.todoTitle").text(value.titel);
             liClone.find("span.todoCreated").text(liClone.find("span.todoCreated").text() + value.created);
             liClone.find("div.alert").addClass(value.priority);
+            liClone.find("a").click(function() {
+                $("#myModal").data("clickedTodo", value)
+            });
             liClone.appendTo("#todolijst");
         })
     }
@@ -43,7 +48,16 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
 
     }
 
-    TodoView.prototype.clickhandlersToepassen = function () {}
+    TodoView.prototype.clickhandlersTodoPageToepassen = function () {};
+
+    TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
+        $('#myModal').on('show.bs.modal', function () {
+            var todo = $("#myModal").data("clickedTodo");
+            $('#todoTitle').val(todo.titel);
+            $('#todoPriority').val(todo.priority);
+            $('#todoOmschrijving').val(todo.description);
+        })
+    };
 
     var todoViewInstance = new TodoView(undefined);
 
