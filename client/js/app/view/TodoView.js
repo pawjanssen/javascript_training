@@ -4,9 +4,9 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
         this.todoController = todoController
     }
 
-    TodoView.prototype.renderTemplate = function() {
+    TodoView.prototype.renderTemplate = function(callBackWhenReady) {
         $('#pageTitle').text("TodoList");
-        $('#page').load("todoPage.html");
+        $('#page').load("todoPage.html", callBackWhenReady);
         $('#myModal').load("todoTonenBewerken.html");
     }
 
@@ -30,9 +30,9 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
     var todoViewInstance = new TodoView(undefined);
 
     return {
-        renderTemplate: function(todoController) {
+        renderTemplate: function(todoController, callBackWhenReady) {
             todoViewInstance = new TodoView(todoController);
-            todoViewInstance.renderTemplate();
+            todoViewInstance.renderTemplate(callBackWhenReady);
         },
 
         renderTodos: todoViewInstance.renderTodos,

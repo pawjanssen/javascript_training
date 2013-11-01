@@ -13,8 +13,9 @@ define(['app/view/TodoView', 'app/service/TodoStorage'], function(TodoView, Todo
 
     return {
         init: function() {
-            TodoView.renderTemplate(todoControllerInstance);
-            todoControllerInstance.getTodos();
+            TodoView.renderTemplate(todoControllerInstance, function() {
+                todoControllerInstance.getTodos();
+            });
         }
     }
 });
