@@ -1,21 +1,23 @@
 define(['app/util/Settings', 'jquery'], function(Settings, $) {
-    var baseURL = "/gebruikers/" + Settings.currentUser + "/todos";
+    function getBaseURL() {
+        return "/gebruikers/" + Settings.currentUser + "/todos";
+    }
 
     return {
         getAll: function(successCallBack, failCallBack) {
-            $.getJSON(baseURL)
+            $.getJSON(getBaseURL())
                 .done(successCallBack)
                 .fail(failCallBack);
         },
 
         get: function(todoID, successCallBack, failCallBack) {
-            $.getJSON(baseURL + "/" + todoID)
+            $.getJSON(getBaseURL() + "/" + todoID)
                 .done(successCallBack)
                 .fail(failCallBack);
         },
 
         saveTodo: function(todo, successCallBack, failCallBack) {
-            $.ajax(baseURL, {
+            $.ajax(getBaseURL(), {
                 data: todo,
                 method: 'POST',
                 dataType: 'json'
@@ -25,7 +27,7 @@ define(['app/util/Settings', 'jquery'], function(Settings, $) {
         },
 
         moveTodo: function(nieuweGebruikerID, todoID, successCallBack, failCallBack){
-            $.ajax(baseURL, {
+            $.ajax(getBaseURL(), {
                 data: {
                     "nieuweGebruikerID": nieuweGebruikerID,
                     "todoID": todoID

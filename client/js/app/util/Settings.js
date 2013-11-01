@@ -10,7 +10,7 @@ define(function(){
 
    return {
        pageTitle: "Javascript training - DEMO App",
-       currentUser: 1,
+       currentUser: null,
        webSocket: ws
    }
 });

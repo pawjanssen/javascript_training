@@ -19,7 +19,7 @@ require.config({
 });
 
 // Initialiseer de applicatie, injecteer daarbij de twee te gebruiker controllers
-require(["app/util/Navigatie"], function(Navigatie) {
+require(["app/util/Navigatie", "app/util/Settings"], function(Navigatie, Settings) {
 
 
 
@@ -39,9 +39,9 @@ require(["app/util/Navigatie"], function(Navigatie) {
     });
 
     // Controleer of bij initiele load een hash met pagina id is gevuld, zo ja, load die controller, anders de default
-    if (location.hash !== '') {
+    if (location.hash !== '' && Settings.currentUser != null) {
         Navigatie.loadController(Navigatie.historyState[location.hash.replace("#","")], true);
     } else {
-        Navigatie.loadController(Navigatie.historyState.todos, true);
+        Navigatie.loadController(Navigatie.historyState.gebruikerselectie, true);
     }
 });
