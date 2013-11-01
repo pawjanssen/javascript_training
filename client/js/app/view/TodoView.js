@@ -5,7 +5,9 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
     }
 
     TodoView.prototype.renderTemplate = function() {
-        $('title').text(Settings.pageTitle + " - TODO View");
+        $('#pageTitle').text(Settings.pageTitle + " - TODO View");
+        $('#page').load("todoPage.html");
+        $('#myModal').load("todoTonenBewerken.html");
     }
 
     TodoView.prototype.renderTodos = function(todos) {
