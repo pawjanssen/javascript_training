@@ -1,35 +1,49 @@
-var todos = require('./data').todos;
+var gebruikers = require('./data').gebruikers;
 var Types = require('hapi').types;
 
 module.exports = [
     {
         method: 'GET',
-        path: '/todos',
+        path: '/gebruikers/{gebruikerID}/todos',
         config: {
             handler: getTodos,
-            validate: { query: { naam: Types.String() } }
+            payload: 'parse',
+            validate: { payload: {
+                gebruikerID: Types.String().required().min(3)
+            } }
         }
     },
     {
         method: 'POST',
-        path: '/todos',
+        path: '/gebruikers/{gebruikerID}/todos',
         config: {
             handler: addTodo,
             payload: 'parse',
-            validate: { payload: { naam: Types.String().required().min(3) } }
+            validate: { payload: {
+                gebruikerID: Types.String().required().min(3)
+            } }
         }
     },
     {
         method: 'GET',
-        path: '/todos/{id}',
+        path: '/gebruikers/{gebruikerID}/todos/{todoID}',
         config: {
-            handler: getTodo
+            handler: getTodo,
+            payload: 'parse',
+            validate: { payload: {
+                gebruikerID: Types.String().required().min(3),
+                todoID: Types.String().required().min(3)
+            } }
         }
     }
 ];
 
 function getTodos(request) {
-    request.reply(todos);
+    var gebruiker = gebruikers.filter(function(p) {
+        return p.id === parseInt(request.params.gebruikerID);
+    }).pop();
+
+    request.reply(gebruiker.todos);
 }
 
 function addTodo(request) {
@@ -46,9 +60,13 @@ function addTodo(request) {
 }
 
 function getTodo(request) {
+    var gebruiker = gebruikers.filter(function(p) {
+        return p.id === parseInt(request.params.gebruikerID);
+    }).pop();
 
-    var todo = todos.filter(function(p) {
-        return p.id === parseInt(request.params.id);
+
+    var todo = gebruiker.todos.filter(function(p) {
+        return p.id === parseInt(request.params.todoID);
     }).pop();
 
     request.reply(todo);

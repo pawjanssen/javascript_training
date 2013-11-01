@@ -1,5 +1,5 @@
 define(['app/util/Settings', 'jquery'], function(Settings, $) {
-    var baseURL = "/todos";
+    var baseURL = "/gebruikers/" + Settings.currentUser + "/todos";
 
     return {
         getAll: function(successCallBack, failCallBack) {
