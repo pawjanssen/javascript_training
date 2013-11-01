@@ -434,3 +434,7 @@ ul.contact li a:before
 .todoOverGebruiker {
     background-color: #E5E5E5;
 }
+
+.clonable {
+    display: none;
+}

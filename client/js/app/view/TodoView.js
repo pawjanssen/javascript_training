@@ -19,13 +19,14 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
     }
 
     TodoView.prototype.renderTodos = function(todos) {
-        var templateLI = $("#todolijst li:first").clone();
-        $("#todolijst").empty();
+        var templateLI = $("#todolijst li.clonable").clone();
+        $("#todolijst li.todoLi").remove();
         $.map(todos, function (value, index) {
             var liClone = templateLI.clone();
             liClone.find("span.todoTitle").text(value.titel);
             liClone.find("span.todoCreated").text(liClone.find("span.todoCreated").text() + value.created);
             liClone.find("div.alert").addClass(value.priority).attr("todoid", value.id);
+            liClone.removeClass("clonable").addClass("todoLi");
             liClone.find("a").click(function() {
                 $("#myModal").data("clickedTodo", value)
             });
