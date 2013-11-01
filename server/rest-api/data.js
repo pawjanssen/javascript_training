@@ -6,11 +6,31 @@ var gebruikers = [
         "todos": [
             {
                 "id": 1,
-                "titel": "Koffie"
+                "titel": "Koffie",
+                "created": "31-10-2013",
+                "priority" : "high",
+                "description" : ""
             },
             {
                 "id": 2,
-                "titel": "Lunch"
+                "titel": "Lunch",
+                "created": "21-10-2013",
+                "priority" : "low",
+                "description" : "bla bla bals tijd voor lunch"
+            },
+            {
+                "id": 2,
+                "titel": "Gebruikers lijst maken",
+                "created": "30-10-2013",
+                "priority" : "middle",
+                "description" : ""
+            },
+            {
+                "id": 2,
+                "titel": "Bier drinken",
+                "created": "24-10-2013",
+                "priority" : "low",
+                "description" : ""
             }
         ]
     },
@@ -21,11 +41,13 @@ var gebruikers = [
         "todos": [
             {
                 "id": 1,
-                "titel": "Bouwen van app"
+                "titel": "Bouwen van app",
+                "created": "31-10-2013"
             },
             {
                 "id": 2,
-                "titel": "Mail checken"
+                "titel": "Mail checken",
+                "created": "24-10-2013"
             }
         ]
     }
