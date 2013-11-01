@@ -42,12 +42,16 @@ var gebruikers = [
             {
                 "id": 1,
                 "titel": "Bouwen van app",
-                "created": "31-10-2013"
+                "created": "31-10-2013",
+                "priority" : "low",
+                "description" : ""
             },
             {
                 "id": 2,
                 "titel": "Mail checken",
-                "created": "24-10-2013"
+                "created": "24-10-2013",
+                "priority" : "low",
+                "description" : ""
             }
         ]
     }
