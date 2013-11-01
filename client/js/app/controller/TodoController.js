@@ -35,7 +35,11 @@ define(['app/view/TodoView', 'app/service/TodoStorage', 'app/service/GebruikersS
     };
 
     TodoController.prototype.moveTodo = function(nieuweGebruikerID, todoID) {
-        TodoStorage.moveTodo(nieuweGebruikerID, todoID);
+        TodoStorage.moveTodo(nieuweGebruikerID, todoID, function() {
+            TodoView.renderSuccessMessage("Het assignen van de todo is gelukt");
+        }, function(){
+            TodoView.renderErrorMessage("Het assignen van de todo is mislukt");
+        });
     };
 
     var todoControllerInstance = new TodoController();

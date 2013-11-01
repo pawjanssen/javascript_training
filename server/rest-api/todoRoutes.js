@@ -103,12 +103,12 @@ function addOrUpdateTodo(request) {
 }
 
 function moveTodo(request) {
-    var nieuweGebruiker = gebruikers.filter(function(p) {
-        return p.id === parseInt(request.params.nieuweGebruikerID);
-    }).pop()[0];
     var huidigeGebruiker = gebruikers.filter(function(p) {
-        return p.id === parseInt(request.payload.huidigeGebruikersID);
-    }).pop()[0];
+        return p.id === parseInt(request.params.huidigeGebruikersID);
+    }).pop();
+    var nieuweGebruiker = gebruikers.filter(function(p) {
+        return p.id === parseInt(request.payload.nieuweGebruikerID);
+    }).pop();
     var todo = huidigeGebruiker.todos.filter(function(p){
         return p.id === parseInt(request.payload.todoID);
     })[0];
