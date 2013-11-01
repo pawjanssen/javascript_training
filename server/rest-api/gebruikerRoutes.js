@@ -52,7 +52,7 @@ function getGebruiker(request) {
 
     var gebruiker = gebruikers.filter(function(p) {
         return p.id === parseInt(request.params.id);
-    }).pop();
+    }).pop()[0];
 
     request.reply(gebruiker);
 }

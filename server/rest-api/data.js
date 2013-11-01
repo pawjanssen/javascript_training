@@ -22,7 +22,7 @@ var gebruikers = [
                 "id": 3,
                 "titel": "Gebruikers lijst maken",
                 "created": "30-10-2013",
-                "priority" : "middle",
+                "priority" : "medium",
                 "description" : ""
             },
             {

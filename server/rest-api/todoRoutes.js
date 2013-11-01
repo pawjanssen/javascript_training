@@ -18,27 +18,30 @@ module.exports = [
         method: 'POST',
         path: '/gebruikers/{gebruikerID}/todos',
         config: {
-            handler: addTodo,
+            handler: addOrUpdateTodo,
             payload: 'parse',
             validate: {
                 path: {
                     gebruikerID: Types.String().required().min(1)
                 },
                 payload: {
-                    titel: Types.String().required().min(3)
+                    id: Types.String().required().min(1),
+                    titel: Types.String().required().min(3),
+                    priority: Types.String().required().min(3),
+                    description: Types.String().required().min(3)
                 }
             }
         }
     },
     {
         method: 'PUT',
-        path: '/gebruikers/{gebruikerID}/todos',
+        path: '/gebruikers/{huidigeGebruikersID}/todos',
         config: {
             handler: moveTodo,
             payload: 'parse',
             validate: {
                 path: {
-                    gebruikerID: Types.String().required().min(1)
+                    huidigeGebruikersID: Types.String().required().min(1)
                 },
                 payload: {
                     nieuweGebruikerID: Types.String().required().min(1),
@@ -69,54 +72,83 @@ function getTodos(request) {
     request.reply(gebruiker.todos);
 }
 
-function addTodo(request) {
+function addOrUpdateTodo(request) {
     var gebruiker = gebruikers.filter(function(p) {
         return p.id === parseInt(request.params.gebruikerID);
     }).pop();
 
-    var todo = {
-        id: gebruiker.todos[gebruiker.todos.length - 1].id + 1,
-        titel: request.payload.titel
-    };
+    var todo;
+    if (request.payload.id) {
+        todo = gebruiker.todos.filter(function(p){
+            return p.id === parseInt(request.payload.id);
+        })[0];
 
-    gebruiker.todos.push(todo);
-    websocketServer.broadcast(JSON.stringify(todo));
+        updateTodo(todo, request);
+    } else {
+        todo = {
+            id: gebruiker.todos[gebruiker.todos.length - 1].id + 1,
+        };
+        updateTodo(todo, request);
+        gebruiker.todos.push(todo);
+    }
 
-    request.reply(gebruiker).code(201).header('Location,: /gebruiker/' + gebruiker.id + "/todos/" + todo.id);
+
+    websocketServer.broadcast(JSON.stringify({
+        "eventtype": "gebruiker-todos",
+        "gebruikerid": gebruiker.id,
+        "data": gebruiker.todos
+    }));
+
+    request.reply(todo).code(201).header('Location,: /gebruikers/' + gebruiker.id + "/todos/" + todo.id);
 }
 
 function moveTodo(request) {
     var nieuweGebruiker = gebruikers.filter(function(p) {
         return p.id === parseInt(request.params.nieuweGebruikerID);
-    }).pop();
-    var oudeGebruiker = gebruikers.filter(function(p) {
-        return p.id === parseInt(request.payload.gebruikerID);
-    }).pop();
-    var todo = oudeGebruiker.todos.filter(function(p){
+    }).pop()[0];
+    var huidigeGebruiker = gebruikers.filter(function(p) {
+        return p.id === parseInt(request.payload.huidigeGebruikersID);
+    }).pop()[0];
+    var todo = huidigeGebruiker.todos.filter(function(p){
         return p.id === parseInt(request.payload.todoID);
-    });
+    })[0];
 
-    oudeGebruiker.todos = oudeGebruiker.todos.filter(function(p){
+    huidigeGebruiker.todos = huidigeGebruiker.todos.filter(function(p){
         return p.id !== parseInt(request.payload.todoID);
     });
 
     todo.id = nieuweGebruiker.todos[nieuweGebruiker.todos.length - 1].id + 1;
 
     nieuweGebruiker.todos.push(todo);
-    websocketServer.broadcast(JSON.stringify(todo));
+    websocketServer.broadcast(JSON.stringify({
+        "eventtype": "gebruiker-todos",
+        "gebruikerid": huidigeGebruiker.id,
+        "data": huidigeGebruiker.todos
+    }));
+    websocketServer.broadcast(JSON.stringify({
+        "eventtype": "gebruiker-todos",
+        "gebruikerid": nieuweGebruiker.id,
+        "data": nieuweGebruiker.todos
+    }));
 
-    request.reply(nieuweGebruiker).code(201).header('Location,: /nieuweGebruiker/' + nieuweGebruiker.id + "/todos/" + todo.id);
+    request.reply(huidigeGebruiker.todos).code(201).header('Location,: /gebruikers/' + huidigeGebruiker.id + "/todos/" + todo.id);
 }
 
 function getTodo(request) {
     var gebruiker = gebruikers.filter(function(p) {
         return p.id === parseInt(request.params.gebruikerID);
-    }).pop();
+    }).pop()[0];
 
 
     var todo = gebruiker.todos.filter(function(p) {
         return p.id === parseInt(request.params.todoID);
-    }).pop();
+    }).pop()[0];
 
     request.reply(todo);
+}
+
+function updateTodo(todo, request) {
+    todo.titel = request.payload.titel;
+    todo.priority = request.payload.priority;
+    todo.description = request.payload.description;
 }
