@@ -10,7 +10,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
     }
 
     GebruikersView.prototype.renderGebruikers = function(gebruikers) {
-        console.log(todos);
+        console.log(gebruikers);
     }
 
     GebruikersView.prototype.renderError = function() {

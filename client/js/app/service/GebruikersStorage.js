@@ -14,8 +14,8 @@ define(['app/util/Settings', 'jquery'], function(Settings, $) {
                 .fail(failCallBack);
         },
 
-        put: function(todo, successCallBack, failCallBack) {
-            $.ajax(baseURL, {
+        put: function(gebruiker, successCallBack, failCallBack) {
+            $.ajax(gebruiker, {
                 data: todo,
                 method: 'POST',
                 dataType: 'json'

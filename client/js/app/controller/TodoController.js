@@ -11,6 +11,10 @@ define(['app/view/TodoView', 'app/service/TodoStorage'], function(TodoView, Todo
 
     var todoControllerInstance = new TodoController();
 
-    TodoView.renderTemplate(todoControllerInstance);
-    todoControllerInstance.getTodos();
+    return {
+        init: function() {
+            TodoView.renderTemplate(todoControllerInstance);
+            todoControllerInstance.getTodos();
+        }
+    }
 });

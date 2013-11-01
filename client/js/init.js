@@ -16,33 +16,46 @@ require.config({
     }
 });
 
-var historyState = {
-    todo: {
-        loadController: function(){
-            requirejs(["app/controller/TodoController"]);
+(function(){
+    var historyState = {
+        todos: {
+            id: 'todos',
+            controller: "app/controller/TodoController"
+        },
+        gebruikers: {
+            id: 'gebruikers',
+            controller: "app/controller/GebruikersController"
         }
-    },
-    gebruikers:{
-        loadController: function(){
-            requirejs(["app/controller/GebruikersController"]);
-        }
-    }
-};
+    };
 
-window.addEventListener ('popstate', function (event) {
-    var state = history.state;
-    state.loadController();
-});
+    require([historyState.todos.controller, historyState.gebruikers.controller], function(TodoController, GebruikersController) {
 
-document.getElementById("gebruikers").addEventListener("click", function(event){
-    event.preventDefault ();
-    history.pushState(historyState.gebruikers, null, '#gebruikers');
-});
+        window.addEventListener ('popstate', function (event) {
+            var state = history.state;
 
-document.getElementById("todos").addEventListener("click", function(event){
-    event.preventDefault ();
-    history.pushState(historyState.todos, null, '#todos');
-});
+            switch (state.id) {
+                case 'todos':
+                    TodoController.init();
+                    break;
+                case 'gebruikers':
+                    GebruikersController.init();
+                    break;
+            }
+        });
 
-historyState.todo.loadController();
+        document.getElementById("gebruikers").addEventListener("click", function(event){
+            event.preventDefault ();
+            history.pushState(historyState.gebruikers, null, '#gebruikers');
+            GebruikersController.init();
+        });
 
+        document.getElementById("todos").addEventListener("click", function(event){
+            event.preventDefault ();
+            history.pushState(historyState.todos, null, '#todos');
+            TodoController.init();
+        });
+
+        TodoController.init();
+    });
+
+})();

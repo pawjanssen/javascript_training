@@ -1,9 +1,9 @@
 define(['app/view/GebruikersView', 'app/service/GebruikersStorage'], function(GebruikersView, GebruikersStorage) {
     function GebruikersController() {}
 
-    GebruikersController.prototype.getTodos = function() {
-        GebruikersController.getAll(function (todos) {
-            GebruikersView.renderTodos(todos);
+    GebruikersController.prototype.getGebruikers = function() {
+        GebruikersStorage.getAll(function (gebruikers) {
+            GebruikersView.renderGebruikers(gebruikers);
         }, function() {
             GebruikersView.renderError();
         });
@@ -11,6 +11,10 @@ define(['app/view/GebruikersView', 'app/service/GebruikersStorage'], function(Ge
 
     var gebruikersControllerInstance = new GebruikersController();
 
-    GebruikersView.renderTemplate(gebruikersControllerInstance);
-    gebruikersControllerInstance.getTodos();
+    return {
+        init: function() {
+            GebruikersView.renderTemplate(gebruikersControllerInstance);
+            gebruikersControllerInstance.getGebruikers();
+        }
+    }
 });
