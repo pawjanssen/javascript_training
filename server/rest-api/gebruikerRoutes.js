@@ -37,7 +37,8 @@ function addGebruiker(request) {
     var gebruiker = {
         id: gebruikers[gebruikers.length - 1].id + 1,
         naam: request.payload.naam,
-        gebruikersnaam: request.payload.gebruikersnaam
+        gebruikersnaam: request.payload.gebruikersnaam,
+        todos: []
     };
 
     gebruikers.push(gebruiker);
