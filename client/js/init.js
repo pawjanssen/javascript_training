@@ -24,11 +24,15 @@ var historyState = {
     },
     gebruikers: {
         id: 'gebruikers'
+    },
+    gebruikerselectie: {
+        id: 'gebruikerselectie'
     }
 };
 
 // Initialiseer de applicatie, injecteer daarbij de twee te gebruiker controllers
-require(["app/controller/TodoController", "app/controller/GebruikersController"], function(TodoController, GebruikersController) {
+require(["app/controller/TodoController", "app/controller/GebruikersController", "app/controller/GebruikerSelectieController"],
+    function(TodoController, GebruikersController, GebruikerSelectieController) {
 
     function loadController(historyState, doSetState) {
         if (doSetState) {
@@ -40,6 +44,9 @@ require(["app/controller/TodoController", "app/controller/GebruikersController"]
                 break;
             case 'gebruikers':
                 GebruikersController.init();
+                break;
+            case 'gebruikerselectie':
+                GebruikerSelectieController.init();
                 break;
         }
     };
@@ -66,13 +73,3 @@ require(["app/controller/TodoController", "app/controller/GebruikersController"]
         loadController(historyState.todos, true);
     }
 });
-
-//var ws = new WebSocket('ws://localhost:8001');
-//ws.onopen = function(evt) {
-//    console.log('connectie geopend');
-//    ws.send("test");
-//};
-//
-//ws.onmessage = function(evt) {
-//    console.log(evt.data);
-//};
