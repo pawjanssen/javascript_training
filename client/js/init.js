@@ -17,20 +17,32 @@ require.config({
 });
 
 var historyState = {
-    todo: { controller: 'blaat'},
-    gebruikers: {controller: 'blaat2' }
+    todo: {
+        loadController: function(){
+            requirejs(["app/controller/TodoController"]);
+        }
+    },
+    gebruikers:{
+        loadController: function(){
+            requirejs(["app/controller/GebruikersController"]);
+        }
+    }
 };
 
 window.addEventListener ('popstate', function (event) {
-    var hs = history.state;
-    console.log(hs);
+    var state = history.state;
+    state.loadController();
 });
 
 document.getElementById("gebruikers").addEventListener("click", function(event){
-    var el = event.target;
     event.preventDefault ();
-
     history.pushState(historyState.gebruikers, null, '#gebruikers');
 });
 
-requirejs(["app/controller/TodoController"]);
+document.getElementById("todos").addEventListener("click", function(event){
+    event.preventDefault ();
+    history.pushState(historyState.todos, null, '#todos');
+});
+
+historyState.todo.loadController();
+
