@@ -7,6 +7,7 @@ define(function(){
     ws.onopen = function(evt) {
         console.log('connectie geopend');
     };
+
    return {
        pageTitle: "Javascript training - DEMO App",
        currentUser: 1,
