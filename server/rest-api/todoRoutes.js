@@ -117,7 +117,11 @@ function moveTodo(request) {
         return p.id !== parseInt(request.payload.todoID);
     });
 
-    todo.id = nieuweGebruiker.todos[nieuweGebruiker.todos.length - 1].id + 1;
+    if (nieuweGebruiker.todos.length == 0) {
+        todo.id = 1;
+    } else {
+        todo.id = nieuweGebruiker.todos[nieuweGebruiker.todos.length - 1].id + 1;
+    }
 
     nieuweGebruiker.todos.push(todo);
     websocketServer.broadcast(JSON.stringify({
