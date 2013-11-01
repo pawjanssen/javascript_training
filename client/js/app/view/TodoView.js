@@ -1,15 +1,15 @@
-define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $) {
+define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], function(Settings, $) {
 
     function TodoView(todoController) {
         this.todoController = todoController
+        _this = this;
     }
 
     TodoView.prototype.renderTemplate = function(callBackWhenReady) {
         $('#pageTitle').text("TodoList");
-        var _this = this;
+//        var _this = this;
         $('#page').load("todoPage.html", function() {
             _this.clickhandlersToepassen();
-
             callBackWhenReady.call();
         });
         $('#myModal').load("todoTonenBewerken.html");
@@ -22,9 +22,10 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
             var liClone = templateLI.clone();
             liClone.find("span.todoTitle").text(value.titel);
             liClone.find("span.todoCreated").text(liClone.find("span.todoCreated").text() + value.created);
-            liClone.find("div.alert").addClass(value.priority);
+            liClone.find("div.alert").addClass(value.priority).attr("todoid", value.id);
             liClone.appendTo("#todolijst");
-        })
+        });
+        _this.todosDraggable();
     }
 
     TodoView.prototype.renderGebruikers = function(gebruikers) {
@@ -36,6 +37,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
             liClone.find("span.gebruikersnaam").text(value.gebruikersnaam);
             liClone.attr("userid", value.id);
             liClone.appendTo("#gebruikerslijst");
+            _this.gebruikersDroppable();
         })
     }
 
@@ -44,6 +46,20 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
     }
 
     TodoView.prototype.clickhandlersToepassen = function () {}
+
+    TodoView.prototype.todosDraggable = function () {
+        $("div.todoDrag").draggable({ revert: true ,
+                                     helper: "clone"});
+    }
+
+    TodoView.prototype.gebruikersDroppable = function () {
+        $("#gebruikerslijst li").droppable({
+            hoverClass: "todoOverGebruiker",
+            drop: function( event, ui ) {
+                _this.todoController.moveTodo($(this).attr("userid"), ui.draggable.attr("todoid"));
+            }
+        });
+    }
 
     var todoViewInstance = new TodoView(undefined);
 

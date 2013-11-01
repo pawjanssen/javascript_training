@@ -13,6 +13,7 @@ require.config({
     paths: {
         app: "../app",
         'jquery': "jquery-2.0.3.min",
+        'jquery-ui': "jquery-ui-1.10.3.custom.min",
         'jquery.bootstrap': 'bootstrap.min'
     }
 });
