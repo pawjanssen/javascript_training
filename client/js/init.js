@@ -16,4 +16,4 @@ require.config({
     }
 });
 
-requirejs(["app/main"]);
+requirejs(["app/controller/TodoController"]);
