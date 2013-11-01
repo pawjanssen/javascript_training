@@ -69,20 +69,27 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
 
     };
 
-    TodoView.prototype.clickhandlersTodoPageToepassen = function () {};
+    TodoView.prototype.clickhandlersTodoPageToepassen = function () {
+        $("a.nieuwetodo").click(function() {
+            console.log("test");
+            $("#myModal").data("clickedTodo", "leeeeeeeeeeg");
+        });
+    };
 
     TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
         $('#myModal').on('show.bs.modal', function () {
             var todo = $("#myModal").data("clickedTodo");
-            $('#todoTitle').val(todo.titel);
-            $('#todoPriority').val(todo.priority);
-            $('#todoOmschrijving').val(todo.description);
+            if(todo) {
+                $('#todoTitle').val(todo.titel);
+                $('#todoPriority').val(todo.priority);
+                $('#todoOmschrijving').val(todo.description);
+            }
         });
 
         $("#saveButton").click(function() {
             var todo = $("#myModal").data("clickedTodo");
 
-            if (todo) {
+            if (!todo) {
                 todo = {};
             }
 
