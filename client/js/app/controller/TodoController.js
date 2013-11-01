@@ -1,4 +1,4 @@
-define(['app/view/TodoView', 'app/service/TodoStorage', 'app/service/GebruikersStorage'], function(TodoView, TodoStorage, GebruikersStorage) {
+define(['app/view/TodoView', 'app/service/TodoStorage', 'app/service/GebruikersStorage', 'app/util/Settings'], function(TodoView, TodoStorage, GebruikersStorage, Settings) {
     function TodoController() {}
 
     TodoController.prototype.getTodos = function() {
@@ -17,7 +17,25 @@ define(['app/view/TodoView', 'app/service/TodoStorage', 'app/service/GebruikersS
         });
     };
 
+    TodoController.prototype.saveTodo = function(todo) {
+        TodoStorage.saveTodo(todo, function() {
+            TodoView.renderSuccessMessage("Het opslaan van de todo met titel '" + todo.titel + "' is gelukt.");
+        }, function() {
+            TodoView.renderErrorMessage("Het opslaan van de todo met titel '" + todo.titel + "' is mislukt, probeer opnieuw.");
+        });
+    };
+
+    TodoController.prototype.onWebSocketMessage = function(websocketEvent) {
+        var websocketData = JSON.parse(websocketEvent.data);
+        if (websocketData.eventtype === "gebruiker-todos" &&
+            websocketData.gebruikerid === Settings.currentUser) {
+
+            TodoView.renderTodos(websocketData.data);
+        }
+    };
+
     var todoControllerInstance = new TodoController();
+    Settings.webSocket.onmessage = todoControllerInstance.onWebSocketMessage;
 
     return {
         init: function() {
@@ -25,6 +43,8 @@ define(['app/view/TodoView', 'app/service/TodoStorage', 'app/service/GebruikersS
                 todoControllerInstance.getTodos();
                 todoControllerInstance.getGebruikers();
             });
-        }
+        },
+
+        saveTodo: todoControllerInstance.saveTodo
     }
 });

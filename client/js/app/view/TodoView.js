@@ -1,7 +1,8 @@
 define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $) {
 
     function TodoView(todoController) {
-        this.todoController = todoController
+        this.todoController = todoController;
+        _this = this;
     }
 
     TodoView.prototype.renderTemplate = function(callBackWhenReady) {
@@ -30,7 +31,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
             });
             liClone.appendTo("#todolijst");
         })
-    }
+    };
 
     TodoView.prototype.renderGebruikers = function(gebruikers) {
         var templateLI = $("#gebruikerslijst li:first").clone();
@@ -42,11 +43,15 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
             liClone.attr("userid", value.id);
             liClone.appendTo("#gebruikerslijst");
         })
-    }
+    };
 
-    TodoView.prototype.renderError = function() {
+    TodoView.prototype.renderSuccessMessage = function(successMessage) {
 
-    }
+    };
+
+    TodoView.prototype.renderErrorMessage = function(errorMessage) {
+
+    };
 
     TodoView.prototype.clickhandlersTodoPageToepassen = function () {};
 
@@ -56,7 +61,18 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
             $('#todoTitle').val(todo.titel);
             $('#todoPriority').val(todo.priority);
             $('#todoOmschrijving').val(todo.description);
-        })
+        });
+
+        $("#saveButton").click(function() {
+            var todo = $("#myModal").data("clickedTodo");
+            todo.titel = $('#todoTitle').val();
+            todo.priority = $('#todoPriority').val();
+            todo.description = $('#todoOmschrijving').val();
+            delete todo.created;
+            _this.todoController.saveTodo(todo);
+
+            $('#myModal').modal('hide');
+        });
     };
 
     var todoViewInstance = new TodoView(undefined);
@@ -71,6 +87,8 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
 
         renderGebruikers: todoViewInstance.renderGebruikers,
 
-        renderError: todoViewInstance.renderError
+        renderSuccessMessage: todoViewInstance.renderSuccessMessage,
+
+        renderErrorMessage: todoViewInstance.renderErrorMessage
     };
 });
