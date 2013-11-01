@@ -5,7 +5,8 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
     }
 
     GebruikersView.prototype.renderTemplate = function() {
-        $('title').text(Settings.pageTitle + " - Gebruikers View");
+        $('#pageTitle').text("Gebruikers");
+        $('#page').load("gebruikersPage.html");
     }
 
     GebruikersView.prototype.renderGebruikers = function(gebruikers) {
