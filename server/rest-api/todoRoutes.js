@@ -19,9 +19,14 @@ module.exports = [
         config: {
             handler: addTodo,
             payload: 'parse',
-            validate: { payload: {
-                gebruikerID: Types.String().required().min(3)
-            } }
+            validate: {
+                path: {
+                    gebruikerID: Types.String().required().min(1)
+                },
+                payload: {
+                    titel: Types.String().required().min(3)
+                }
+            }
         }
     },
     {
@@ -47,16 +52,18 @@ function getTodos(request) {
 }
 
 function addTodo(request) {
+    var gebruiker = gebruikers.filter(function(p) {
+        return p.id === parseInt(request.params.gebruikerID);
+    }).pop();
 
-    var gebruiker = {
-        id: todos[todos.length - 1].id + 1,
-        naam: request.payload.naam,
-        gebruikersnaam: request.payload.gebruikersnaam
+    var todo = {
+        id: gebruiker.todos[gebruiker.todos.length - 1].id + 1,
+        titel: request.payload.titel
     };
 
-    todos.push(gebruiker);
+    gebruiker.todos.push(todo);
 
-    request.reply(gebruiker).code(201).header('Location,: /todos/' + gebruiker.id);
+    request.reply(gebruiker).code(201).header('Location,: /gebruiker/' + gebruiker.id + "/todos/" + todo.id);
 }
 
 function getTodo(request) {
