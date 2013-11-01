@@ -1,5 +1,6 @@
 var gebruikers = require('./data').gebruikers;
 var Types = require('hapi').types;
+var websocketServer = require('./websocketserver').websocketServer;
 
 module.exports = [
     {
@@ -42,6 +43,7 @@ function addGebruiker(request) {
     };
 
     gebruikers.push(gebruiker);
+    websocketServer.broadcast(JSON.stringify(gebruiker));
 
     request.reply(gebruiker).code(201).header('Location,: /gebruikers/' + gebruiker.id);
 }

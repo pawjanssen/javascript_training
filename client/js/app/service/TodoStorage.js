@@ -14,10 +14,23 @@ define(['app/util/Settings', 'jquery'], function(Settings, $) {
                 .fail(failCallBack);
         },
 
-        put: function(todo, successCallBack, failCallBack) {
+        saveTodo: function(todo, successCallBack, failCallBack) {
             $.ajax(baseURL, {
                 data: todo,
                 method: 'POST',
+                dataType: 'json'
+            })
+                .done(successCallBack)
+                .fail(failCallBack);
+        },
+
+        moveTodo: function(nieuweGebruikerID, todoID, successCallBack, failCallBack){
+            $.ajax(baseURL, {
+                data: {
+                    "nieuweGebruikerID": nieuweGebruikerID,
+                    "todoID": todoID
+                },
+                method: 'PUT',
                 dataType: 'json'
             })
                 .done(successCallBack)

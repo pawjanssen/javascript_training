@@ -1,5 +1,6 @@
 var gebruikers = require('./data').gebruikers;
 var Types = require('hapi').types;
+var websocketServer = require('./websocketserver').websocketServer;
 
 module.exports = [
     {
@@ -25,6 +26,23 @@ module.exports = [
                 },
                 payload: {
                     titel: Types.String().required().min(3)
+                }
+            }
+        }
+    },
+    {
+        method: 'PUT',
+        path: '/gebruikers/{gebruikerID}/todos',
+        config: {
+            handler: moveTodo,
+            payload: 'parse',
+            validate: {
+                path: {
+                    gebruikerID: Types.String().required().min(1)
+                },
+                payload: {
+                    nieuweGebruikerID: Types.String().required().min(1),
+                    todoID: Types.String().required().min(1)
                 }
             }
         }
@@ -62,8 +80,32 @@ function addTodo(request) {
     };
 
     gebruiker.todos.push(todo);
+    websocketServer.broadcast(JSON.stringify(todo));
 
     request.reply(gebruiker).code(201).header('Location,: /gebruiker/' + gebruiker.id + "/todos/" + todo.id);
+}
+
+function moveTodo(request) {
+    var nieuweGebruiker = gebruikers.filter(function(p) {
+        return p.id === parseInt(request.params.nieuweGebruikerID);
+    }).pop();
+    var oudeGebruiker = gebruikers.filter(function(p) {
+        return p.id === parseInt(request.payload.gebruikerID);
+    }).pop();
+    var todo = oudeGebruiker.todos.filter(function(p){
+        return p.id === parseInt(request.payload.todoID);
+    });
+
+    oudeGebruiker.todos = oudeGebruiker.todos.filter(function(p){
+        return p.id !== parseInt(request.payload.todoID);
+    });
+
+    todo.id = nieuweGebruiker.todos[nieuweGebruiker.todos.length - 1].id + 1;
+
+    nieuweGebruiker.todos.push(todo);
+    websocketServer.broadcast(JSON.stringify(todo));
+
+    request.reply(nieuweGebruiker).code(201).header('Location,: /nieuweGebruiker/' + nieuweGebruiker.id + "/todos/" + todo.id);
 }
 
 function getTodo(request) {
