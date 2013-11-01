@@ -1,7 +1,8 @@
 ({
     baseUrl: "../client/js",
     paths: {
-        jquery: "empty:"
+        "jquery": "empty:",
+        "jquery.bootstrap": "empty:"
     },
     optimize: 'none',
     name: "init",
