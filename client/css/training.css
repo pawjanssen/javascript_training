@@ -439,7 +439,7 @@ ul.contact li a:before
     display: none;
 }
 
-.nieuwetodo {
+.nieuwetodo, .nieuwegebruiker {
     float: right;
     margin-top: -15px;
 }

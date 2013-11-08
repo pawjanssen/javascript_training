@@ -13,8 +13,9 @@ define(['app/view/GebruikersView', 'app/service/GebruikersStorage'], function(Ge
 
     return {
         init: function() {
-            GebruikersView.renderTemplate(gebruikersControllerInstance);
-            gebruikersControllerInstance.getGebruikers();
+            GebruikersView.renderTemplate(gebruikersControllerInstance, function() {
+                gebruikersControllerInstance.getGebruikers();
+            });
         }
     }
 });
