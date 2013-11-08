@@ -37,7 +37,7 @@ TodoView.prototype.renderTodos = function(todos) {
         liClone.find("div.alert").addClass(value.priority).attr("todoid", value.id);
         liClone.removeClass("clonable").addClass("todoLi");
         liClone.find("a").click(function() {
-            $("#myModal").data("clickedTodo", value)
+            _this.selectedTodo = value;
         });
         liClone.appendTo("#todolijst");
     });
@@ -85,31 +85,31 @@ TodoView.prototype.clickhandlersTodoPageToepassen = function () {
 };
 
 TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
-    $('#myModal').on('show.bs.modal', function () {
-        var todo = $("#myModal").data("clickedTodo");
-        if(todo) {
-            $('#todoTitle').val(todo.titel);
-            $('#todoPriority').val(todo.priority);
-            $('#todoOmschrijving').val(todo.description);
+    var _this = this;
+    $('#myModal').on('show.bs.modal', function (e) {
+        if ($(e.relatedTarget).attr('id') == "nieuweTodoLink") {
+            delete _this.selectedTodo;
+        }
+
+        if(_this.selectedTodo) {
+            $('#todoTitle').val(_this.selectedTodo.titel);
+            $('#todoPriority').val(_this.selectedTodo.priority);
+            $('#todoOmschrijving').val(_this.selectedTodo.description);
+        } else {
+            $('#todoToevoegenBewerkenForm')[0].reset();
         }
     });
 
     $("#saveButton").click(function() {
-        var todo = $("#myModal").data("clickedTodo");
+        _this.selectedTodo.titel = $('#todoTitle').val();
+        _this.selectedTodo.priority = $('#todoPriority').val();
+        _this.selectedTodo.description = $('#todoOmschrijving').val();
+        delete _this.selectedTodo.created;
 
-        if (!todo) {
-            todo = {};
-        }
-
-        todo.titel = $('#todoTitle').val();
-        todo.priority = $('#todoPriority').val();
-        todo.description = $('#todoOmschrijving').val();
-        delete todo.created;
-
-        _this.todoStorageInstance.saveTodo(todo, function() {
-            _this.renderSuccessMessage("Het opslaan van de todo met titel '" + todo.titel + "' is gelukt.");
+        _this.todoStorageInstance.saveTodo(_this.selectedTodo, function() {
+            _this.renderSuccessMessage("Het opslaan van de todo met titel '" + _this.selectedTodo.titel + "' is gelukt.");
         }, function() {
-            _this.renderErrorMessage("Het opslaan van de todo met titel '" + todo.titel + "' is mislukt, probeer opnieuw.");
+            _this.renderErrorMessage("Het opslaan van de todo met titel '" + _this.selectedTodo.titel + "' is mislukt, probeer opnieuw.");
         });
 
         $('#myModal').modal('hide');

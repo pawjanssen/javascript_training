@@ -27,6 +27,14 @@ server.route({
 
 server.route({
     method: 'GET',
+    path: '/client-zonder-deps-met-jquery/{path*}',
+    handler: {
+        directory: { path: '../../client-zonder-deps-met-jquery', listing: true, index: true }
+    }
+});
+
+server.route({
+    method: 'GET',
     path: '/lib/{path*}',
     handler: {
         directory: { path: '../../client/js/lib', listing: true, index: true }

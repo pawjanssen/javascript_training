@@ -18,6 +18,7 @@ GebruikerSelectieView.prototype.renderTemplate = function() {
 };
 
 GebruikerSelectieView.prototype.renderGebruikers = function(gebruikers) {
+    $("#gebruikersdropdown").empty();
     $.map(gebruikers, function (gebruiker, index) {
         $("<option></option>")
             .val(gebruiker.id)
