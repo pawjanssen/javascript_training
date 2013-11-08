@@ -85,7 +85,8 @@ TodoView.prototype.clickhandlersTodoPageToepassen = function () {
 };
 
 TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
-    $('#myModal').on('show.bs.modal', function () {
+    var _this = this;
+    $('#myModal').on('show.bs.modal', function (e) {
         if ($(e.relatedTarget).attr('id') == "nieuweTodoLink") {
             delete _this.selectedTodo;
         }

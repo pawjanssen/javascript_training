@@ -1,11 +1,27 @@
 var settingsInstance = {
     currentUser: null
 };
+
 var gebruikerStorageInstance = new GebruikerStorage();
 var todoStorageInstance = new TodoStorage(settingsInstance);
 var gebruikerSelectieViewInstance = new GebruikerSelectieView(gebruikerStorageInstance, settingsInstance);
 var todoViewInstance = new TodoView(todoStorageInstance, gebruikerStorageInstance);
 var gebruikersViewInstance = new GebruikersView(gebruikerStorageInstance);
+
+var ws = new WebSocket('ws://localhost:8001');
+
+ws.onopen = function(evt) {
+    console.log('connectie geopend');
+};
+
+ws.onmessage = function(websocketEvent) {
+    var websocketData = JSON.parse(websocketEvent.data);
+    if (websocketData.eventtype === "gebruiker-todos" &&
+        websocketData.gebruikerid == settingsInstance.currentUser) {
+
+        todoViewInstance.renderTodos(websocketData.data);
+    }
+};
 
 function loadView(historyState, doSetState) {
     if (doSetState) {
