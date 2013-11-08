@@ -106,7 +106,8 @@ var historyState = {
     }
 };
 
-$(document).ready(function() {
+window.addEventListener("load", function() {
+
     // Popstate event wordt door de browser afgevuurd bij een history even (browser back buttons)
     window.addEventListener ('popstate', function (event) {
         loadView(history.state, false);

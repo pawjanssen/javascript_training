@@ -38,8 +38,11 @@ TodoView.prototype.renderTodos = function(todos) {
         liClone.querySelector("div.alert").setAttribute("todoid", value.id);
         liClone.classList.remove("clonable");
         liClone.classList.add("todoLi");
-        liClone.querySelector("a").addEventListener("click", function() {
+        liClone.querySelector("a").addEventListener("click", function(event) {
             _this.selectedTodo = value;
+
+            document.getElementById("myModal").style.display = "block";
+            event.preventDefault();
         }, false);
 
 
@@ -70,39 +73,58 @@ TodoView.prototype.renderGebruikers = function(gebruikers) {
 };
 
 TodoView.prototype.todosDraggable = function () {
-    $("div.todoDrag").draggable({ revert: true ,
-        helper: "clone"});
+    var draggableDivs = document.querySelectorAll("div.todoDrag");
+
+    var _this = this;
+    for (var i = 0; i < draggableDivs.length; ++i) {
+        var item = draggableDivs[i];
+        item.addEventListener("mousedown", function(event) {
+            _this.selectedTodoId = event.currentTarget.getAttribute("todoid");
+        }, false);
+    }
 };
 
 TodoView.prototype.gebruikersDroppable = function () {
     var _this = this;
-    $("#gebruikerslijst li").droppable({
-        hoverClass: "todoOverGebruiker",
-        drop: function( event, ui ) {
-            _this.todoStorageInstance.moveTodo($(this).attr("userid"), ui.draggable.attr("todoid"), function() {
+
+    var gebruikersLijstLIs = document.querySelectorAll("#gebruikerslijst li");
+
+    for (var i = 0; i < gebruikersLijstLIs.length; ++i) {
+        var item = gebruikersLijstLIs[i];
+
+        item.addEventListener("dragover", function(event) {
+            event.preventDefault();
+            event.dataTransfer.dropEffect = "move";
+        }, false);
+
+        item.addEventListener("drop", function(event) {
+            event.preventDefault();
+            var todoid = _this.selectedTodoId;
+
+            _this.todoStorageInstance.moveTodo(this.getAttribute("userid"), todoid, function() {
                 _this.renderSuccessMessage("Het assignen van de todo is gelukt");
             }, function(){
                 _this.renderErrorMessage("Het assignen van de todo is mislukt");
             });
-        }
-    });
+        }, false);
+    }
 };
 
 TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
     var _this = this;
-    $('#myModal').on('show.bs.modal', function (e) {
-        if (e.relatedTarget.getAttribute('id') == "nieuweTodoLink") {
-            delete _this.selectedTodo;
-        }
-
-        if(_this.selectedTodo) {
-            document.getElementById('todoTitle').value = _this.selectedTodo.titel;
-            document.getElementById('todoPriority').value = _this.selectedTodo.priority;
-            document.getElementById('todoOmschrijving').value = _this.selectedTodo.description;
-        } else {
-            document.getElementById('todoToevoegenBewerkenForm').reset();
-        }
-    });
+//    $('#myModal').on('show.bs.modal', function (e) {
+//        if (e.relatedTarget.getAttribute('id') == "nieuweTodoLink") {
+//            delete _this.selectedTodo;
+//        }
+//
+//        if(_this.selectedTodo) {
+//            document.getElementById('todoTitle').value = _this.selectedTodo.titel;
+//            document.getElementById('todoPriority').value = _this.selectedTodo.priority;
+//            document.getElementById('todoOmschrijving').value = _this.selectedTodo.description;
+//        } else {
+//            document.getElementById('todoToevoegenBewerkenForm').reset();
+//        }
+//    });
 
     document.getElementById("saveButton").addEventListener("click", function() {
         var todo = {};
