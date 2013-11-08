@@ -438,3 +438,12 @@ ul.contact li a:before
 .clonable {
     display: none;
 }
+
+.nieuwetodo {
+    float: right;
+    margin-top: -15px;
+}
+
+#todolijst {
+    margin-top: 30px;
+}
