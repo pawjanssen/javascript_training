@@ -4,13 +4,24 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
         this.gebruikersController = gebruikersController
     }
 
-    GebruikersView.prototype.renderTemplate = function() {
+    GebruikersView.prototype.renderTemplate = function(callBackWhenReady) {
         $('#pageTitle').text("Gebruikers");
-        $('#page').load("gebruikersPage.html");
+        $('#page').load("gebruikersPage.html", function() {
+            callBackWhenReady.call();
+        });
     }
 
     GebruikersView.prototype.renderGebruikers = function(gebruikers) {
-        console.log(gebruikers);
+        var _this = this;
+        var templateLI = $("#gebruikerslijst li:first").clone();
+        $("#gebruikerslijst").empty();
+        $.map(gebruikers, function (value, index) {
+            var liClone = templateLI.clone();
+            liClone.find("span.naam").text(value.naam);
+            liClone.find("span.gebruikersnaam").text(value.gebruikersnaam);
+            liClone.attr("userid", value.id);
+            liClone.appendTo("#gebruikerslijst");
+        })
 
     }
 
@@ -21,13 +32,15 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
     var gebruikersViewInstance = new GebruikersView(undefined);
 
     return {
-        renderTemplate: function(gebruikersController) {
+        renderTemplate: function(gebruikersController, callBackWhenReady) {
             gebruikersViewInstance = new GebruikersView(gebruikersController);
-            gebruikersViewInstance.renderTemplate();
+            gebruikersViewInstance.renderTemplate(callBackWhenReady);
         },
 
-        renderGebruikers: gebruikersViewInstance.renderGebruikers,
+        renderGebruikers: function(gebruikers) { gebruikersViewInstance.renderGebruikers(gebruikers) },
 
-        renderError: gebruikersViewInstance.renderError
+        renderSuccessMessage: function() { gebruikersViewInstance.renderSuccessMessage() },
+
+        renderErrorMessage: function() { gebruikersViewInstance.renderErrorMessage() }
     };
 });
