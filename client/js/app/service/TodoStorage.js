@@ -15,7 +15,6 @@ define(['app/util/Settings', 'jquery'], function(Settings, $) {
                 .done(successCallBack)
                 .fail(failCallBack);
         },
-
         saveTodo: function(todo, successCallBack, failCallBack) {
             $.ajax(getBaseURL(), {
                 data: todo,

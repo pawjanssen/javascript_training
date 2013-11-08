@@ -25,7 +25,6 @@ module.exports = [
                     gebruikerID: Types.String().required().min(1)
                 },
                 payload: {
-                    id: Types.String().required().min(1),
                     titel: Types.String().required().min(3),
                     priority: Types.String().required().min(3),
                     description: Types.String().required().min(3)

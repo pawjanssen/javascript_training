@@ -2,14 +2,12 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
 
     function TodoView(todoController) {
         this.todoController = todoController;
-        _this = this;
     }
 
     TodoView.prototype.renderTemplate = function(callBackWhenReady) {
+        var _this = this;
         $('#pageTitle').text("TodoList");
         $('#page').load("todoPage.html", function() {
-            _this.clickhandlersTodoPageToepassen();
-
             callBackWhenReady.call();
         });
         $('#myModal').load("todoTonenBewerken.html", function() {
@@ -18,6 +16,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
     }
 
     TodoView.prototype.renderTodos = function(todos) {
+        var _this = this;
         var templateLI = $("#todolijst li.clonable").clone();
         $("#todolijst li.todoLi").remove();
         $.map(todos, function (value, index) {
@@ -27,7 +26,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
             liClone.find("div.alert").addClass(value.priority).attr("todoid", value.id);
             liClone.removeClass("clonable").addClass("todoLi");
             liClone.find("a").click(function() {
-                $("#myModal").data("clickedTodo", value)
+                _this.selectedTodo = value;
             });
             liClone.appendTo("#todolijst");
         });
@@ -35,6 +34,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
     }
 
     TodoView.prototype.renderGebruikers = function(gebruikers) {
+        var _this = this;
         var templateLI = $("#gebruikerslijst li:first").clone();
         $("#gebruikerslijst").empty();
         $.map(gebruikers, function (value, index) {
@@ -53,6 +53,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
     }
 
     TodoView.prototype.gebruikersDroppable = function () {
+        var _this = this;
         $("#gebruikerslijst li").droppable({
             hoverClass: "todoOverGebruiker",
             drop: function( event, ui ) {
@@ -69,35 +70,26 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
 
     };
 
-    TodoView.prototype.clickhandlersTodoPageToepassen = function () {
-        $("a.nieuwetodo").click(function() {
-            console.log("test");
-            $("#myModal").data("clickedTodo", "leeeeeeeeeeg");
-        });
-    };
-
     TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
-        $('#myModal').on('show.bs.modal', function () {
-            var todo = $("#myModal").data("clickedTodo");
-            if(todo) {
-                $('#todoTitle').val(todo.titel);
-                $('#todoPriority').val(todo.priority);
-                $('#todoOmschrijving').val(todo.description);
+        var _this = this;
+        $('#myModal').on('show.bs.modal', function (e) {
+            if ($(e.relatedTarget).attr('id') == "nieuweTodoLink") {
+                delete _this.selectedTodo;
+            }
+
+            if(_this.selectedTodo) {
+                $('#todoTitle').val(_this.selectedTodo.titel);
+                $('#todoPriority').val(_this.selectedTodo.priority);
+                $('#todoOmschrijving').val(_this.selectedTodo.description);
             }
         });
 
         $("#saveButton").click(function() {
-            var todo = $("#myModal").data("clickedTodo");
-
-            if (!todo) {
-                todo = {};
-            }
-
-            todo.titel = $('#todoTitle').val();
-            todo.priority = $('#todoPriority').val();
-            todo.description = $('#todoOmschrijving').val();
-            delete todo.created;
-            _this.todoController.saveTodo(todo);
+            _this.selectedTodo.titel = $('#todoTitle').val();
+            _this.selectedTodo.priority = $('#todoPriority').val();
+            _this.selectedTodo.description = $('#todoOmschrijving').val();
+            delete _this.selectedTodo.created;
+            _this.todoController.saveTodo(_this.selectedTodo);
 
             $('#myModal').modal('hide');
         });
