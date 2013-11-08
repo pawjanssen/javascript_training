@@ -34,6 +34,14 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
 
     }
 
+    GebruikersView.prototype.renderSuccessMessage = function(successMessage) {
+
+    };
+
+    GebruikersView.prototype.renderErrorMessage = function(errorMessage) {
+
+    };
+
     GebruikersView.prototype.eventHandlersgebruikerToevoegenToepassen = function () {
         var _this = this;
         var nieuweGebruiker = { "todos": [] };
