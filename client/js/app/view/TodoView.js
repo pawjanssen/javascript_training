@@ -10,6 +10,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
         $('#page').load("todoPage.html", function() {
             callBackWhenReady.call();
         });
+        $('#myModal').empty();
         $('#myModal').load("todoTonenBewerken.html", function() {
             _this.eventHandlersTodoTonenBewerkenToepassen();
         });

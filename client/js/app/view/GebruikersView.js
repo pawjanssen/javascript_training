@@ -5,9 +5,14 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
     }
 
     GebruikersView.prototype.renderTemplate = function(callBackWhenReady) {
+        var _this = this;
         $('#pageTitle').text("Gebruikers");
         $('#page').load("gebruikersPage.html", function() {
             callBackWhenReady.call();
+        });
+        $('#myModal').empty();
+        $('#myModal').load("gebruikerToevoegen.html", function() {
+            _this.eventHandlersgebruikerToevoegenToepassen();
         });
     }
 
@@ -27,6 +32,28 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
 
     GebruikersView.prototype.renderError = function() {
 
+    }
+
+    GebruikersView.prototype.renderSuccessMessage = function(successMessage) {
+
+    };
+
+    GebruikersView.prototype.renderErrorMessage = function(errorMessage) {
+
+    };
+
+    GebruikersView.prototype.eventHandlersgebruikerToevoegenToepassen = function () {
+        var _this = this;
+        var nieuweGebruiker = { "todos": [] };
+        $('#myModal').on('show.bs.modal', function (e) {
+            $("#saveButton").click(function() {
+                nieuweGebruiker.naam = $('#gebruikerNaam').val();
+                nieuweGebruiker.gebruikersnaam = $('#gebruikerGebruikersnaam').val();
+                _this.gebruikersController.saveGebruiker(nieuweGebruiker);
+
+                $('#myModal').modal('hide');
+            });
+        });
     }
 
     var gebruikersViewInstance = new GebruikersView(undefined);

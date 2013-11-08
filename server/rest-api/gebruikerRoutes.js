@@ -17,7 +17,8 @@ module.exports = [
         config: {
             handler: addGebruiker,
             payload: 'parse',
-            validate: { payload: { naam: Types.String().required().min(3) } }
+            validate: { payload: { naam: Types.String().required().min(3),
+                                   gebruikersnaam: Types.String().required().min(3)} }
         }
     },
     {
@@ -43,7 +44,10 @@ function addGebruiker(request) {
     };
 
     gebruikers.push(gebruiker);
-    websocketServer.broadcast(JSON.stringify(gebruiker));
+    websocketServer.broadcast(JSON.stringify({
+        "eventtype": "gebruikertoegevoegd",
+        "data": gebruikers
+    }));
 
     request.reply(gebruiker).code(201).header('Location,: /gebruikers/' + gebruiker.id);
 }

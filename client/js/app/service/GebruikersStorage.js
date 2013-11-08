@@ -1,22 +1,24 @@
 define(['app/util/Settings', 'jquery'], function(Settings, $) {
-    var baseURL = "/gebruikers";
+    function getBaseURL() {
+        return "/gebruikers";
+    }
 
     return {
         getAll: function(successCallBack, failCallBack) {
-            $.getJSON(baseURL)
+            $.getJSON(getBaseURL())
                 .done(successCallBack)
                 .fail(failCallBack);
         },
 
         get: function(gebruikersID, successCallBack, failCallBack) {
-            $.getJSON(baseURL + "/" + gebruikersID)
+            $.getJSON(getBaseURL() + "/" + gebruikersID)
                 .done(successCallBack)
                 .fail(failCallBack);
         },
 
-        put: function(gebruiker, successCallBack, failCallBack) {
-            $.ajax(gebruiker, {
-                data: todo,
+        saveGebruiker: function(gebruiker, successCallBack, failCallBack) {
+            $.ajax(getBaseURL(), {
+                data: gebruiker,
                 method: 'POST',
                 dataType: 'json'
             })
