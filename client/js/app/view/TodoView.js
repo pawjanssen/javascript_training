@@ -81,6 +81,8 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
                 $('#todoTitle').val(_this.selectedTodo.titel);
                 $('#todoPriority').val(_this.selectedTodo.priority);
                 $('#todoOmschrijving').val(_this.selectedTodo.description);
+            } else {
+                $('#todoToevoegenBewerkenForm')[0].reset();
             }
         });
 
@@ -103,12 +105,12 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
             todoViewInstance.renderTemplate(callBackWhenReady);
         },
 
-        renderTodos: todoViewInstance.renderTodos,
+        renderTodos: function(todos) { todoViewInstance.renderTodos(todos) },
 
-        renderGebruikers: todoViewInstance.renderGebruikers,
+        renderGebruikers: function(gebruikers) { todoViewInstance.renderGebruikers(gebruikers) },
 
-        renderSuccessMessage: todoViewInstance.renderSuccessMessage,
+        renderSuccessMessage: function() { todoViewInstance.renderSuccessMessage() },
 
-        renderErrorMessage: todoViewInstance.renderErrorMessage
+        renderErrorMessage: function() { todoViewInstance.renderErrorMessage() }
     };
 });
