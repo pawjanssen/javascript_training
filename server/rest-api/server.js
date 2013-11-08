@@ -9,12 +9,35 @@ server.pack.require({ lout: { endpoint: '/docs' } }, function (err) {
     }
 });
 
-// File server route
 server.route({
     method: 'GET',
-    path: '/{path*}',
+    path: '/client/{path*}',
     handler: {
         directory: { path: '../../client', listing: true, index: true }
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/client-zonder-deps/{path*}',
+    handler: {
+        directory: { path: '../../client-zonder-deps', listing: true, index: true }
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/lib/{path*}',
+    handler: {
+        directory: { path: '../../client/js/lib', listing: true, index: true }
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/css/{path*}',
+    handler: {
+        directory: { path: '../../client/css', listing: true, index: true }
     }
 });
 

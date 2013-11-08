@@ -86,7 +86,7 @@ function addOrUpdateTodo(request) {
         updateTodo(todo, request);
     } else {
         todo = {
-            id: gebruiker.todos[gebruiker.todos.length - 1].id + 1,
+            id: gebruiker.todos[gebruiker.todos.length - 1].id + 1
         };
         updateTodo(todo, request);
         gebruiker.todos.push(todo);
