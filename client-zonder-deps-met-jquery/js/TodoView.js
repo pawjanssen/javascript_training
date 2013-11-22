@@ -79,7 +79,6 @@ TodoView.prototype.gebruikersDroppable = function () {
 
 TodoView.prototype.clickhandlersTodoPageToepassen = function () {
     $("a.nieuwetodo").click(function() {
-        console.log("test");
         $("#myModal").data("clickedTodo", "leeeeeeeeeeg");
     });
 };
@@ -97,6 +96,7 @@ TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
             $('#todoOmschrijving').val(_this.selectedTodo.description);
         } else {
             $('#todoToevoegenBewerkenForm')[0].reset();
+            _this.selectedTodo = {};
         }
     });
 

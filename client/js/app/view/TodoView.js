@@ -84,6 +84,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap', 'jquery-ui'], functio
                 $('#todoOmschrijving').val(_this.selectedTodo.description);
             } else {
                 $('#todoToevoegenBewerkenForm')[0].reset();
+                _this.selectedTodo = {};
             }
         });
 

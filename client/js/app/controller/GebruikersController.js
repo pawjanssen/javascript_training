@@ -18,7 +18,6 @@ define(['app/view/GebruikersView', 'app/service/GebruikersStorage', 'app/util/Se
     };
 
     GebruikersController.prototype.onWebSocketMessage = function(websocketEvent) {
-        console.log("poep");
         var websocketData = JSON.parse(websocketEvent.data);
         if (websocketData.eventtype === "gebruikertoegevoegd") {
 
