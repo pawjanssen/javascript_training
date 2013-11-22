@@ -11,7 +11,7 @@ GebruikerStorage.prototype.get = function(gebruikersID, successCallBack, failCal
 };
 
 GebruikerStorage.prototype.saveGebruiker = function (gebruiker, successCallBack, failCallBack) {
-    $.ajax(this.getBaseUrl(), {
+    $.ajax(this.baseURL, {
         data: gebruiker,
         method: 'POST',
         dataType: 'json'

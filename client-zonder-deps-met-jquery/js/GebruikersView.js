@@ -39,10 +39,10 @@ GebruikersView.prototype.eventHandlersgebruikerToevoegenToepassen = function () 
         $("#saveButton").click(function() {
             nieuweGebruiker.naam = $('#gebruikerNaam').val();
             nieuweGebruiker.gebruikersnaam = $('#gebruikerGebruikersnaam').val();
-            _this.gebruikersController.saveGebruiker(nieuweGebruiker, function() {
-                GebruikersView.renderSuccessMessage("Het opslaan van de gebruiker met naam '" + gebruikers.naam + "' is gelukt.");
+            _this.gebruikersStorageInstance.saveGebruiker(nieuweGebruiker, function() {
+                _this.renderSuccessMessage("Het opslaan van de gebruiker met naam '" + gebruikers.naam + "' is gelukt.");
             }, function() {
-                GebruikersView.renderErrorMessage("Het opslaan van de gebruiker met naam '" + gebruikers.naam + "' is mislukt, probeer opnieuw.");
+                _this.renderErrorMessage("Het opslaan van de gebruiker met naam '" + gebruikers.naam + "' is mislukt, probeer opnieuw.");
             });
 
             $('#myModal').modal('hide');
@@ -50,8 +50,5 @@ GebruikersView.prototype.eventHandlersgebruikerToevoegenToepassen = function () 
     });
 }
 
-TodoView.prototype.renderSuccessMessage = function() {};
-TodoView.prototype.renderErrorMessage = function() {};
-GebruikersView.prototype.renderError = function() {
-
-};
+GebruikersView.prototype.renderSuccessMessage = function() {};
+GebruikersView.prototype.renderErrorMessage = function() {};
