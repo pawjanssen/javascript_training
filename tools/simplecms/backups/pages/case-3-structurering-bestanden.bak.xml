@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Fri, 22 Nov 2013 16:00:07 +0100</pubDate><title><![CDATA[Case 3 - Structurering bestanden]]></title><url><![CDATA[case-3-structurering-bestanden]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 3 - Structurering bestanden]]></menu><menuOrder><![CDATA[4]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+&lt;p&gt;Download de source voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 3 staan.&lt;/p&gt;
+&lt;h2&gt;Omschrijving&lt;/h2&gt;
+&lt;p&gt;Zojuist is verteld hoe je objecten en functies creeert en hoe je hier vervolgens gebruik van kunt maken. Het doel van deze opdracht is het leren van omgang met objecten, zowel in JSON als &quot;normale&quot; notatie. In deze opdracht leer je ook over inheritencemogelijkheden binnen javascript (prototyping).&lt;/p&gt;
+&lt;h2&gt;Opdracht 1 - Structurering&lt;/h2&gt;
+&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case3/template.html&quot; om de derde case te laden. Je ziet het todoscherm van de applicatie voor je.&lt;/p&gt;
+&lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case3/init.js&quot;. Zorg ervoor dat je voor deze opdracht alle TODO&#039;s met het commentaar &quot;TODO-OPDRACHT-1&quot; wegwerkt/oplost. Bij sommige stukken staat uitgecommentarieerde code, de bedoeling is dat aan het eind van deze opdracht er geen uitgecommentarieerde code meer aanwezig is (hint: dit betekend niet dat je de uitgecommentarieerde code moet verwijderen).&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
