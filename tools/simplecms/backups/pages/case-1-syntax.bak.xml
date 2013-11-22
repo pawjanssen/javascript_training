@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 22 Nov 2013 10:41:35 +0100</pubDate><title><![CDATA[Case 1 - O]]></title><url><![CDATA[case-1-syntax]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Syntax]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;Download de source voor deze opdracht om te beginnen met de case&lt;/p&gt;
+<item><pubDate>Fri, 22 Nov 2013 11:18:59 +0100</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case-1-syntax]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Syntax]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;data/uploads/case1.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe de Todo applicatie eruit ziet. Middels deze applicatie zul je alle cases in deze training gaan uitwerken.&lt;/p&gt;
 &lt;p&gt;Het doel van deze opdracht is te wennen aan de ontwikkelomgeving waarmee de cases ontwikkeld gaan worden. Na deze opdracht weet je hoe je bestanden kunt bewerken in de ontwikkelomgeving en weet je hoe je de webserver start waarmee in latere opdrachten data vandaan is te halen. Tevens weet je hoe je de Todo applicatie benaderd en hoe de REST service er globaal uitziet.&lt;/p&gt;
@@ -28,4 +28,4 @@
 &lt;h3&gt;Stap 4&lt;/h3&gt;
 &lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case1/template.html&quot;. Zoek de &quot;select&quot; met als id &quot;gebruikersdropdown&quot; en voeg hier je eigen naam aan toe, op de manier zoals er nu reeds 3 namen staan. Reload de client die je in stap 3 in je browser hebt geladen. Als het goed is zie je in de dropdown nu de door jouw toegevoegde gebruikersnaam staan.&lt;/p&gt;
 &lt;p&gt;Je hebt waarschijnlijk gemerkt dat je niet de NodeJS server hebt hoeven restarten, of in WebStorm het bestand hebt moeten opslaan. Voor aanpassingen die je gedurende deze training doet zijn beide zaken niet nodig, NodeJS zorgt ervoor dat altijd de actuele bestanden van het filesystem worden geladen en WebStorm zorgt dat na het editen van files meteen een &quot;auto-save&quot; wordt uitgevoerd.&lt;/p&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[pascal]]></author></item>
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
