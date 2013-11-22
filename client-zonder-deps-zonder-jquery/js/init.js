@@ -74,6 +74,11 @@ ws.onmessage = function(websocketEvent) {
 
         todoViewInstance.renderTodos(websocketData.data);
     }
+
+    if (websocketData.eventtype === "gebruikertoegevoegd") {
+
+        gebruikersViewInstance.renderGebruikers(websocketData.data);
+    }
 };
 
 function loadView(historyState, doSetState) {

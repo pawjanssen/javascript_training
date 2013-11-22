@@ -34,7 +34,7 @@ GebruikersView.prototype.renderGebruikers = function(gebruikers) {
 
 GebruikersView.prototype.eventHandlersgebruikerToevoegenToepassen = function () {
     var _this = this;
-    var nieuweGebruiker = { "todos": [] };
+    var nieuweGebruiker = {};
     $('#myModal').on('show.bs.modal', function (e) {
         $("#saveButton").click(function() {
             nieuweGebruiker.naam = $('#gebruikerNaam').val();
