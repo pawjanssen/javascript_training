@@ -1,8 +1,61 @@
-var settingsInstance = {
-    currentUser: null
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = 0, len = this.length; i < len; i++) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
 };
 
-var gebruikerStorageInstance = new GebruikerStorage();
+var settingsInstance = {
+    currentUser: null,
+    loadTemplate: function(templateElement, template, successCallBack) {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200)
+            {
+                templateElement.innerHTML = request.responseText;
+                successCallBack.call();
+            }
+        };
+
+        request.open("GET", template, true);
+        request.send();
+    },
+    getJSON: function(url, successCallBack, failCallBack) {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4) {
+                if (request.status == 200) {
+                    successCallBack.call(window, JSON.parse(request.responseText));
+                } else {
+                    failCallBack.call();
+                }
+            }
+        };
+
+        request.open("GET", url, true);
+        request.send();
+    },
+    sendJSONToServer: function(method, url, data, successCallBack, failCallBack) {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4) {
+                if (request.status == 200) {
+                    successCallBack.call(window, JSON.parse(request.responseText));
+                } else {
+                    failCallBack.call();
+                }
+            }
+        };
+
+        request.open(method, url, true);
+        request.setRequestHeader("Content-Type", "application/json");
+
+        request.send(JSON.stringify(data));
+    }
+};
+
+var gebruikerStorageInstance = new GebruikerStorage(settingsInstance);
 var todoStorageInstance = new TodoStorage(settingsInstance);
 var gebruikerSelectieViewInstance = new GebruikerSelectieView(gebruikerStorageInstance, settingsInstance);
 var todoViewInstance = new TodoView(todoStorageInstance, gebruikerStorageInstance);
@@ -20,11 +73,6 @@ ws.onmessage = function(websocketEvent) {
         websocketData.gebruikerid == settingsInstance.currentUser) {
 
         todoViewInstance.renderTodos(websocketData.data);
-    }
-
-    if (websocketData.eventtype === "gebruikertoegevoegd") {
-
-        gebruikersViewInstance.renderGebruikers(websocketData.data);
     }
 };
 
@@ -58,7 +106,8 @@ var historyState = {
     }
 };
 
-$(document).ready(function() {
+window.addEventListener("load", function() {
+
     // Popstate event wordt door de browser afgevuurd bij een history even (browser back buttons)
     window.addEventListener ('popstate', function (event) {
         loadView(history.state, false);
