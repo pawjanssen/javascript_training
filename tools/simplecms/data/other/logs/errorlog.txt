@@ -27,3 +27,9 @@
 [22-Nov-2013 11:18:59 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
 [22-Nov-2013 11:19:12 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
 [22-Nov-2013 11:19:12 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 11:20:13 Europe/Berlin] PHP Warning:  Illegal string offset 'type' in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 181
+[22-Nov-2013 11:20:35 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 11:20:58 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 11:21:11 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 11:22:50 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 11:28:18 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312

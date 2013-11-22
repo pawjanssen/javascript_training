@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 22 Nov 2013 11:19:12 +0100</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case-1-syntax]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Syntax]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
+<item><pubDate>Fri, 22 Nov 2013 11:28:18 +0100</pubDate><title><![CDATA[Case 2 - Selectors]]></title><url><![CDATA[case1-opzetten-omgeving-1]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case1.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;Zojuist is verteld hoe de Todo applicatie eruit ziet. Middels deze applicatie zul je alle cases in deze training gaan uitwerken.&lt;/p&gt;
+&lt;p&gt;Zojuist is verteld hoe je middels selectors elemente uit de DOM kunt selecteren om ze vervolgens te kunnen bewerken. Het doel van deze opdracht is te leren hoe de selectors werken en op een pagina op verschillende&lt;/p&gt;
 &lt;p&gt;Het doel van deze opdracht is te wennen aan de ontwikkelomgeving waarmee de cases ontwikkeld gaan worden. Na deze opdracht weet je hoe je bestanden kunt bewerken in de ontwikkelomgeving en weet je hoe je de webserver start waarmee in latere opdrachten data vandaan is te halen. Tevens weet je hoe je de Todo applicatie benaderd en hoe de REST service er globaal uitziet.&lt;/p&gt;
 &lt;h2&gt;&lt;em&gt;Opdracht 1 - Opstarten ontwikkelomgeving&lt;/em&gt;&lt;/h2&gt;
 &lt;h3&gt;Stap 1&lt;/h3&gt;
