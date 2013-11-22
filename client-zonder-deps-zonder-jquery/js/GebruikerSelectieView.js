@@ -5,8 +5,8 @@ function GebruikerSelectieView(gebruikerStorageInstance, settingsInstance) {
 
 GebruikerSelectieView.prototype.renderTemplate = function() {
     var _this = this;
-    $('#pageTitle').text("Gebruiker Selectie");
-    $('#page').load("gebruikerSelectiePage.html", function() {
+    document.getElementById("pageTitle").text = "Gebruiker Selectie";
+    settingsInstance.loadTemplate(document.getElementById('page'), "gebruikerSelectiePage.html", function() {
         _this.eventHandlersToepassen();
 
         _this.gebruikerStorageInstance.getAll(function (gebruikers) {
@@ -18,12 +18,16 @@ GebruikerSelectieView.prototype.renderTemplate = function() {
 };
 
 GebruikerSelectieView.prototype.renderGebruikers = function(gebruikers) {
-    $("#gebruikersdropdown").empty();
-    $.map(gebruikers, function (gebruiker, index) {
-        $("<option></option>")
-            .val(gebruiker.id)
-            .text(gebruiker.naam)
-            .appendTo("#gebruikersdropdown");
+    var gebruikersSelect = document.getElementById("gebruikersdropdown");
+    while (gebruikersSelect.options.length > 0) {
+        gebruikersSelect.remove(0);
+    }
+
+    gebruikers.map(function (gebruiker) {
+        var option = document.createElement("option");
+        option.value = gebruiker.id;
+        option.text = gebruiker.naam;
+        gebruikersSelect.add(option);
     });
 };
 
@@ -31,8 +35,8 @@ GebruikerSelectieView.prototype.renderError = function() {};
 
 GebruikerSelectieView.prototype.eventHandlersToepassen = function () {
     var _this = this;
-    $('#selecteergebruiker').click(function() {
-        _this.settingsInstance.currentUser = $("#gebruikersdropdown").val();
+    document.getElementById("selecteergebruiker").addEventListener("click", function(){
+        _this.settingsInstance.currentUser = document.getElementById("gebruikersdropdown").value;
         loadView(historyState.todos, true);
-    });
+    }, false);
 };

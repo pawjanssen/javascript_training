@@ -19,17 +19,17 @@ server.route({
 
 server.route({
     method: 'GET',
-    path: '/client-zonder-deps/{path*}',
+    path: '/client-zonder-deps-zonder-jquery/{path*}',
     handler: {
-        directory: { path: '../../client-zonder-deps', listing: true, index: true }
+        directory: { path: '../../client-zonder-deps-zonder-jquery', listing: true, index: true }
     }
 });
 
 server.route({
     method: 'GET',
-    path: '/client-zonder-deps-met-jquery/{path*}',
+    path: '/client-zonder-deps/{path*}',
     handler: {
-        directory: { path: '../../client-zonder-deps-met-jquery', listing: true, index: true }
+        directory: { path: '../../client-zonder-deps', listing: true, index: true }
     }
 });
 

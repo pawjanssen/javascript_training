@@ -1,12 +1,19 @@
-function GebruikerStorage(settingsInstance) {
-    this.settingsInstance = settingsInstance;
+function GebruikerStorage() {
     this.baseURL = "/gebruikers";
 }
 
 GebruikerStorage.prototype.getAll = function(successCallBack, failCallBack) {
-    this.settingsInstance.getJSON(this.baseURL, successCallBack, failCallBack);
+    $.getJSON(this.baseURL).done(successCallBack).fail(failCallBack);
 };
 
 GebruikerStorage.prototype.get = function(gebruikersID, successCallBack, failCallBack) {
-    this.settingsInstance.getJSON(this.baseURL + "/" + gebruikersID, successCallBack, failCallBack);
+    $.getJSON(this.baseURL + "/" + gebruikersID).done(successCallBack).fail(failCallBack);
+};
+
+GebruikerStorage.prototype.saveGebruiker = function (gebruiker, successCallBack, failCallBack) {
+    $.ajax(this.baseURL, {
+        data: gebruiker,
+        method: 'POST',
+        dataType: 'json'
+    }).done(successCallBack).fail(failCallBack);
 };
