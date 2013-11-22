@@ -19,7 +19,7 @@ GebruikersView.prototype.renderTemplate = function() {
 
 GebruikersView.prototype.renderGebruikers = function(gebruikers) {
     var templateLI = document.querySelector("#gebruikerslijst li.clonable");
-    document.querySelectorAll("#gebruikerslijst li").remove();
+    document.querySelectorAll("#gebruikerslijst li.gebruikerLi").remove();
     var gebruikersLijst = document.getElementById("gebruikerslijst");
 
     gebruikers.map(function (value) {
@@ -66,10 +66,10 @@ GebruikersView.prototype.eventHandlersgebruikerToevoegenToepassen = function () 
     }, false);
 
     document.getElementById("saveButton").addEventListener("click", function(event) {
-        var nieuweGebruiker = { "todos": [] };
+        var nieuweGebruiker = {};
 
-        nieuweGebruiker.titel = document.getElementById('gebruikerNaam').value;
-        nieuweGebruiker.priority = document.getElementById('gebruikerGebruikersnaam').value;
+        nieuweGebruiker.naam = document.getElementById('gebruikerNaam').value;
+        nieuweGebruiker.gebruikersnaam = document.getElementById('gebruikerGebruikersnaam').value;
 
         _this.gebruikersStorageInstance.saveGebruiker(nieuweGebruiker, function() {
             _this.renderSuccessMessage("Het opslaan van de gebruiker met titel '" + nieuweGebruiker.naam + "' is gelukt.");
