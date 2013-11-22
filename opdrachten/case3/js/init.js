@@ -7,7 +7,6 @@ TodoView.prototype.renderTemplate = function() {
 };
 
 TodoView.prototype.renderTodos = function(todos) {
-    var _this = this;
     var templateLI = document.querySelector("#todolijst li.clonable");
 
     var bestaandeTodoLIs = document.querySelectorAll("#todolijst li.todoLi");

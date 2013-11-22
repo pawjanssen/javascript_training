@@ -28,10 +28,3 @@ gebruiker3.naam = "S. Cala";
 gebruiker3.gebruikersnaam = "scala";
 
 var gebruikers = new Array(gebruiker1, gebruiker2, gebruiker3);
-
-var todoViewInstance = new TodoView();
-
-window.addEventListener("load", function() {
-    todoViewInstance.renderTodos(todos);
-    todoViewInstance.renderGebruikers(gebruikers);
-});
