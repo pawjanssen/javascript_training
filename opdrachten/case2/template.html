@@ -2,6 +2,7 @@
 <html>
 <head>
     <title></title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/training.css"/>
     <script type="text/javascript" src="js/todoapp.js"></script>
@@ -10,8 +11,9 @@
     <div id="header">
         <div id="menu" class="container">
             <ul>
-                <li id="todos" class="current_page_item"><a href="#" accesskey="1" title="">ToDo list</a></li>
-                <li><a id="gebruikers" href="#" accesskey="1" title="">Gebruikers</a></li>
+                <li class="current_page_item"><a href="#" accesskey="1" title="">Gebruikerselectie</a></li>
+                <li><a href="#" accesskey="1" title="">ToDo list</a></li>
+                <li><a href="#" accesskey="1" title="">Gebruikers</a></li>
             </ul>
         </div>
     </div>
@@ -21,11 +23,12 @@
     <div id="page" class="container">
         <div id="content">
             <div class="title">
-                <h2>Gebruiker Selectie</h2>
-                <span class="byline">Kies de gebruiker die u wil gebruiken tijdens gebruik van de todo app</span>
+                <h2 class="toBeCopyrighted">Gebruiker Selectie</h2>
+                <span class="byline toBeCopyrighted">Kies de gebruiker die u wil gebruiken tijdens gebruik van de todo app</span>
             </div>
             <div>
                 <select class="form-control" id="gebruikersdropdown">
+                    <option value="defaultOption">Kies een waarde...</option>
                     <option>C. Scherp</option>
                     <option>S. Cala</option>
                 </select>
@@ -35,7 +38,7 @@
         </div>
     </div>
     <div id="copyright" class="container">
-        <p>Javascript Training</p>
+        <p class="toBeCopyrighted">Javascript Training</p>
     </div>
 </body>
 </html>
