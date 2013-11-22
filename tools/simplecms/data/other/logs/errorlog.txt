@@ -33,3 +33,6 @@
 [22-Nov-2013 11:21:11 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
 [22-Nov-2013 11:22:50 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
 [22-Nov-2013 11:28:18 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 16:08:28 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 16:08:45 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 16:08:58 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
