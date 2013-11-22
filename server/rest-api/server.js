@@ -49,6 +49,14 @@ server.route({
     }
 });
 
+server.route({
+    method: 'GET',
+    path: '/opdrachten/{path*}',
+    handler: {
+        directory: { path: '../../opdrachten', listing: true, index: true }
+    }
+});
+
 // REST Gebruikers API
 var gebruikerRoutes = require('./gebruikerRoutes');
 server.addRoutes(gebruikerRoutes);
