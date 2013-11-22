@@ -72,7 +72,7 @@ letter-spacing:-2px;
 
 #sidebar {width:230px;float:right;border:1px solid #ccc;background:#f6f6f6;margin-bottom:50px;}
 
-.section {padding:30px 20px 20px 20px;text-align:left;}
+.section {padding:30px 10px 20px 10px;text-align:left;}
 .section p, .section ul, .section ol {line-height:20px;margin:0 0 20px 0;}
 .section ul, .section ol {margin-left:20px;}
 .section ul ul, .section ol ul, .section ul ol, .section ol ol {
