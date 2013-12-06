@@ -1,11 +1,6 @@
 function TodoView() {
 }
 
-TodoView.prototype.renderTemplate = function() {
-    document.getElementById("pageTitle").text = "TodoList";
-    this.eventHandlersTodoTonenBewerkenToepassen();
-};
-
 TodoView.prototype.renderTodos = function(todos) {
     var templateLI = document.querySelector("#todolijst li.clonable");
 
