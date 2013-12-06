@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 22 Nov 2013 16:00:27 +0100</pubDate><title><![CDATA[Case 4 - Objecten en functies]]></title><url><![CDATA[case-4-objecten-en-functies]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 4 - Objecten en functies]]></menu><menuOrder><![CDATA[5]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
-&lt;p&gt;Download de source voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 3 staan.&lt;/p&gt;
+<item><pubDate>Fri, 06 Dec 2013 15:11:35 +0100</pubDate><title><![CDATA[Case 4 - Objecten en functies]]></title><url><![CDATA[case-4-objecten-en-functies]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 4 - Objecten en functies]]></menu><menuOrder><![CDATA[5]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+&lt;p&gt;Download de source voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 4 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je objecten en functies creeert en hoe je hier vervolgens gebruik van kunt maken. Het doel van deze opdracht is het leren van omgang met objecten, zowel in JSON als &quot;normale&quot; notatie. In deze opdracht leer je ook over inheritencemogelijkheden binnen javascript (prototyping).&lt;/p&gt;
-&lt;h2&gt;Opdracht 1 - Structurering&lt;/h2&gt;
-&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case3/template.html&quot; om de derde case te laden. Je ziet het todoscherm van de applicatie voor je.&lt;/p&gt;
-&lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case3/init.js&quot;. Zorg ervoor dat je voor deze opdracht alle TODO&#039;s met het commentaar &quot;TODO-OPDRACHT-1&quot; wegwerkt/oplost. Bij sommige stukken staat uitgecommentarieerde code, de bedoeling is dat aan het eind van deze opdracht er geen uitgecommentarieerde code meer aanwezig is (hint: dit betekend niet dat je de uitgecommentarieerde code moet verwijderen).&lt;/p&gt;
+&lt;h2&gt;Opdracht 1 - JSON&lt;/h2&gt;
+&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case4/template.html&quot; om de vierde case te laden. Je ziet het todoscherm van de applicatie voor je.&lt;/p&gt;
+&lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case4/gebruikers.js&quot;. In dit bestand worden een aantal gebruikersobjecten gecreerd. Een meer gebruikelijke manier om dit te doen is middels het JSON formaat. Schrijf de huidige manier van objectdeclaratie om naar de JSON notatie. Doe ditzelfde voor todos.js. Refresh de browser om te controleren of pagina nog werkt, nadat je de bestanden hebt omgeschreven.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 ]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
