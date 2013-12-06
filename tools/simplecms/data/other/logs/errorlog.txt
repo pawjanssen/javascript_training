@@ -38,3 +38,9 @@
 [22-Nov-2013 16:08:58 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
 [22-Nov-2013 16:27:15 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
 [22-Nov-2013 16:27:15 Europe/Berlin] PHP Warning:  SimpleXMLElement::asXML(/home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/data/other/pages.xml): failed to open stream: Permission denied in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/inc/caching_functions.php on line 289
+[22-Nov-2013 16:30:46 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 16:30:46 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 16:30:59 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 16:30:59 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 16:31:06 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
+[22-Nov-2013 16:31:06 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/a168100/IdeaProjects/js-cursus/javascript_training/tools/simplecms/admin/inc/basic.php on line 312
