@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Fri, 06 Dec 2013 13:28:35 +0100</pubDate><title><![CDATA[Case 3 - Structurering bestanden - Uitwerkingen]]></title><url><![CDATA[case-3-structurering-bestanden-uitwerkingen]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 3 - Uitwerkingen]]></menu><menuOrder><![CDATA[5]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;p&gt;&lt;a href=&quot;data/uploads/case3-uitwerkingen.zip&quot;&gt;Download de sources van de uitwerkingen&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Opdracht 1 - Structurering&lt;/h2&gt;
+&lt;h3&gt;1. Wat is de functie van de TodoView?&lt;/h3&gt;
+&lt;p&gt;De TodoView is een functie die geinstantieerd kan worden en de mogelijkheid biedt todo- en gebruikerobjecten te renderen. Deze class bevat alle logica die nodig is om beide soorten data aan de DOM toe te voegen.&lt;/p&gt;
+&lt;h3&gt;2. Wat is de functie van de eventlistener die op het window wordt geplaatst?&lt;/h3&gt;
+&lt;p&gt;De &quot;load&quot; of &quot;onload&quot; eventlistener die op het window geplaatst wordt zorgt ervoor dat de code die in de callback van de eventlistener staat (renderTodos en renderGebruikers) pas wordt uitgevoerd wanneer de browser klaar is met het laden van de huidige window. Dit houdt in dat de DOM en mogelijke plaatjes e.d. zijn ingeladen. De browser vuurt dan een &quot;load&quot; event af. Op dat moment kun je er als javascript programmeur vanuit gaan dat andere javascript files zijn ingeladen, en kun je tevens beginnen met het manipuleren van de DOM.&lt;/p&gt;
+&lt;h3&gt;3. In hoeveel delen zou je dit bestand opsplitsen?&lt;/h3&gt;
+&lt;p&gt;Er zijn 4 stukken code te onderscheiden in de init.js. Bovenaan wordt begonnen met het declareren van de TodoView (1). Daarna worden todo data objecten aangemaakt die aan een Array worden toegevoegd (2). Dit wordt vervolgens tevens voor gebruikers gedaan (3). Onderaan wordt vervolgens de TodoView geinstantieerd en wordt de applicatie gestart als de browser klaar is met het laden van het window (4). Als je deze stukken zou opsplitsen, zou je op onderstaande 4 stukken uitkomen:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;TodoView.js&lt;/li&gt;
+	&lt;li&gt;todos.js&lt;/li&gt;
+	&lt;li&gt;gebruikers.js&lt;/li&gt;
+	&lt;li&gt;init.js&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Opdracht 2 - Betere manier van inladen&lt;/h2&gt;
+&lt;h3&gt;1. Refresh vervolgens je browser, wat gebeurd er nu?&lt;/h3&gt;
+&lt;p&gt;De pagina werkt niet meer naar behoren. Gebruikers en todos worden niet meer op de pagina gerenderd.&lt;/p&gt;
+&lt;h3&gt;2. Waarom denk je dat de pagina nu niet meer werkt zoals die werkte met de eventlistener?&lt;/h3&gt;
+&lt;p&gt;De eventlistener zorgde ervoor dat de code in de callback (renderTodos en renderGebruikers) pas werd uitgevoerd als de browser klaar was met het laden van het window. Omdat deze code nu wordt uitgevoerd zodra init.js is geladen, maar de DOM nog niet klaar is met laden, zal er een fout optreden in de TodoView. Waarschijnlijk zal alle code die de DOM manipuleert niet/niet correct uitgevoerd worden.&lt;/p&gt;
+&lt;h3&gt;3. Hoe zorg je ervoor dat de pagina weer werkt als voorheen, zonder de eventlistener terug te plaatsen? Probeer dit uit, en refresh de pagina om te verifieren of alles weer werkt als voorheen.&lt;/h3&gt;
+&lt;p&gt;De browser zorgt ervoor dat items die in een HTML file staan zo snel mogelijk uitgevoerd/gerenderd worden. Dit betekend dat als je de script tags die in de HEAD staan verplaatst naar onderaan de body (dus voor de &amp;lt;/body&amp;gt; tag), de browser eerst de DOM zal laden en renderen aangezien die eerder in de HTML staat dan de script tags. Dit betekend dat de &quot;load&quot; eventlistener in de javascript niet meer nodig is, aangezien de DOM reeds gerenderd is in het browserwindow op het moment dat de init.js wordt uitgevoerd.&lt;/p&gt;
+&lt;h3&gt;4. Welke voordelen biedt de oplossing die je in vraag 3 hebt bedacht nog meer?&lt;/h3&gt;
+&lt;p&gt;Als de scripts onderaan staan, dan zal de browser al beginnen met het renderen van de HTML. De pagina lijkt voor de gebruiker dan meer responsive, aangezien deze meteen een pagina voor zijn neus krijgt.&lt;/p&gt;
+&lt;p&gt;Daarnaast schrijft de HTTP/1.1 specificatie voor dat er maximaal 2 bestanden per hostname in parallel worden gedownload. Op het moment dat een pagina een aantal plaatjes en scripts bevat, dan worden er maximaal 2 stuks tegelijk ingeladen. Als je in dit geval meer dan 2 plaatjes tegelijk zou willen laten downloaden door de browser, dan zou je deze kunnen spreiden over meerdere hosts. Echter werkt deze optie niet voor het inladen van meer dan 2 javascript files tegelijk, aangezien de browser geen andere parallele downloads start op het moment dat een javascript bestand wordt gedownload. Door de bestanden onderaan te plaatsen, zorg je ervoor dat deze javscript downloads andere mogelijke downloads (plaatjes, html) niet blokkeren.&lt;/p&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
