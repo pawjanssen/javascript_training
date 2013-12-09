@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Mon, 09 Dec 2013 14:44:09 +0100</pubDate><title><![CDATA[Case 6 - Inheritance &amp; Scoping]]></title><url><![CDATA[case-6-prototyping]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 6 - Prototyping]]></menu><menuOrder><![CDATA[8]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item><pubDate>Mon, 09 Dec 2013 15:35:15 +0100</pubDate><title><![CDATA[Case 6 - Inheritance &amp; Scoping]]></title><url><![CDATA[case-6-prototyping]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 6 - Inheritance &amp; Scoping]]></menu><menuOrder><![CDATA[8]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case6.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 6 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je met inheritance omgaat en in welke scope objecten zitten die je aanmaakt. Het doel van deze opdracht is het leren van omgaan met inheritence van objecten middels prototyping. Tevens leer je in deze opdracht hoe je ervoor zorgt dat niet alle objecten die je maakt in de global scope terecht komen.&lt;/p&gt;
@@ -16,9 +16,13 @@
 	&lt;li&gt;Refresh nogmaals de browser, als je stap 5 goed hebt gedaan zie je nu &quot;TodoView&quot; als prefix voor de logregel.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;Overriden methods&lt;/h3&gt;
-&lt;ol&gt;
-	&lt;li&gt;&amp;nbsp;&lt;/li&gt;
+&lt;ol start=&quot;7&quot;&gt;
+	&lt;li&gt;Alle logregels die vanuit de TodoView gelogd worden, dienen nu tevens de lengte van de Array te loggen. Om dit te bewerkstelligen moet je de logVariable methode overriden in de TodoView. Doe dit, en zorg er tevens voor dat de logVariable methode uit de View class (de parent of superclass) wordt aangeroepen. Voer daarna het tweede log statement uit in de overridden methode. Het aantal element van een Array kun je opvragen via de &quot;length&quot; property. Als je de browser refreshed dien je in de console log van je browser het volgende te zien:&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;tt&gt;&lt;em&gt;TodoView - {&quot;id&quot;:1,&quot;titel&quot;:&quot;Afmaken opdracht 1&quot;,...&lt;br /&gt;
+	Aantal items gerenderd: 2&lt;/em&gt;&lt;br /&gt;
+	&lt;em&gt;TodoView - {&quot;id&quot;:1,&quot;naam&quot;:&quot;J. Script&quot;,&quot;gebruikersnaam&quot;:&quot;jscript&quot;...&lt;br /&gt;
+	Aantal items gerenderd: 3&lt;/em&gt;&lt;/tt&gt;&lt;/p&gt;
 &lt;h2&gt;&lt;br /&gt;
 	Opdracht 2 - Scoping&lt;/h2&gt;
 &lt;p&gt;Voor deze opdracht is er een View.js gedefinieerd. In deze file zie je op dit moment een constructor function staan die een viewNaam accepteerd. De bedoeling is dat we een View class maken waaraan we wat generieke view functionaliteiten aan gaan toevoegen. Doorloop onderstaande stappen om de opdracht te voltooien.&lt;/p&gt;
