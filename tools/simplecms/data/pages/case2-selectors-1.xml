@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 06 Dec 2013 10:40:25 +0100</pubDate><title><![CDATA[Case 5 - Advanced dom manipulatie]]></title><url><![CDATA[case2-selectors-1]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 5 - Advanced dom manipulatie]]></menu><menuOrder><![CDATA[6]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
+<item><pubDate>Mon, 09 Dec 2013 00:12:34 +0100</pubDate><title><![CDATA[Case 5 - Advanced dom manipulatie]]></title><url><![CDATA[case2-selectors-1]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 5 - Advanced dom manipulatie]]></menu><menuOrder><![CDATA[6]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case2.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 5 staan.&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;Zojuist is verteld hoe je middels selectors elementen uit de DOM kunt selecteren om ze vervolgens te kunnen bewerken. Het doel van deze opdracht is te leren hoe de selectors werken en hoe op een pagina op verschillende manieren DOM elementen zijn te selecteren. Tevens leer je in deze opdrachten hoe je over geselecteerde DOM elementen itereert en hoe je hier basic operaties op uitvoert (tekst aanpassen en verwijderen).&lt;/p&gt;
+&lt;p&gt;Zojuist is verteld hoe je DOM manipulatie kunt uitvoeren aan de hand van JQuery en JQuery UI. Doel van deze opdracht is om met JQuery dom elementen aan te passen en te verplaatsen. Ook zullen er wat kleine verwijzingen terug komen van de vorige opdrachten&lt;/p&gt;
 &lt;h2&gt;&lt;em&gt;Opdracht 1 - Queryen DOM Elementen&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case5/template.html&quot; om de tweede case te laden. Je ziet de todo lijst van de applicatie voor je. In deze todolijst staan 3 Todo met 3 verschillende titels. De de opdracht is om te zorgen dat de Todo&#039;s kunnen wat hun titels zegt.&lt;/p&gt;
+&lt;p&gt;1. Drag me: Deze mag overal naartoe te slepen zijn&lt;br /&gt;
+	2. Can&#039;t be Dragged: Deze mag niet te slepen zijn&lt;br /&gt;
+	3. Can&#039;t get out of todolijst: Deze mag te slepen zijn maar niet uit de lijst met todo&#039;s&lt;/p&gt;
+&lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case5/js/todoView.js&quot;. Zdorg ervoor dat je voor deze opdracht alle TODO&#039;s&amp;nbsp; wegwerkt/oplost.&lt;/p&gt;
+&lt;p&gt;Gebruik het bestand &quot;template.html&quot; om de nodige attributen/id&#039;s te gebruiken of toe tevoegen om de opdracht te voltooien.&lt;/p&gt;
+&lt;p&gt;Zorg ervoor dat je na het oplossen van een todo, in je browser de pagina refreshed en controleert of het resultaat is wat je verwacht had. Mochten er dingen niet werken, dan kom je hier tevens zo snel mogelijk achter en kun je dit meteen oplossen.&lt;/p&gt;
 &lt;h2&gt;Opdracht 2 - Extra opdracht&lt;/h2&gt;
 &lt;p&gt;Draggable opnieuw initialiseren naar toevoegen nieuw element&lt;/p&gt;
 ]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>

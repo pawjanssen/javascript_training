@@ -8,19 +8,9 @@ TodoView.prototype.renderTemplate = function() {
 }
 
 TodoView.prototype.todosDraggable = function () {
-    $("div.todoDrag.high").draggable({ revert: true ,
-        helper: "clone"});
-
-    $("div.todoDrag.low").draggable({ revert: true ,
-        containment: ".dragContainer",
-        helper: "clone"});
+    // TODO Maak de todo's draggable en zorg de ze kunnen wat in de todo zelf staat.
 };
 
 TodoView.prototype.gebruikersDroppable = function () {
-    $("#gebruikerslijst li").droppable({
-        hoverClass: "todoOverGebruiker",
-        drop: function( event, ui ) {
-            console.log(this);
-        }
-    });
+    // TODO de gebruikers lijst droppable maken, laat met een console log zien op welke user je de todo sleept.
 };
