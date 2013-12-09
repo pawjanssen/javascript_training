@@ -12,9 +12,9 @@ todosScriptTag.setAttribute("src", "js-uitwerkingen/todos.js");
 
 var todoViewScriptTag = document.createElement("script");
 todoViewScriptTag.setAttribute("type", "text/javascript");
-todoViewScriptTag.setAttribute("src", "js-uitwerkingen/TodoView.js");
+todoViewScriptTag.setAttribute("src", "js-uitwerkingen/TodoView-opdracht-1.js");
 
-// Als TodoView.js geladen is, kunnen we de class die in die file staat pas instantieren
+// Als TodoView-opdracht-1.js geladen is, kunnen we de class die in die file staat pas instantieren
 todoViewScriptTag.onload = function() {
     var todoViewInstance = new TodoView();
 
@@ -33,5 +33,5 @@ todoViewScriptTag.onload = function() {
     body.appendChild(gebruikersScriptTag);
 };
 
-// Als dit initialisatiescript wordt uitgevoerd, starten we met het laden van TodoView.js
+// Als dit initialisatiescript wordt uitgevoerd, starten we met het laden van TodoView-opdracht-1.js
 body.appendChild(todoViewScriptTag);
