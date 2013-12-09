@@ -1,3 +1,6 @@
 *.iml
 atlassian-ide-plugin.xml
 .idea
+errorlog.txt
+failedlogins.log
+sitemap.xml
