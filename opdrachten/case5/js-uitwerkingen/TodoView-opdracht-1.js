@@ -19,7 +19,7 @@ TodoView.prototype.gebruikersDroppable = function () {
     $("#gebruikerslijst li").droppable({
         hoverClass: "todoOverGebruiker",
         drop: function( event, ui ) {
-            console.log(this);
+            console.log($(this).find(".naam").text());
         }
     });
 };
