@@ -22,12 +22,13 @@ TodoView.prototype.gebruikersDroppable = function () {
     });
 };
 
-TodoView.prototype.clickhandlersTodoPageToepassen = function () {
+TodoView.prototype.clickhandlersTodoToevoegen = function () {
+    var _this = this;
     $("a.nieuwetodo").click(function() {
-        var _this = this;
         var liClone = $("#todolijst li.clonable").clone();
         liClone.find("span.todoTitle").text("nieuwe todo");
-        liClone.find("span.todoCreated").text(liClone.find("span.todoCreated").text("Vandaag"));
+        liClone.find("span.todoCreated").text(liClone.find("span.todoCreated").text() + "Vandaag");
+        liClone.find("div.alert").addClass("medium")
         liClone.removeClass("clonable")
         liClone.appendTo("#todolijst");
         _this.todosDraggable();
