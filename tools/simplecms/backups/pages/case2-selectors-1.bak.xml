@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Mon, 09 Dec 2013 14:36:33 +0100</pubDate><title><![CDATA[Case 5 - Advanced dom manipulatie]]></title><url><![CDATA[case2-selectors-1]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 5 - Advanced dom manipulatie]]></menu><menuOrder><![CDATA[6]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item>
+    <pubDate>Fri, 13 Dec 2013 15:00:28 +0100</pubDate>
+    <title><![CDATA[Case 5 - Advanced dom manipulatie]]></title>
+    <url><![CDATA[case2-selectors-1]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 5 - Advanced dom manipulatie]]></menu>
+    <menuOrder><![CDATA[0]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[]]></parent>
+    <content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case5.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 5 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je DOM manipulatie kunt uitvoeren aan de hand van JQuery en JQuery UI. Doel van deze opdracht is om met JQuery dom elementen aan te passen en te verplaatsen. Ook zullen er wat kleine verwijzingen terug komen van de vorige opdrachten&lt;/p&gt;
@@ -22,4 +33,7 @@
 	&lt;li&gt;Maak een instance methode die ervoor zorgt dat alle Todo&#039;s in de lijst draggable worden. De todo&#039;s mogen niet fisiek verplaatst worden. Dus na het slepen van een todo moet hij gewoon terug gaan naar zijn oorspronkelijke positie.&lt;/li&gt;
 	&lt;li&gt;Maak een instance methode die ervoor zorgt dat de todo&#039;s op de gebruikers gedropt kunnen worden. Bewijs het met een console log met de naam van de gebruiker waar hij op is gedropt.&lt;/li&gt;
 &lt;/ol&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>
