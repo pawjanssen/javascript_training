@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 13 Dec 2013 13:48:32 +0100</pubDate><title><![CDATA[Case 6 - Inheritance &amp; Scoping]]></title><url><![CDATA[case-6-prototyping]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 6 - Inheritance &amp; Scoping]]></menu><menuOrder><![CDATA[8]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item>
+    <pubDate>Fri, 13 Dec 2013 13:48:32 +0100</pubDate>
+    <title><![CDATA[Case 6 - Inheritance &amp; Scoping]]></title>
+    <url><![CDATA[case-6-prototyping]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 6 - Inheritance &amp; Scoping]]></menu>
+    <menuOrder><![CDATA[8]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[]]></parent>
+    <content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case6.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 6 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je inheritance via prototyping werkt in javascript en in welke scope objecten zitten die je aanmaakt. Tevens is je net uitgelegd hoe het module pattern werkt. Het doel van deze opdracht is het leren van omgaan met inheritence van objecten middels prototyping. Tevens leer je in deze opdracht hoe je ervoor zorgt dat niet alle objecten die je maakt in de global scope terecht komen.&lt;/p&gt;
@@ -39,4 +50,7 @@
 	&lt;li&gt;Denk goed na over de publieke API van de modules. Niet alle interne code hoeft van buiten de module benaderbaar te zijn.&lt;/li&gt;
 	&lt;li&gt;Als je de opdracht goed hebt uitgevoerd, zijn alleen module variabelen en de publieke API&#039;s van de modules die hebt gemaakt beschikbaar in de global scope. Zo zal de View class, TodoView class en de todoViewInstance in de init.js niet meer beschikbaar moeten zijn in de global scope. Toon dit aan/controleer door stap 2 te herhalen. De View class zou je helemaal niet meer moeten kunnen achterhalen middels FireBug.&lt;/li&gt;
 &lt;/ul&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>

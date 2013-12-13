@@ -1,2 +1,207 @@
 <?xml version="1.0"?>
-<channel><item><url>case-4-objecten-en-functies</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:00:17 +0100]]></pubDate><title><![CDATA[Case 4 - Objecten en functies]]></title><url><![CDATA[case-4-objecten-en-functies]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 4 - Objecten en functies]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case-4-objecten-en-functies]]></slug><filename><![CDATA[case-4-objecten-en-functies.xml]]></filename></item><item><url>index</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:01:04 +0100]]></pubDate><title><![CDATA[Home]]></title><url><![CDATA[index]]></url><meta><![CDATA[getsimple, easy, content management system]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Home]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[index]]></slug><filename><![CDATA[index.xml]]></filename></item><item><url>case-3-structurering-bestanden</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:00:08 +0100]]></pubDate><title><![CDATA[Case 3 - Structurering bestanden]]></title><url><![CDATA[case-3-structurering-bestanden]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 3 - Structurering bestanden]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case-3-structurering-bestanden]]></slug><filename><![CDATA[case-3-structurering-bestanden.xml]]></filename></item><item><url>case2-selectors-1</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:00:28 +0100]]></pubDate><title><![CDATA[Case 5 - Advanced dom manipulatie]]></title><url><![CDATA[case2-selectors-1]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 5 - Advanced dom manipulatie]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case2-selectors-1]]></slug><filename><![CDATA[case2-selectors-1.xml]]></filename></item><item><url>case-6-uitwerkingen</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:00:37 +0100]]></pubDate><title><![CDATA[Case 6 - Uitwerkingen]]></title><url><![CDATA[case-6-uitwerkingen]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 6 - Uitwerkingen]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[case-6-prototyping]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case-6-uitwerkingen]]></slug><filename><![CDATA[case-6-uitwerkingen.xml]]></filename></item><item><url>case-7-ajax-requests</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:00:41 +0100]]></pubDate><title><![CDATA[Case 7 - Ajax Requests]]></title><url><![CDATA[case-7-ajax-requests]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 7 - Ajax Requests]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case-7-ajax-requests]]></slug><filename><![CDATA[case-7-ajax-requests.xml]]></filename></item><item><url>case1-opzetten-omgeving</url><pubDate><![CDATA[Fri, 13 Dec 2013 14:59:51 +0100]]></pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case1-opzetten-omgeving]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case1-opzetten-omgeving]]></slug><filename><![CDATA[case1-opzetten-omgeving.xml]]></filename></item><item><url>case-4-uitwerkingen</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:00:24 +0100]]></pubDate><title><![CDATA[Case 4 - Uitwerkingen]]></title><url><![CDATA[case-4-uitwerkingen]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 4 - Uitwerkingen]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[case-4-objecten-en-functies]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case-4-uitwerkingen]]></slug><filename><![CDATA[case-4-uitwerkingen.xml]]></filename></item><item><url>case-8-amd</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:08:22 +0100]]></pubDate><title><![CDATA[Case 8 - AMD]]></title><url><![CDATA[case-8-amd]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 8 - AMD]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case-8-amd]]></slug><filename><![CDATA[case-8-amd.xml]]></filename></item><item><url>case1-selectors</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:00:03 +0100]]></pubDate><title><![CDATA[Case 2 - Selectors en de DOM]]></title><url><![CDATA[case1-selectors]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 2 - Selectors en de DOM]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case1-selectors]]></slug><filename><![CDATA[case1-selectors.xml]]></filename></item><item><url>case-6-prototyping</url><pubDate><![CDATA[Fri, 13 Dec 2013 13:48:32 +0100]]></pubDate><title><![CDATA[Case 6 - Inheritance &amp; Scoping]]></title><url><![CDATA[case-6-prototyping]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 6 - Inheritance &amp; Scoping]]></menu><menuOrder><![CDATA[8]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case-6-prototyping]]></slug><filename><![CDATA[case-6-prototyping.xml]]></filename></item><item><url>case-3-structurering-bestanden-uitwerkingen</url><pubDate><![CDATA[Fri, 13 Dec 2013 15:00:12 +0100]]></pubDate><title><![CDATA[Case 3 - Structurering bestanden - Uitwerkingen]]></title><url><![CDATA[case-3-structurering-bestanden-uitwerkingen]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 3 - Uitwerkingen]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[case-3-structurering-bestanden]]></parent><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author><slug><![CDATA[case-3-structurering-bestanden-uitwerkingen]]></slug><filename><![CDATA[case-3-structurering-bestanden-uitwerkingen.xml]]></filename></item></channel>
+<channel>
+    <item>
+        <url>case-4-objecten-en-functies</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:00:17 +0100]]></pubDate>
+        <title><![CDATA[Case 4 - Objecten en functies]]></title>
+        <url><![CDATA[case-4-objecten-en-functies]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 4 - Objecten en functies]]></menu>
+        <menuOrder><![CDATA[40]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case-4-objecten-en-functies]]></slug>
+        <filename><![CDATA[case-4-objecten-en-functies.xml]]></filename>
+    </item>
+    <item>
+        <url>index</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:01:04 +0100]]></pubDate>
+        <title><![CDATA[Home]]></title>
+        <url><![CDATA[index]]></url>
+        <meta><![CDATA[getsimple, easy, content management system]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Home]]></menu>
+        <menuOrder><![CDATA[1]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[index]]></slug>
+        <filename><![CDATA[index.xml]]></filename>
+    </item>
+    <item>
+        <url>case-3-structurering-bestanden</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:00:08 +0100]]></pubDate>
+        <title><![CDATA[Case 3 - Structurering bestanden]]></title>
+        <url><![CDATA[case-3-structurering-bestanden]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 3 - Structurering bestanden]]></menu>
+        <menuOrder><![CDATA[30]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case-3-structurering-bestanden]]></slug>
+        <filename><![CDATA[case-3-structurering-bestanden.xml]]></filename>
+    </item>
+    <item>
+        <url>case2-selectors-1</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:00:28 +0100]]></pubDate>
+        <title><![CDATA[Case 5 - Advanced dom manipulatie]]></title>
+        <url><![CDATA[case2-selectors-1]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 5 - Advanced dom manipulatie]]></menu>
+        <menuOrder><![CDATA[50]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case2-selectors-1]]></slug>
+        <filename><![CDATA[case2-selectors-1.xml]]></filename>
+    </item>
+    <item>
+        <url>case-6-uitwerkingen</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:00:37 +0100]]></pubDate>
+        <title><![CDATA[Case 6 - Uitwerkingen]]></title>
+        <url><![CDATA[case-6-uitwerkingen]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 6 - Uitwerkingen]]></menu>
+        <menuOrder><![CDATA[61]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[case-6-prototyping]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case-6-uitwerkingen]]></slug>
+        <filename><![CDATA[case-6-uitwerkingen.xml]]></filename>
+    </item>
+    <item>
+        <url>case-7-ajax-requests</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:00:41 +0100]]></pubDate>
+        <title><![CDATA[Case 7 - Ajax Requests]]></title>
+        <url><![CDATA[case-7-ajax-requests]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 7 - Ajax Requests]]></menu>
+        <menuOrder><![CDATA[70]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case-7-ajax-requests]]></slug>
+        <filename><![CDATA[case-7-ajax-requests.xml]]></filename>
+    </item>
+    <item>
+        <url>case1-opzetten-omgeving</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 14:59:51 +0100]]></pubDate>
+        <title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title>
+        <url><![CDATA[case1-opzetten-omgeving]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 1 - Opzet van omgeving]]></menu>
+        <menuOrder><![CDATA[10]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case1-opzetten-omgeving]]></slug>
+        <filename><![CDATA[case1-opzetten-omgeving.xml]]></filename>
+    </item>
+    <item>
+        <url>case-4-uitwerkingen</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:00:24 +0100]]></pubDate>
+        <title><![CDATA[Case 4 - Uitwerkingen]]></title>
+        <url><![CDATA[case-4-uitwerkingen]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 4 - Uitwerkingen]]></menu>
+        <menuOrder><![CDATA[41]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[case-4-objecten-en-functies]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case-4-uitwerkingen]]></slug>
+        <filename><![CDATA[case-4-uitwerkingen.xml]]></filename>
+    </item>
+    <item>
+        <url>case-8-amd</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:08:22 +0100]]></pubDate>
+        <title><![CDATA[Case 8 - AMD]]></title>
+        <url><![CDATA[case-8-amd]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 8 - AMD]]></menu>
+        <menuOrder><![CDATA[80]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case-8-amd]]></slug>
+        <filename><![CDATA[case-8-amd.xml]]></filename>
+    </item>
+    <item>
+        <url>case1-selectors</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:00:03 +0100]]></pubDate>
+        <title><![CDATA[Case 2 - Selectors en de DOM]]></title>
+        <url><![CDATA[case1-selectors]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 2 - Selectors en de DOM]]></menu>
+        <menuOrder><![CDATA[20]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case1-selectors]]></slug>
+        <filename><![CDATA[case1-selectors.xml]]></filename>
+    </item>
+    <item>
+        <url>case-6-prototyping</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 13:48:32 +0100]]></pubDate>
+        <title><![CDATA[Case 6 - Inheritance &amp; Scoping]]></title>
+        <url><![CDATA[case-6-prototyping]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 6 - Inheritance &amp; Scoping]]></menu>
+        <menuOrder><![CDATA[60]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case-6-prototyping]]></slug>
+        <filename><![CDATA[case-6-prototyping.xml]]></filename>
+    </item>
+    <item>
+        <url>case-3-structurering-bestanden-uitwerkingen</url>
+        <pubDate><![CDATA[Fri, 13 Dec 2013 15:00:12 +0100]]></pubDate>
+        <title><![CDATA[Case 3 - Structurering bestanden - Uitwerkingen]]></title>
+        <url><![CDATA[case-3-structurering-bestanden-uitwerkingen]]></url>
+        <meta><![CDATA[]]></meta>
+        <metad><![CDATA[]]></metad>
+        <menu><![CDATA[Case 3 - Uitwerkingen]]></menu>
+        <menuOrder><![CDATA[31]]></menuOrder>
+        <menuStatus><![CDATA[Y]]></menuStatus>
+        <template><![CDATA[template.php]]></template>
+        <parent><![CDATA[case-3-structurering-bestanden]]></parent>
+        <private><![CDATA[]]></private>
+        <author><![CDATA[jsadmin]]></author>
+        <slug><![CDATA[case-3-structurering-bestanden-uitwerkingen]]></slug>
+        <filename><![CDATA[case-3-structurering-bestanden-uitwerkingen.xml]]></filename>
+    </item>
+</channel>
