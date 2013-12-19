@@ -11,47 +11,20 @@ var settingsInstance = {
     loadTemplate: function(templateElement, template, successCallBack) {
         var request = new XMLHttpRequest();
         request.onreadystatechange = function() {
+            if (request.readyState == 2) {
+
+            }
             if (request.readyState == 4 && request.status == 200)
             {
                 templateElement.innerHTML = request.responseText;
                 successCallBack.call();
+            } else if (request.readyState == 4 && request.status == 404) {
+
             }
         };
 
         request.open("GET", template, true);
         request.send();
-    },
-    getJSON: function(url, successCallBack, failCallBack) {
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function() {
-            if (request.readyState == 4) {
-                if (request.status == 200) {
-                    successCallBack.call(window, JSON.parse(request.responseText));
-                } else {
-                    failCallBack.call();
-                }
-            }
-        };
-
-        request.open("GET", url, true);
-        request.send();
-    },
-    sendJSONToServer: function(method, url, data, successCallBack, failCallBack) {
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function() {
-            if (request.readyState == 4) {
-                if (request.status == 200) {
-                    successCallBack.call(window, JSON.parse(request.responseText));
-                } else {
-                    failCallBack.call();
-                }
-            }
-        };
-
-        request.open(method, url, true);
-        request.setRequestHeader("Content-Type", "application/json");
-
-        request.send(JSON.stringify(data));
     }
 };
 
