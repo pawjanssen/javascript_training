@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Mon, 09 Dec 2013 11:35:41 +0100</pubDate><title><![CDATA[Case 4 - Uitwerkingen]]></title><url><![CDATA[case-4-uitwerkingen]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 4 - Uitwerkingen]]></menu><menuOrder><![CDATA[5]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[case-4-objecten-en-functies]]></parent><content><![CDATA[&lt;p&gt;&lt;a href=&quot;data/uploads/case4-uitwerkingen.zip&quot;&gt;Download de sources van de uitwerkingen&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Opdracht 2 - Prototyping&lt;/h2&gt;
+<item>
+    <pubDate>Fri, 13 Dec 2013 15:00:24 +0100</pubDate>
+    <title><![CDATA[Case 4 - Uitwerkingen]]></title>
+    <url><![CDATA[case-4-uitwerkingen]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 4 - Uitwerkingen]]></menu>
+    <menuOrder><![CDATA[0]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[case-4-objecten-en-functies]]></parent>
+    <content><![CDATA[&lt;p&gt;&lt;a href=&quot;data/uploads/case4-uitwerkingen.zip&quot;&gt;Download de sources van de uitwerkingen&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Opdracht 2 - JSON&lt;/h2&gt;
 &lt;h3&gt;3. Welke constructor is er gedefinieerd op het prototype van het View object? Gebruik FireBug om het antwoord te bepalen.&lt;/h3&gt;
 &lt;p&gt;In FireBug kun je &amp;lt;Object&amp;gt;.prototype.constructor gebruiker om de constructor van een object te zien. De constructor van het View object is View.prototype.constructor. Deze geeft vervolgens View terug, de constructor function die gedeclareerd is in View.js&lt;/p&gt;
 &lt;h2&gt;Opdracht 3 - Extra opdracht&lt;/h2&gt;
 &lt;h3&gt;4. Als het goed is zie je een dergelijke logregel verschijnen: &quot;TodoView - [object Object],[object Object],[object Object]&quot;. Hoe denk je dat dit komt?&lt;/h3&gt;
 &lt;p&gt;De logregel die gebruikt wordt: &quot;console.log(this.viewNaam + &#039; - &#039; + variableToLog);&quot; logt een String. Voor object wordt de methode toString gebruikt om een Stringrepresentatie van het object te krijgen. Deze methode is op het Object.prototype gedeclareerd en geldt dus voor alle objecten. De default implementatie van deze methode geeft weer welk type object het betreft. In dit voorbeeld wordt de toString op de gebruikers array aangeroepen, waardoor je voor ieder object de String representatie ziet van het gebruikers object, in dit geval dus &quot;[object Object]&quot;. Als je een andere Stringrepresentatie van je object wil, dan zul je zelf de toString methode moeten overschrijven, wat je in stap 5 gedaan hebt.&lt;/p&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>

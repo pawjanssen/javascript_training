@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Mon, 09 Dec 2013 14:17:11 +0100</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case1-opzetten-omgeving]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
+<item>
+    <pubDate>Fri, 13 Dec 2013 14:59:51 +0100</pubDate>
+    <title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title>
+    <url><![CDATA[case1-opzetten-omgeving]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 1 - Opzet van omgeving]]></menu>
+    <menuOrder><![CDATA[1]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[]]></parent>
+    <content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case1.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe de Todo applicatie eruit ziet. Middels deze applicatie zul je alle cases in deze training gaan uitwerken.&lt;/p&gt;
 &lt;p&gt;Het doel van deze opdracht is te wennen aan de ontwikkelomgeving waarmee de cases ontwikkeld gaan worden. Na deze opdracht weet je hoe je bestanden kunt bewerken in de ontwikkelomgeving en weet je hoe je de webserver start waarmee in latere opdrachten data vandaan is te halen. Tevens weet je hoe je de Todo applicatie benaderd en hoe de REST service er globaal uitziet.&lt;/p&gt;
-&lt;h2&gt;&lt;em&gt;Opdracht 1 - Opstarten ontwikkelomgeving&lt;/em&gt;&lt;/h2&gt;
+&lt;h2&gt;Opdracht 1 - Configureren Virtual Machine&lt;/h2&gt;
+&lt;p&gt;Zorg ervoor dat VirtualBox geïnstalleerd is. Download deze als je deze nog niet hebt van de website: &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;https://www.virtualbox.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Als je VirtualBox hebt geopend, kies dan voor &quot;File -&amp;gt; Import appliance...&quot;. Start vervolgens de virtual machine.&lt;/p&gt;
+&lt;h2&gt;&lt;em&gt;Opdracht 2 - Opstarten ontwikkelomgeving&lt;/em&gt;&lt;/h2&gt;
 &lt;h3&gt;Stap 1&lt;/h3&gt;
 &lt;p&gt;Eerst dient de proxy geconfigureerd te worden. Deze stap zullen we even gezamelijk doen -&amp;gt; @Adriaan, in de reviewfase graag even in de terminal &lt;em&gt;sudo cntlm -u &amp;lt;userid&amp;gt;@ww930 -H&lt;/em&gt; uitvoeren en /etc/cntlm.conf aanpassen. Vervolgens cntlm restarten.&lt;/p&gt;
 &lt;h3&gt;Stap 2&lt;/h3&gt;
@@ -13,7 +27,7 @@
 &lt;h3&gt;Stap 3&lt;/h3&gt;
 &lt;p&gt;Links zie je alle project files staan. Hier staat nu een &quot;server&quot; directory en een lege &quot;opdrachten&quot; directory, hieraan voegen we per opdracht de sources toe. Open hiervoor middels het &quot;map&quot; icoontje in de balk onderaan in het scherm de file browser. Navigeer naar Downloads, als het goed is zie je hier de eerder gedownloade zip file die de sources voor deze case bevat.&lt;/p&gt;
 &lt;p&gt;Kopieer deze zip file naar de directory &quot;Home/WebstormProjects/javascript_training/opdrachten&quot;. Klik hierna met de rechter muisknop op de zip file en kies voor &quot;Extract here&quot;. Als je nu teruggaat naar WebStorm zie je in de &quot;opdrachten&quot; folder de zojuist uitgepakte sources van deze case erbij staan.&lt;/p&gt;
-&lt;h2&gt;Opdracht 2 - Starten van de server&lt;/h2&gt;
+&lt;h2&gt;Opdracht 3 - Starten van de server&lt;/h2&gt;
 &lt;p&gt;Als REST server gebruiken we NodeJS, deze verzorgt de mogelijkheden om data op te slaan en data op te halen. Tevens fungeert deze asl WebSocket server. Tijdens de cursus hoef je aan de serverkant niets te doen, echter dien je wel de server te starten en bekend te zijn met de REST structuur die we hebben opgezet.&lt;/p&gt;
 &lt;h3&gt;Stap 1&lt;/h3&gt;
 &lt;p&gt;Bovenin WebStorm naast de tekst &quot;NodeJS Server&quot; staan een &quot;Run&quot; en een&amp;nbsp; &quot;Debug&quot; knop. Gebruik de &quot;Run&quot; knop om de server op te starten.&lt;/p&gt;
@@ -31,4 +45,7 @@
 &lt;h3&gt;Stap 4&lt;/h3&gt;
 &lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case1/template.html&quot;. Zoek de &quot;select&quot; met als id &quot;gebruikersdropdown&quot; en voeg hier je eigen naam aan toe, op de manier zoals er nu reeds 3 namen staan. Reload de client die je in stap 3 in je browser hebt geladen. Als het goed is zie je in de dropdown nu de door jouw toegevoegde gebruikersnaam staan.&lt;/p&gt;
 &lt;p&gt;Je hebt waarschijnlijk gemerkt dat je niet de NodeJS server hebt hoeven restarten, of in WebStorm het bestand hebt moeten opslaan. Voor aanpassingen die je gedurende deze training doet zijn beide zaken niet nodig, NodeJS zorgt ervoor dat altijd de actuele bestanden van het filesystem worden geladen en WebStorm zorgt dat na het editen van files meteen een &quot;auto-save&quot; wordt uitgevoerd.&lt;/p&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 06 Dec 2013 12:56:22 +0100</pubDate><title><![CDATA[Case 3 - Structurering bestanden]]></title><url><![CDATA[case-3-structurering-bestanden]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 3 - Structurering bestanden]]></menu><menuOrder><![CDATA[4]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item>
+    <pubDate>Fri, 13 Dec 2013 15:00:08 +0100</pubDate>
+    <title><![CDATA[Case 3 - Structurering bestanden]]></title>
+    <url><![CDATA[case-3-structurering-bestanden]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 3 - Structurering bestanden]]></menu>
+    <menuOrder><![CDATA[0]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[]]></parent>
+    <content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case3.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 3 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je je javascript kunt opsplitsen in meerdere bestanden. Doel van deze opdracht is herkennen welke stukken javascript logischerwijs in een eigen bestand horen om zo de code overzichtelijk te houden. Daarnaast leer je over de volgordelijkheid van de in te laden code.&lt;/p&gt;
@@ -32,4 +43,7 @@
 	&lt;li&gt;Gebruik &lt;span style=&quot;font-family:courier new,courier,monospace;&quot;&gt;nieuweScriptTag.onload = function() {}&lt;/span&gt; om code uit te voeren als een script klaar is met laden. Dit mechanisme heet een callback.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>
