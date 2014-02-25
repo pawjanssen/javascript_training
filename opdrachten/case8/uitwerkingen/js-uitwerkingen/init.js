@@ -4,7 +4,7 @@
 
 // RequireJS configuratie
 require.config({
-    baseUrl: "js/lib",
+    baseUrl: "js-uitwerkingen/lib",
     shim: {
         "jquery.bootstrap": {
             deps: ['jquery']
@@ -32,7 +32,7 @@ require(["app/util/Navigatie", "app/util/Settings"], function(Navigatie, Setting
     });
 
     document.getElementById("todos").addEventListener("click", function(event){
-        event.preventDefault();
+        event.preventDefault ();
         Navigatie.loadController(Navigatie.historyState.todos, true);
     });
 

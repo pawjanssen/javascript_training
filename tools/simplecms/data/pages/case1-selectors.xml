@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item>
-    <pubDate>Fri, 13 Dec 2013 15:00:03 +0100</pubDate>
-    <title><![CDATA[Case 2 - Selectors en de DOM]]></title>
-    <url><![CDATA[case1-selectors]]></url>
-    <meta><![CDATA[]]></meta>
-    <metad><![CDATA[]]></metad>
-    <menu><![CDATA[Case 2 - Selectors en de DOM]]></menu>
-    <menuOrder><![CDATA[2]]></menuOrder>
-    <menuStatus><![CDATA[Y]]></menuStatus>
-    <template><![CDATA[template.php]]></template>
-    <parent><![CDATA[]]></parent>
-    <content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
+<item><pubDate>Fri, 13 Dec 2013 15:52:59 +0100</pubDate><title><![CDATA[Case 2 - Selectors en de DOM]]></title><url><![CDATA[case1-selectors]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 2 - Selectors en de DOM]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[case2-selectors-1]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case2.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 2 staan.&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je middels selectors elementen uit de DOM kunt selecteren om ze vervolgens te kunnen bewerken. Het doel van deze opdracht is te leren hoe de selectors werken en hoe op een pagina op verschillende manieren DOM elementen zijn te selecteren. Tevens leer je in deze opdrachten hoe je over geselecteerde DOM elementen itereert en hoe je hier basic operaties op uitvoert (tekst aanpassen en verwijderen).&lt;/p&gt;
@@ -21,7 +10,4 @@
 &lt;p&gt;Zorg ervoor dat je na het oplossen van een todo, in je browser de pagina refreshed en controleert of het resultaat is wat je verwacht had. Open tevens FireBug en controleer of de javascript console geen fouten weergeeft. Mochten er dingen niet werken, dan kom je hier tevens zo snel mogelijk achter en kun je dit meteen oplossen.&lt;/p&gt;
 &lt;h2&gt;Opdracht 2 - Extra opdracht&lt;/h2&gt;
 &lt;p&gt;Mocht je tijd overhebben na het maken van opdracht 1, dan kun je je middels deze extra opdracht verdiepen in andere selectors en andere mogelijkheden om over DOM elementen heen te itereren. Zorg ervoor dat je voor deze opdracht alle TODO&#039;s met het commentaar &quot;TODO-OPDRACHT-2&quot; wegwerkt/oplost.&lt;/p&gt;
-]]></content>
-    <private><![CDATA[]]></private>
-    <author><![CDATA[jsadmin]]></author>
-</item>
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>

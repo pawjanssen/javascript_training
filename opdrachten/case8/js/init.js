@@ -2,8 +2,10 @@
  * Applicatie initialisatie script
  */
 
+
 // RequireJS configuratie
-require.config({
+// COMMENTARIEER DEZE REGEL UIT VOOR STAP 3
+/*require.config({
     baseUrl: "js/lib",
     shim: {
         "jquery.bootstrap": {
@@ -16,10 +18,10 @@ require.config({
         'jquery-ui': "jquery-ui-1.10.3.custom.min",
         'jquery.bootstrap': 'bootstrap.min'
     }
-});
+});*/
 
 // Initialiseer de applicatie, injecteer daarbij de twee te gebruiker controllers
-require(["app/util/Navigatie", "app/util/Settings"], function(Navigatie, Settings) {
+(function(Navigatie, Settings) {
 
     // Popstate event wordt door de browser afgevuurd bij een history even (browser back buttons)
     window.addEventListener ('popstate', function (event) {
@@ -38,8 +40,8 @@ require(["app/util/Navigatie", "app/util/Settings"], function(Navigatie, Setting
 
     // Controleer of bij initiele load een hash met pagina id is gevuld, zo ja, load die controller, anders de default
     if (location.hash !== '' && Settings.currentUser != null) {
-        Navigatie.loadController(Navigatie.historyState[location.hash.replace("#","")], true);
+        Navigatie.loadController(Navigatie.historyState[location.hash.replace("#", "")], true);
     } else {
         Navigatie.loadController(Navigatie.historyState.gebruikerselectie, true);
     }
-});
+}(NavigatieModule, SettingsModule));
