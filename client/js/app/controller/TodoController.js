@@ -54,5 +54,5 @@ define(['app/view/TodoView', 'app/service/TodoStorage', 'app/service/GebruikersS
         },
 
         saveTodo: todoControllerInstance.saveTodo
-    }
+    };
 });

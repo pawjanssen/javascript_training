@@ -12,5 +12,5 @@ define(function(){
        pageTitle: "Javascript training - DEMO App",
        currentUser: null,
        webSocket: ws
-   }
+   };
 });

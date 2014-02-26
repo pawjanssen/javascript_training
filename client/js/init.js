@@ -18,6 +18,9 @@ require.config({
     }
 });
 
+var poep = asdf;
+poep.blaat();
+
 // Initialiseer de applicatie, injecteer daarbij de twee te gebruiker controllers
 require(["app/util/Navigatie", "app/util/Settings"], function(Navigatie, Settings) {
 

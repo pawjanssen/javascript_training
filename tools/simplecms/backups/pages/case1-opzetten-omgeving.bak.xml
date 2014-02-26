@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Tue, 25 Feb 2014 19:20:05 +0100</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case1-opzetten-omgeving]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[1]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
+<item><pubDate>Tue, 25 Feb 2014 19:59:11 +0100</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case1-opzetten-omgeving]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[1]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe de Todo applicatie eruit ziet. Middels deze applicatie zul je alle cases in deze training gaan uitwerken.&lt;/p&gt;
 &lt;p&gt;Het doel van deze opdracht is te wennen aan de ontwikkelomgeving waarmee de cases ontwikkeld gaan worden. Na deze opdracht weet je hoe je bestanden kunt bewerken in de ontwikkelomgeving en weet je hoe je de webserver start waarmee in latere opdrachten data vandaan is te halen. Tevens weet je hoe je de Todo applicatie benaderd en hoe de REST service er globaal uitziet.&lt;/p&gt;
 &lt;h2&gt;Opdracht 1 - Configureren Virtual Machine&lt;/h2&gt;
 &lt;p&gt;Zorg ervoor dat VirtualBox geïnstalleerd is. Download deze als je deze nog niet hebt van de website: &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;https://www.virtualbox.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Als je VirtualBox hebt geopend, kies dan voor &quot;File -&amp;gt; Import appliance...&quot;. Start vervolgens de virtual machine.&lt;/p&gt;
+&lt;p&gt;Als je VirtualBox hebt geopend, maak dan een nieuwe virtual machine aan. Gebruik in de wizard onderstaande waardes:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Name&lt;/strong&gt;: Javascript training&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt;: Linux&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Version&lt;/strong&gt;: Ubuntu&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Memory size&lt;/strong&gt;: 1024MB&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Use an existing virtual hard drive file&lt;/strong&gt;: gebruik de file die tijdens de training wordt aangereikt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Als de machine is aangemaakt, gebruik dan de settings om onderstaande waardes te configureren:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Display&lt;/strong&gt;: Enable 3D video acceleration&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Network&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;br /&gt;
+		&lt;em&gt;Attached to: Bridged Adapter&lt;br /&gt;
+		Name: de enige die er staat, anders even vragen welke je moet kiezen&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Start de virtual machine op. Als het goed is kom je in een Linux desktop omgeving terecht.&lt;/p&gt;
 &lt;h2&gt;&lt;em&gt;Opdracht 2 - Opstarten ontwikkelomgeving&lt;/em&gt;&lt;/h2&gt;
 &lt;h3&gt;Stap 1&lt;/h3&gt;
 &lt;p&gt;Eerst dient de proxy geconfigureerd te worden.&lt;/p&gt;
@@ -40,5 +55,5 @@
 &lt;p&gt;Probeer aan de hand van de REST documentatie die je net in de browser hebt bekeken de applicatie te benaderen. Hint: de pagina (het path) dat je moet laden is &quot;index.html&quot;. Als je deze stap succesvol uitvoert, verschijnt er een pagina waarop een gebruikerselectie is te maken in je browser.&lt;/p&gt;
 &lt;h3&gt;Stap 4&lt;/h3&gt;
 &lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case1/template.html&quot;. Zoek de &quot;select&quot; met als id &quot;gebruikersdropdown&quot; en voeg hier je eigen naam aan toe, op de manier zoals er nu reeds 3 namen staan. Reload de client die je in stap 3 in je browser hebt geladen. Als het goed is zie je in de dropdown nu de door jouw toegevoegde gebruikersnaam staan.&lt;/p&gt;
-&lt;p&gt;Je hebt waarschijnlijk gemerkt dat je niet de NodeJS server hebt hoeven restarten, of in WebStorm het bestand hebt moeten opslaan. Voor aanpassingen die je gedurende deze training doet zijn beide zaken niet nodig, NodeJS zorgt ervoor dat altijd de actuele bestanden van het filesystem worden geladen en WebStorm zorgt dat na het editen van files meteen een &quot;auto-save&quot; wordt uitgevoerd.&lt;/p&gt;
+&lt;p&gt;Je hebt waarschijnlijk gemerkt dat je niet de NodeJS server hebt hoeven restarten, of in WebStorm het bestand hebt moeten opslaan. Voor aanpassingen die je gedurende deze training doet zijn beide zaken niet nodig. NodeJS zorgt ervoor dat altijd de actuele bestanden van het filesystem worden geladen en WebStorm zorgt dat na het editen van files meteen een &quot;auto-save&quot; wordt uitgevoerd.&lt;/p&gt;
 ]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>

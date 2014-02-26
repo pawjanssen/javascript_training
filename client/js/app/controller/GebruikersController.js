@@ -34,5 +34,5 @@ define(['app/view/GebruikersView', 'app/service/GebruikersStorage', 'app/util/Se
                 gebruikersControllerInstance.getGebruikers();
             });
         }
-    }
+    };
 });

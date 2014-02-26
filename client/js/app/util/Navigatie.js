@@ -32,10 +32,10 @@ define(["app/controller/TodoController", "app/controller/GebruikersController", 
                 GebruikerSelectieController.init();
                 break;
         }
-    };
+    }
 
    return {
        historyState: historyState,
        loadController: loadController
-   }
+   };
 });
