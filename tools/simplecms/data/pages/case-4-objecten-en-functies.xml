@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item>
-    <pubDate>Fri, 13 Dec 2013 15:00:17 +0100</pubDate>
-    <title><![CDATA[Case 4 - Objecten en functies]]></title>
-    <url><![CDATA[case-4-objecten-en-functies]]></url>
-    <meta><![CDATA[]]></meta>
-    <metad><![CDATA[]]></metad>
-    <menu><![CDATA[Case 4 - Objecten en functies]]></menu>
-    <menuOrder><![CDATA[0]]></menuOrder>
-    <menuStatus><![CDATA[Y]]></menuStatus>
-    <template><![CDATA[template.php]]></template>
-    <parent><![CDATA[]]></parent>
-    <content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item><pubDate>Wed, 26 Feb 2014 19:42:57 +0100</pubDate><title><![CDATA[Case 4 - Objecten en functies]]></title><url><![CDATA[case-4-objecten-en-functies]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 4 - Objecten en functies]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case4.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 4 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je objecten en functies creeert en hoe je hier vervolgens gebruik van kunt maken. Het doel van deze opdracht is het leren van omgaan met objecten, zowel in JSON als &quot;normale&quot; notatie. In deze opdracht leer je ook over de verschillende manieren van property/methoddeclaratie binnen javascript.&lt;/p&gt;
+&lt;p&gt;Voer voor het uitvoeren van de opdracht het de commando&#039;s &quot;npm install&quot; en &quot;grunt watch&quot; uit. Zorg ervoor dat er gedurende de opdracht geen fouten van grunt op de console verschijnen. Je mag ook, i.p.v. het commando &quot;grunt watch&quot; na het uitvoeren van de opdrachten het &quot;grunt&quot; commando draaien, ook hierbij geldt, zorg ervoor dat grunt geen fouten aangeeft.&lt;/p&gt;
 &lt;h2&gt;Opdracht 1 - JSON&lt;/h2&gt;
 &lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case4/template.html&quot; om de vierde case te laden. Je ziet het todoscherm van de applicatie voor je.&lt;/p&gt;
 &lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case4/gebruikers.js&quot;. In dit bestand worden een aantal gebruikersobjecten gecreerd. Een meer gebruikelijke manier om dit te doen is middels het JSON formaat. Schrijf de huidige manier van objectdeclaratie om naar de JSON notatie. Doe ditzelfde voor todos.js. Refresh de browser om te controleren of pagina nog werkt, nadat je de bestanden hebt omgeschreven.&lt;/p&gt;
@@ -58,7 +48,4 @@
 	&lt;li&gt;Voer nogmaals stap 4 uit. Als het goed is zie je nu een dergelijke logregel verschijnen: &quot;TodoView - [ID: 1 - Gebruikersnaam: jscript],[ID: 2 - Gebruikersnaam: cscherp],[ID: 3 - Gebruikersnaam: scala]&quot;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-]]></content>
-    <private><![CDATA[]]></private>
-    <author><![CDATA[jsadmin]]></author>
-</item>
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>

@@ -3,42 +3,7 @@ module.exports = function (grunt) {
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'requirejs']);
-
-//    grunt.initConfig({
-//        'closure-compiler': {
-//            frontend: {
-//                closurePath: '/home/a166128/apps/closure-compiler',
-//                js: ['js/**/*.js', '!js/lib/*.js'],
-//                jsOutputFile: 'target/build.js',
-//                maxBuffer: 20000,
-//                options: {
-//                    compilation_level: 'SIMPLE_OPTIMIZATIONS',
-//                    language_in: 'ECMASCRIPT5_STRICT',
-//                    common_js_entry_module: 'js/init.js',
-//
-//                    externs: ['js/lib/*.js']
-//                }
-//            }
-//        }
-//    });
-
-    /*grunt.initConfig({
-     'closure-compiler': {
-     frontend: {
-     closurePath: '/home/a166128/apps/closure-compiler',
-     js: ['js/init.js'],
-     jsOutputFile: 'target/build.js',
-     maxBuffer: 20000,
-     options: {
-     compilation_level: 'SIMPLE_OPTIMIZATIONS',
-     language_in: 'ECMASCRIPT3',
-     warning_level: 'DEFAULT',
-     summary_detail_level: 3
-     }
-     }
-     }
-     });*/
+    grunt.registerTask('default', ['clean', 'htmlhint', 'jshint', 'requirejs']);
 
     grunt.initConfig({
         requirejs: {
@@ -89,7 +54,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['js/**/*.js'],
-                tasks: ['requirejs', 'closure-compiler']
+                tasks: ['jshint']
             }
         },
         'closure-compiler': {
@@ -120,7 +85,6 @@ module.exports = function (grunt) {
                     "newcap": true,
                     "noempty": true,
                     "unused": true,
-                    "strict": true,
                     "trailing": true,
                     "maxcomplexity": 3,
                     "asi": true,
