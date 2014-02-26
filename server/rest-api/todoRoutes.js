@@ -141,7 +141,7 @@ function moveTodo(request) {
 function getTodo(request) {
     var gebruiker = gebruikers.filter(function(p) {
         return p.id === parseInt(request.params.gebruikerID);
-    }).pop();
+    }).pop()
 
 
     var todo = gebruiker.todos.filter(function(p) {
