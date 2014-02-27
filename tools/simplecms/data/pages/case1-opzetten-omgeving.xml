@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Wed, 26 Feb 2014 19:39:40 +0100</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case1-opzetten-omgeving]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[1]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
+<item><pubDate>Thu, 27 Feb 2014 10:27:22 +0100</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case1-opzetten-omgeving]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[1]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe de Todo applicatie eruit ziet. Middels deze applicatie zul je alle cases in deze training gaan uitwerken.&lt;/p&gt;
 &lt;p&gt;Het doel van deze opdracht is te wennen aan de ontwikkelomgeving waarmee de cases ontwikkeld gaan worden. Na deze opdracht weet je hoe je bestanden kunt bewerken in de ontwikkelomgeving en weet je hoe je de webserver start waarmee in latere opdrachten data vandaan is te halen. Tevens weet je hoe je de Todo applicatie benaderd en hoe de REST service er globaal uitziet.&lt;/p&gt;
 &lt;h2&gt;Opdracht 1 - Configureren Virtual Machine&lt;/h2&gt;
@@ -47,16 +47,16 @@
 &lt;p&gt;Beantwoord onderstaande vragen:&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Welke entiteiten kunnen opgeslagen worden?&lt;/li&gt;
-	&lt;li&gt;Op welk pad is de client benaderbaar?&lt;/li&gt;
+	&lt;li&gt;Op welk pad is de opdracht benaderbaar?&lt;/li&gt;
 	&lt;li&gt;Welke URL roep je vermoedelijk aan als je Todo &quot;1&quot; van gebruiker &quot;1&quot; wilt ophalen? Probeer dit tevens uit, en controleer of het resultaat is wat je verwacht.&lt;/li&gt;
 	&lt;li&gt;Welke URL roep je vermoedelijk aan als je een nieuwe Todo aan gebruiker &quot;1&quot; wilt toevoegen? Beargumenteer je keuze.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;Stap 3&lt;/h3&gt;
-&lt;p&gt;Probeer aan de hand van de REST documentatie die je net in de browser hebt bekeken de applicatie te benaderen. Hint: de pagina (het path) dat je moet laden is &quot;index.html&quot;. Als je deze stap succesvol uitvoert, verschijnt er een pagina waarop een gebruikerselectie is te maken in je browser.&lt;/p&gt;
+&lt;p&gt;Probeer aan de hand van de REST documentatie die je net in de browser hebt bekeken de applicatie te benaderen. Hint: de pagina (het path) dat je moet laden is &quot;/opdrachten/case1/template.html&quot;. Als je deze stap succesvol uitvoert, verschijnt er een pagina waarop een gebruikerselectie is te maken in je browser.&lt;/p&gt;
 &lt;h3&gt;Stap 4&lt;/h3&gt;
 &lt;p&gt;Open in WebStorm het bestand &quot;opdrachten/case1/template.html&quot;. Zoek de &quot;select&quot; met als id &quot;gebruikersdropdown&quot; en voeg hier je eigen naam aan toe, op de manier zoals er nu reeds 3 namen staan. Reload de client die je in stap 3 in je browser hebt geladen. Als het goed is zie je in de dropdown nu de door jouw toegevoegde gebruikersnaam staan.&lt;/p&gt;
 &lt;p&gt;Je hebt waarschijnlijk gemerkt dat je niet de NodeJS server hebt hoeven restarten, of in WebStorm het bestand hebt moeten opslaan. Voor aanpassingen die je gedurende deze training doet zijn beide zaken niet nodig. NodeJS zorgt ervoor dat altijd de actuele bestanden van het filesystem worden geladen en WebStorm zorgt dat na het editen van files meteen een &quot;auto-save&quot; wordt uitgevoerd.&lt;/p&gt;
-&lt;h2&gt;Opdracht 3 - Omgaan met NPM/Grunt&lt;/h2&gt;
+&lt;h2&gt;Opdracht 4 - Omgaan met NPM/Grunt&lt;/h2&gt;
 &lt;p&gt;Het enige wat je voor nu hoeft te weten van NPM (Node Package Manager) en Grunt, is dat deze wat zaken makkelijker maken m.b.t. de ontwikkelomgeving. Middels NPM worden dependencies geregeld. Denk herbij aan libraries voor draaien van unittests (jasmine), code checking (JSHint) en een heuse compiler (Google&#039;s closure compiler).&lt;/p&gt;
 &lt;p&gt;Als je deze libraries eenmaal hebt, kun je ermee taken uitvoeren. Denk bijvoorbeeld aan het draaien van unittests of het daadwerkelijk checken van code. Grunt biedt de mogelijkheid taken te configureren en deze af te trappen.&lt;/p&gt;
 &lt;p&gt;De twee commando&#039;s die nu en in de volgende cases van belang zijn, zijn:&lt;/p&gt;

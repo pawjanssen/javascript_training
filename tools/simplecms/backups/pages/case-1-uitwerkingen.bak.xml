@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Thu, 27 Feb 2014 10:28:58 +0100</pubDate><title><![CDATA[Case 1 - Uitwerkingen]]></title><url><![CDATA[case-1-uitwerkingen]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Uitwerkingen]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[case1-opzetten-omgeving]]></parent><content><![CDATA[&lt;h2&gt;Opdracht 2 - Starten van de server&lt;/h2&gt;
+&lt;h3&gt;1. Welke entiteiten kunnen opgeslagen worden?&lt;/h3&gt;
+&lt;p&gt;Gebruikers en todos&lt;/p&gt;
+&lt;h3&gt;2. Op welk pad is de opdracht benaderbaar?&lt;/h3&gt;
+&lt;p&gt;http://localhost:8000/opdrachten/case1/template.html&lt;/p&gt;
+&lt;h3&gt;3. Welke URL roep je vermoedelijk aan als je Todo &quot;1&quot; van gebruiker &quot;1&quot; wilt ophalen?&lt;/h3&gt;
+&lt;p&gt;http://localhost:8000/gebruikers/1/todos/1&lt;/p&gt;
+&lt;h3&gt;4. Welke URL roep je vermoedelijk aan als je een nieuwe Todo aan gebruiker &quot;1&quot; wilt toevoegen?&lt;/h3&gt;
+&lt;p&gt;POST http://localhost:8000/gebruikers/1/todos&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;Opdracht 3 - Omgaan met NPM/Grunt&lt;/h2&gt;
+&lt;h3&gt;1. Waartoe dient het bestand package.json?&lt;/h3&gt;
+&lt;p&gt;In dit bestand staat algemene project informatie en de dependencies die door NPM gedownload worden bij het uitvoeren van het commando &quot;npm install&quot;&lt;/p&gt;
+&lt;h3&gt;&lt;br /&gt;
+	2. Waartoe dient het bestand Gruntfile.js?&lt;/h3&gt;
+&lt;p&gt;In de Gruntfile.js staan de taken geconfigureerd die door Grunt kunnen worden uitgevoerd. Tevens wordt aangegeven welke taken er als default moeten worden uitgevoerd. De default taak wordt uitgevoerd als het grunt commando zonder parameters wordt uitgevoerd. Alle taken kunnen los worden uitgevoerd middels et commando &quot;grunt &amp;lt;taaknaam&amp;gt;&quot;&lt;/p&gt;
+&lt;h3&gt;&lt;br /&gt;
+	3. Welke taken werden er door Grunt uitgevoerd?&lt;/h3&gt;
+&lt;p&gt;De default taken; clean en htmlhint&lt;/p&gt;
+&lt;h3&gt;&lt;br /&gt;
+	4. Welke taken zijn er door Grunt uit te voeren?&lt;/h3&gt;
+&lt;p&gt;clean, htmlhint en watch&lt;/p&gt;
+&lt;h3&gt;&lt;br /&gt;
+	5. Probeer te achterhalen wat de andere geconfigureerde taak inhoudt&lt;/h3&gt;
+&lt;p&gt;De watch taak zorgt ervoor dat er continue wordt gecontroleerd of de opgegeven bestanden worden gewijzigd. Als dat gebeurd, dan zal de geconfigureerde taak worden afgevuurt.&lt;/p&gt;
+&lt;h3&gt;&lt;br /&gt;
+	6. Pas de template.html zo aan, dat er twee elementen zijn met hetzelfde id-attribuut. Voer grunt uit en beschrijf wat er gebeurd.&lt;/h3&gt;
+&lt;p&gt;Grunt zal een error geven omdat de htmlhint taak niet succesvol is uitgevoerd. Htmlhint geeft vervolgens aan dat er een id-attribuut dubbel is gedeclareerd in de html file.&lt;/p&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>

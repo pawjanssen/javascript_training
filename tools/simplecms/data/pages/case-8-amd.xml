@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 24 Jan 2014 13:08:47 +0100</pubDate><title><![CDATA[Case 8 - AMD]]></title><url><![CDATA[case-8-amd]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 8 - AMD]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item><pubDate>Thu, 27 Feb 2014 07:28:01 +0100</pubDate><title><![CDATA[Case 8 - AMD]]></title><url><![CDATA[case-8-amd]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 8 - AMD]]></menu><menuOrder><![CDATA[12]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case8.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 8 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;In case 3 heb je geleerd hoe je functionaliteiten groepeerd in losse javascript files. In case 6 heb je geleerd hoe je met het module pattern scoping issues kunt voorkomen. Hoewel deze methodes een stuk in de juiste richting zijn voor de opzet van je applicatie zijn er toch nog enkele problemen:&lt;/p&gt;
@@ -49,4 +49,4 @@
 	&lt;li&gt;Als je de opdracht goed hebt uitgevoerd, zijn alleen module variabelen en de publieke API&#039;s van de modules die hebt gemaakt beschikbaar in de global scope. Zo zal de View class, TodoView class en de todoViewInstance in de init.js niet meer beschikbaar moeten zijn in de global scope. Toon dit aan/controleer door stap 2 te herhalen. De View class zou je helemaal niet meer moeten kunnen achterhalen middels FireBug.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Opdracht 3 - Minification met AMD&lt;/h2&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content><private><![CDATA[Y]]></private><author><![CDATA[jsadmin]]></author></item>
