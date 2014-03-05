@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'htmlhint', 'jshint:beforeconcat', 'concat', 'jshint:afterconcat']);
+    grunt.registerTask('default', ['clean', 'htmlhint', 'jshint:all']);
 
     grunt.initConfig({
         clean: ["target"],
@@ -54,17 +54,7 @@ module.exports = function (grunt) {
                 },
                 reporter: require('jshint-stylish')
             },
-            beforeconcat: ['js*/**/*.js', '!js/lib/**/*.js'],
-            afterconcat: {
-                options: {
-                    "undef": true,
-                    "unused": true,
-                },
-                files: {
-                    src: ['target/*.js']
-                }
-
-            }
+            all: ['js*/**/*.js', '!js/lib/**/*.js']
         },
         requirejs: {
             compile: {
