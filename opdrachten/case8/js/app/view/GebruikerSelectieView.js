@@ -1,8 +1,12 @@
-var GebruikerSelectieViewModule = (function(Settings, $) {
+var GebruikerSelectieViewModule = (function(ViewModule, Settings, $) {
 
     function GebruikerSelectieView(gebruikersController) {
-        this.gebruikersController = gebruikersController
+        this.gebruikersController = gebruikersController;
+        ViewModule.superConstructor(this, "GebruikerSelectieView");
     }
+
+    ViewModule.subclass(GebruikerSelectieView);
+
 
     GebruikerSelectieView.prototype.renderTemplate = function(callBackWhenReady) {
         var _this = this;
@@ -14,7 +18,7 @@ var GebruikerSelectieViewModule = (function(Settings, $) {
     }
 
     GebruikerSelectieView.prototype.renderGebruikers = function(gebruikers) {
-        $.map(gebruikers, function (gebruiker, index) {
+        $.map(gebruikers, function (gebruiker) {
             $("<option></option>")
                 .val(gebruiker.id)
                 .text(gebruiker.naam)
@@ -22,13 +26,13 @@ var GebruikerSelectieViewModule = (function(Settings, $) {
         });
     }
 
-    GebruikerSelectieView.prototype.renderError = function() {
-
+    GebruikerSelectieView.prototype.renderError = function(errorMessage) {
+        this.log(errorMessage);
     }
 
     GebruikerSelectieView.prototype.eventHandlersToepassen = function () {
         $('#selecteergebruiker').click(function() {
-            Settings.currentUser = $("#gebruikersdropdown").val();
+            Settings.currentUser = parseInt($("#gebruikersdropdown").val());
 
             NavigatieModule.loadController(NavigatieModule.historyState.todos, true);
         });
@@ -46,4 +50,4 @@ var GebruikerSelectieViewModule = (function(Settings, $) {
 
         renderError: gebruikerSelectieViewInstance.renderError
     };
-}(SettingsModule, jQuery));
+}(ViewModule, SettingsModule, jQuery));

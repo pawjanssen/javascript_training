@@ -1,8 +1,11 @@
-var GebruikersViewModule = (function(Settings, $) {
+var GebruikersViewModule = (function(ViewModule, Settings, $) {
 
     function GebruikersView(gebruikersController) {
-        this.gebruikersController = gebruikersController
+        this.gebruikersController = gebruikersController;
+        ViewModule.superConstructor(this, "GebruikersView");
     }
+
+    ViewModule.subclass(GebruikersView);
 
     GebruikersView.prototype.renderTemplate = function(callBackWhenReady) {
         var _this = this;
@@ -17,10 +20,9 @@ var GebruikersViewModule = (function(Settings, $) {
     }
 
     GebruikersView.prototype.renderGebruikers = function(gebruikers) {
-        var _this = this;
         var templateLI = $("#gebruikerslijst li:first").clone();
         $("#gebruikerslijst").empty();
-        $.map(gebruikers, function (value, index) {
+        $.map(gebruikers, function (value) {
             var liClone = templateLI.clone();
             liClone.find("span.naam").text(value.naam);
             liClone.find("span.gebruikersnaam").text(value.gebruikersnaam);
@@ -31,21 +33,21 @@ var GebruikersViewModule = (function(Settings, $) {
     }
 
     GebruikersView.prototype.renderError = function() {
-
+        this.log(errorMessage);
     }
 
     GebruikersView.prototype.renderSuccessMessage = function(successMessage) {
-
+        this.log(successMessage);
     };
 
     GebruikersView.prototype.renderErrorMessage = function(errorMessage) {
-
+        this.log(errorMessage);
     };
 
     GebruikersView.prototype.eventHandlersgebruikerToevoegenToepassen = function () {
         var _this = this;
         var nieuweGebruiker = {};
-        $('#myModal').on('show.bs.modal', function (e) {
+        $('#myModal').on('show.bs.modal', function () {
             $("#saveButton").click(function() {
                 nieuweGebruiker.naam = $('#gebruikerNaam').val();
                 nieuweGebruiker.gebruikersnaam = $('#gebruikerGebruikersnaam').val();
@@ -66,8 +68,8 @@ var GebruikersViewModule = (function(Settings, $) {
 
         renderGebruikers: function(gebruikers) { gebruikersViewInstance.renderGebruikers(gebruikers) },
 
-        renderSuccessMessage: function() { gebruikersViewInstance.renderSuccessMessage() },
+        renderSuccessMessage: function(successMessage) { gebruikersViewInstance.renderSuccessMessage(successMessage) },
 
-        renderErrorMessage: function() { gebruikersViewInstance.renderErrorMessage() }
+        renderErrorMessage: function(errorMessage) { gebruikersViewInstance.renderErrorMessage(errorMessage) }
     };
-}(SettingsModule, jQuery));
+}(ViewModule, SettingsModule, jQuery));

@@ -1,8 +1,11 @@
-var TodoViewModule = (function(Settings, $) {
+var TodoViewModule = (function(ViewModule, Settings, $) {
 
     function TodoView(todoController) {
         this.todoController = todoController;
+        ViewModule.superConstructor(this, "TodoView");
     }
+
+    ViewModule.subclass(TodoView);
 
     TodoView.prototype.renderTemplate = function(callBackWhenReady) {
         var _this = this;
@@ -20,7 +23,7 @@ var TodoViewModule = (function(Settings, $) {
         var _this = this;
         var templateLI = $("#todolijst li.clonable").clone();
         $("#todolijst li.todoLi").remove();
-        $.map(todos, function (value, index) {
+        $.map(todos, function (value) {
             var liClone = templateLI.clone();
             liClone.find("span.todoTitle").text(value.titel);
             liClone.find("span.todoCreated").text(liClone.find("span.todoCreated").text() + value.created);
@@ -31,21 +34,25 @@ var TodoViewModule = (function(Settings, $) {
             });
             liClone.appendTo("#todolijst");
         });
-        _this.todosDraggable();
+
+        this.todosDraggable();
+        this.renderSuccessMessage("Todos gerendered");
     }
 
     TodoView.prototype.renderGebruikers = function(gebruikers) {
         var _this = this;
         var templateLI = $("#gebruikerslijst li:first").clone();
         $("#gebruikerslijst").empty();
-        $.map(gebruikers, function (value, index) {
+        $.map(gebruikers, function (value) {
             var liClone = templateLI.clone();
             liClone.find("span.naam").text(value.naam);
             liClone.find("span.gebruikersnaam").text(value.gebruikersnaam);
             liClone.attr("userid", value.id);
             liClone.appendTo("#gebruikerslijst");
             _this.gebruikersDroppable();
-        })
+        });
+
+        this.renderSuccessMessage("Gebruikers gerendered");
     };
 
     TodoView.prototype.todosDraggable = function () {
@@ -64,17 +71,17 @@ var TodoViewModule = (function(Settings, $) {
     }
 
     TodoView.prototype.renderSuccessMessage = function(successMessage) {
-
+        this.log(successMessage);
     };
     
     TodoView.prototype.renderErrorMessage = function(errorMessage) {
-
+        this.log(errorMessage);
     };
 
     TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
         var _this = this;
         $('#myModal').on('show.bs.modal', function (e) {
-            if ($(e.relatedTarget).attr('id') == "nieuweTodoLink") {
+            if ($(e.relatedTarget).attr('id') === "nieuweTodoLink") {
                 delete _this.selectedTodo;
             }
 
@@ -111,8 +118,8 @@ var TodoViewModule = (function(Settings, $) {
 
         renderGebruikers: function(gebruikers) { todoViewInstance.renderGebruikers(gebruikers) },
 
-        renderSuccessMessage: function() { todoViewInstance.renderSuccessMessage() },
+        renderSuccessMessage: function(successMessage) { todoViewInstance.renderSuccessMessage(successMessage) },
 
-        renderErrorMessage: function() { todoViewInstance.renderErrorMessage() }
+        renderErrorMessage: function(errorMessage) { todoViewInstance.renderErrorMessage(errorMessage) }
     };
-}(SettingsModule, jQuery));
+}(ViewModule, SettingsModule, jQuery));

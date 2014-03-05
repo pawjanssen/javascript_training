@@ -4,7 +4,7 @@
 define(function(){
    var ws = new WebSocket('ws://localhost:8001');
 
-    ws.onopen = function(evt) {
+    ws.onopen = function() {
         console.log('connectie geopend');
     };
 

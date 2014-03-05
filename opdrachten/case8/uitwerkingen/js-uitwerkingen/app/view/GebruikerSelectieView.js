@@ -1,11 +1,15 @@
-define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $) {
+define(['app/view/ViewModule', 'app/util/Settings', 'jquery', 'jquery.bootstrap'], function(ViewModule, Settings, $) {
 
     function GebruikerSelectieView(gebruikersController) {
-        _this = this;
-        this.gebruikersController = gebruikersController
+        this.gebruikersController = gebruikersController;
+        ViewModule.superConstructor(this, "GebruikerSelectieView");
     }
 
+    ViewModule.subclass(GebruikerSelectieView);
+
+
     GebruikerSelectieView.prototype.renderTemplate = function(callBackWhenReady) {
+        var _this = this;
         $('#pageTitle').text("Gebruiker Selectie");
         $('#page').load("gebruikerSelectiePage.html", function() {
             _this.eventHandlersToepassen();
@@ -14,7 +18,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
     }
 
     GebruikerSelectieView.prototype.renderGebruikers = function(gebruikers) {
-        $.map(gebruikers, function (gebruiker, index) {
+        $.map(gebruikers, function (gebruiker) {
             $("<option></option>")
                 .val(gebruiker.id)
                 .text(gebruiker.naam)
@@ -22,13 +26,13 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
         });
     }
 
-    GebruikerSelectieView.prototype.renderError = function() {
-
+    GebruikerSelectieView.prototype.renderError = function(errorMessage) {
+        this.log(errorMessage);
     }
 
     GebruikerSelectieView.prototype.eventHandlersToepassen = function () {
         $('#selecteergebruiker').click(function() {
-            Settings.currentUser = $("#gebruikersdropdown").val();
+            Settings.currentUser = parseInt($("#gebruikersdropdown").val());
 
             require(["app/util/Navigatie"], function(Navigatie) {
                 Navigatie.loadController(Navigatie.historyState.todos, true);
