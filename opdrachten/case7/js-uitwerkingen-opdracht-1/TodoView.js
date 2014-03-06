@@ -18,8 +18,6 @@ TodoView.prototype.renderTemplate = function() {
                     document.getElementById('page').innerHTML = "Pagina niet gevonden"
                 break;
             }
-        } else if (request.readyState === 4 && request.status === 404) {
-
         }
     };
     request.open("GET", "todoPage.html", true);
