@@ -4,6 +4,7 @@ function TodoView() {
 TodoView.prototype.renderTemplate = function() {
     var _this = this;
 
+    // TODO pagina's inladen
 }
 
 TodoView.prototype.renderTodos = function(todos) {
@@ -37,7 +38,7 @@ TodoView.prototype.eventHandlersTodoTonenBewerkenToepassen = function () {
         _this.nieuweTodo.description = $('#todoOmschrijving').val();
         delete _this.nieuweTodo.created;
 
-        // nieuweTodo opslaan
+        // TODO nieuweTodo opslaan
 
         $('#myModal').modal('hide');
     });
