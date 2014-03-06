@@ -37,6 +37,6 @@ describe("", function() {
             }
         });
         todoStorageInstance.moveTodo(gebruikerId, todoId);
-        expect($.ajax.mostRecentCall.args[0][""]).toEqual("/gebruikers/1/todos");
+        expect($.ajax.mostRecentCall.args[0]["data"]["nieuweGebruikerID"]).toEqual(gebruikerId);
     });
 });
