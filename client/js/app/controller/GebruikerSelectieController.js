@@ -17,5 +17,5 @@ define(['app/view/GebruikerSelectieView', 'app/service/GebruikersStorage'], func
                 gebruikerSelectieControllerInstance.getGebruikers();
             });
         }
-    }
+    };
 });

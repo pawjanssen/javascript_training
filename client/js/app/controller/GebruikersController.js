@@ -17,16 +17,15 @@ define(['app/view/GebruikersView', 'app/service/GebruikersStorage', 'app/util/Se
         });
     };
 
-    GebruikersController.prototype.onWebSocketMessage = function(websocketEvent) {
-        var websocketData = JSON.parse(websocketEvent.data);
-        if (websocketData.eventtype === "gebruikertoegevoegd") {
+    GebruikersController.prototype.onWebSocketMessage = function(event) {
+        if (event.eventtype === "gebruikertoegevoegd") {
 
-            GebruikersView.renderGebruikers(websocketData.data);
+            GebruikersView.renderGebruikers(event.data);
         }
     };
 
     var gebruikersControllerInstance = new GebruikersController();
-    Settings.webSocket.onmessage = gebruikersControllerInstance.onWebSocketMessage;
+    Settings.addWebsocketListener(gebruikersControllerInstance.onWebSocketMessage);
 
     return {
         init: function() {
@@ -34,5 +33,5 @@ define(['app/view/GebruikersView', 'app/service/GebruikersStorage', 'app/util/Se
                 gebruikersControllerInstance.getGebruikers();
             });
         }
-    }
+    };
 });
