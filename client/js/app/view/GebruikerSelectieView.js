@@ -28,7 +28,7 @@ define(['app/util/Settings', 'jquery', 'jquery.bootstrap'], function(Settings, $
 
     GebruikerSelectieView.prototype.eventHandlersToepassen = function () {
         $('#selecteergebruiker').click(function() {
-            Settings.currentUser = $("#gebruikersdropdown").val();
+            Settings.currentUser = parseInt($("#gebruikersdropdown").val());
 
             require(["app/util/Navigatie"], function(Navigatie) {
                 Navigatie.loadController(Navigatie.historyState.todos, true);

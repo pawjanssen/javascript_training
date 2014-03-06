@@ -117,25 +117,27 @@ function moveTodo(request) {
         return p.id !== parseInt(request.payload.todoID);
     });
 
-    if (nieuweGebruiker.todos.length == 0) {
-        todo.id = 1;
+    if (todo) {
+        todo.id = Math.random();
+
+        nieuweGebruiker.todos.push(todo);
+        websocketServer.broadcast(JSON.stringify({
+            "eventtype": "gebruiker-todos",
+            "gebruikerid": huidigeGebruiker.id,
+            "data": huidigeGebruiker.todos
+        }));
+        websocketServer.broadcast(JSON.stringify({
+            "eventtype": "gebruiker-todos",
+            "gebruikerid": nieuweGebruiker.id,
+            "data": nieuweGebruiker.todos
+        }));
+
+        request.reply(huidigeGebruiker.todos).code(201).header('Location,: /gebruikers/' + huidigeGebruiker.id + "/todos/" + todo.id);
     } else {
-        todo.id = nieuweGebruiker.todos[nieuweGebruiker.todos.length - 1].id + 1;
+        request.reply().code(404);
     }
 
-    nieuweGebruiker.todos.push(todo);
-    websocketServer.broadcast(JSON.stringify({
-        "eventtype": "gebruiker-todos",
-        "gebruikerid": huidigeGebruiker.id,
-        "data": huidigeGebruiker.todos
-    }));
-    websocketServer.broadcast(JSON.stringify({
-        "eventtype": "gebruiker-todos",
-        "gebruikerid": nieuweGebruiker.id,
-        "data": nieuweGebruiker.todos
-    }));
 
-    request.reply(huidigeGebruiker.todos).code(201).header('Location,: /gebruikers/' + huidigeGebruiker.id + "/todos/" + todo.id);
 }
 
 function getTodo(request) {

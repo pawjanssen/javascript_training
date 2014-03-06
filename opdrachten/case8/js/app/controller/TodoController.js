@@ -28,7 +28,7 @@ var TodoControllerModule = (function(TodoView, TodoStorage, GebruikersStorage, S
     TodoController.prototype.onWebSocketMessage = function(websocketEvent) {
         var websocketData = JSON.parse(websocketEvent.data);
         if (websocketData.eventtype === "gebruiker-todos" &&
-            websocketData.gebruikerid == Settings.currentUser) {
+            websocketData.gebruikerid === Settings.currentUser) {
 
             TodoView.renderTodos(websocketData.data);
         }
