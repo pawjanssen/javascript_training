@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Wed, 05 Mar 2014 21:12:50 +0100</pubDate><title><![CDATA[Case 8 - AMD]]></title><url><![CDATA[case-8-amd]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 8 - AMD]]></menu><menuOrder><![CDATA[12]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item><pubDate>Thu, 06 Mar 2014 14:05:22 +0100</pubDate><title><![CDATA[Case 8 - AMD]]></title><url><![CDATA[case-8-amd]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 8 - AMD]]></menu><menuOrder><![CDATA[15]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case8.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 8 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;In case 3 heb je geleerd hoe je functionaliteiten groepeerd in losse javascript files. In case 6 heb je geleerd hoe je met het module pattern scoping issues kunt voorkomen. Hoewel deze methodes een stuk in de juiste richting zijn voor de opzet van je applicatie zijn er toch nog enkele problemen:&lt;/p&gt;
@@ -16,7 +16,7 @@
 &lt;ol&gt;
 	&lt;li&gt;Blader door de verschillende javascript sources en de js/app folders. Probeer te begrijpen wat de functionaliteiten van de verschillende files zijn. Wat valt je op over de opzet van de applicatie? Welk pattern wordt er toegepast?&lt;/li&gt;
 	&lt;li&gt;Open vervolgens het bestand &quot;template.html&quot;. Wat valt je op/welk nadeel kun je herkennen aan de huidige opzet?&lt;/li&gt;
-	&lt;li&gt;Commentarieer in de bestanden &quot;template.html&quot; en &quot;init.js&quot; de regels code uit waar stap 3 bij genoemd staat. In template.html zul je tevens alle script tags die onderaan de pagina staan moeten verwijderen.&lt;/li&gt;
+	&lt;li&gt;Uncomment in de bestanden &quot;template.html&quot; en &quot;init.js&quot; de regels code uit waar stap 3 bij genoemd staat. In template.html zul je tevens alle script tags die onderaan de pagina staan moeten verwijderen.&lt;/li&gt;
 	&lt;li&gt;Pas overal waar mogelijk AMD toe waar nu het module pattern wordt toegepast.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Tips:&lt;/p&gt;
@@ -29,7 +29,7 @@
 	&lt;li&gt;Refresh je browser en controleer of alles nog werkt als voorheen. Bekijk tevens de FireBug console en controleer dat er geen errors meer optreden. Bekijk tevens het &quot;Net&quot; tabblad in FireBug en controleer dat alle javascript bestanden worden ingeladen. Wat valt je op?&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;Opdracht 2 - Lazy loading met AMD&lt;/h2&gt;
-&lt;p&gt;Als je opdracht 1 succesvol hebt uitgevoerd, zie je in het &quot;Net&quot; tabblad van FireBug dat alle javascript bestanden in de juiste volgorde worden ingeladen. De GebruikersView hoeft echter pas geladen te worden als je in het menu bovenin op &quot;Gebruikers&quot; klikt. Dit geldt tevens voor de GebruikersController. Zorg ervoor dat het inladen van deze javascript files pas plaats vindt op het moment dat je ook op &quot;Gebruikers&quot; klikt in het menu.&lt;/p&gt;
+&lt;p&gt;Als je opdracht 1 succesvol hebt uitgevoerd, zie je in het &quot;Net&quot; tabblad van FireBug dat alle javascript bestanden in de juiste volgorde worden ingeladen. De GebruikersView hoeft echter pas geladen te worden als je in het menu bovenin op &quot;Gebruikers&quot; klikt. De GebruikersView is een dependency van de GebruikersController. Zorg ervoor dat het inladen van deze javascript file pas plaats vindt op het moment dat je ook op &quot;Gebruikers&quot; klikt in het menu.&lt;/p&gt;
 &lt;p&gt;Tips:&lt;/p&gt;
 &lt;ul&gt;
 	&lt;li&gt;Het enige wat je hoeft aan te passen is Navigatie.js&lt;/li&gt;
@@ -42,4 +42,4 @@
 	&lt;li&gt;Zonder de outputfile worden modules met AMD gevonden in een file die als naam gelijk is aan de modulenaam. Hoe denk je dat RequireJS de modules nu vind?&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Pas het bestand template.html zo aan, dat i.p.v. het init script de initialisatie van de applictatie plaats vind via de gegenereerde output file. Controleer in de browser wat er gebeurd. Als het goed zal alleen de gegenereerde javsacript file worden ingeladen met AMD, en niet meer alle losse modules.&lt;/p&gt;
-]]></content><private><![CDATA[Y]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>

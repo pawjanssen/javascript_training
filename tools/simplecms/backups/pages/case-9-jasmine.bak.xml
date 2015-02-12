@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Thu, 06 Mar 2014 15:30:13 +0100</pubDate><title><![CDATA[Case 9 - Jasmine]]></title><url><![CDATA[case-9-jasmine]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 9 - Jasmine]]></menu><menuOrder><![CDATA[17]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;data/uploads/case9.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 9 staan.&lt;/p&gt;
+&lt;h2&gt;Omschrijving&lt;/h2&gt;
+&lt;p&gt;Zojuist is verteld hoe je met Jasmine testen kan schrijven voor javascript&lt;/p&gt;
+&lt;h2&gt;Opdracht 1&lt;/h2&gt;
+&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case9/SpecRunner.html&quot; om de 9e case te laden. Je ziet een lege test pagina voor je.&lt;/p&gt;
+&lt;p&gt;Bekijk in WebStorm de javascript bestanden die bij deze opdracht horen. Doorloop onderstaande stappen om de opdracht te voltooien.&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;In de View.js staat een functie die checkt of je een een console hebt in je browser &#039;isConsoleAvailable&#039; (die heb je gemaakt in case 4). Maak in TodoSpec.js een test die controleerd of je true terug krijgt (alle heden daagse browers hebben een console dus zal altijd true moeten zijn).&lt;/li&gt;
+	&lt;li&gt;Refresh &#039;SpecRunner.html&#039; en nu zal er een test te zien zijn die slaagt (tenzij je in IE8 of lager zit want die hebben geen console)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;&lt;br /&gt;
+	Opdracht 2 - Ajax testen&lt;/h2&gt;
+&lt;p&gt;We gaan nu testen schrijven om Ajax calls te controleren.&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;In de &#039;TodoStorage.js&#039; staat een getAll functie die alle todo&#039;s ophaalt. Schrijf een test om te controleren of de url in de ajax call de juiste is.&lt;/li&gt;
+	&lt;li&gt;In de &#039;TodoStorage.js&#039; staat een moveTodo functie die todo&#039;s aan een andere gebruiker koppelt. Schrijf een test om te controleren of het eerste argument inderdaad het nieuweGebruikerID is en dus in de ajax call wordt meegegeven als nieuweGebruikerID.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Refresh uiteraard &#039;SpecRunner.html&#039; om te kijken of de tests kloppen&lt;/p&gt;
+&lt;h2&gt;Extra opdracht&lt;/h2&gt;
+&lt;p&gt;in de JS map staan alle files uit onze Todo App. Bekijk voor welke functies en nog meer Jasmine testen geschreven en werk er een paar uit.&lt;/p&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>

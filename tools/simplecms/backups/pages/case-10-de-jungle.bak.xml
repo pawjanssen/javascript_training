@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Thu, 06 Mar 2014 16:24:16 +0100</pubDate><title><![CDATA[Case 10 - De Jungle]]></title><url><![CDATA[case-10-de-jungle]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 10 - De Jungle]]></menu><menuOrder><![CDATA[19]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;data/uploads/case10.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 10 staan.&lt;/p&gt;
+&lt;h2&gt;Omschrijving&lt;/h2&gt;
+&lt;p&gt;Zojuist is verteld over enkele populaire javascript tools en frameworks. Tevens heb je zojuist gehoord over jasmine in grunt en client side dependencies met Bower. In deze opdracht ga je zelf de &quot;jungle&quot; van frameworks proberen te ontdekken, gebruikmakend van de ondersteuning van je medecursisten en begeleiders. Met de kennis die je gedurende deze training hebt opgedaan, zal je een heel eind moeten komen.&lt;/p&gt;
+&lt;p&gt;Kies voor het maken van deze case 1 van de volgende frameworks die je wilt proberen:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;AngularJS&lt;/li&gt;
+	&lt;li&gt;Backbone.js&lt;/li&gt;
+	&lt;li&gt;Ember.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Het aantal frameworks waar je uit kan kiezen is natuurlijk groter dan deze. Door ons voor nu te beperken is het mogelijk oplossingen te vergelijken met je medecursisten.&lt;/p&gt;
+&lt;p&gt;Hint: Gebruik de site http://todomvc.com/ als starter voor het maken van een javascript applicatie in het door jou gekozen framework. De voorbeeld applicatie die aldaar gebruikt wordt, is ook een todo-applicatie, echter een andere dan degene die in de cases gebruikt werden.&lt;/p&gt;
+&lt;h2&gt;Opdracht 1 - Jasmine in Grunt&lt;/h2&gt;
+&lt;p&gt;In de source file die is meegeleverd, is tevens de Gruntfile.js geupdate met jasmine configuratie. Tevens is de node_modules directory meegeleverd waar jasmine in staat. Probeer middels grunt de testen uit de vorige opdracht te draaien. Gebruik de documentatie van https://github.com/gruntjs/grunt-contrib-jasmine als voorbeeld.&lt;/p&gt;
+&lt;h2&gt;Opdracht 2 - Bower&lt;/h2&gt;
+&lt;p&gt;Eerst zul je bower moeten installeren. Gebruik het commando &quot;npm install -g bower&quot;. Mocht je geen internet hebben, sla dan deze opdracht over (lees paragraaf 3).&lt;/p&gt;
+&lt;p&gt;Installeer het eerder gekozen frontend framework middels bower. Doe dit via het commando &quot;bower install &amp;lt;framework-naar-keuze-zonder-js&amp;gt;&quot;. In de map bower_components wordt vervolgens het framework gedownload. Maak een template.html file aan in de map &quot;case10&quot; en neem een scripttag op de pagina op die verwijst naar het javascript bestand van het framework dat je wilt gebruiken. Dus bijvoorbeeld &amp;lt;script src=&quot;bower_components/framework/framework.js&quot;&amp;gt;&lt;/p&gt;
+&lt;p&gt;Mocht je geen internet hebben, in de case10.zip staat tevens de map &quot;bower_components&quot;, waar de dependencies al in zitten.&lt;/p&gt;
+&lt;h2&gt;Opdracht 3 - GebruikersSelectie in gekozen framework&lt;/h2&gt;
+&lt;p&gt;Gebruik je output van case 8 als basis voor deze opdracht. Probeer alleen het gebruikersselectiescherm om te bouwen in het door jou gekozen framework. Vraag om hulp als je er niet uit komt.&lt;/p&gt;
+&lt;p&gt;Hint:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;De bestanden uit case 8 die je zult moeten ombouwen zijn dus alleen die, die met het gebruikersselectiescherm te maken hebben. Dus de GebruikersSelectieController, de GebruikersSelectieView en de GebruikersStorage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Geef aan je cursusleider aan als je klaar bent. Aan het einde (of zodra iedereen klaar is) bespreken we de oplossingen.&lt;/p&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
