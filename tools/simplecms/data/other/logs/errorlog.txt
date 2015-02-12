@@ -95,3 +95,5 @@
 [27-Feb-2014 16:18:17] PHP Notice:  Undefined index: existing-url in /var/esuitepkg/pascal/javascript_training/tools/simplecms/admin/changedata.php on line 201
 [05-Mar-2014 20:59:16 Europe/Berlin] PHP Notice:  Undefined index: existing-url in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/changedata.php on line 198
 [05-Mar-2014 20:59:16 Europe/Berlin] PHP Notice:  Undefined index: existing-url in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/changedata.php on line 201
+[05-Mar-2014 21:31:54 Europe/Berlin] PHP Notice:  Undefined index: existing-url in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/changedata.php on line 198
+[05-Mar-2014 21:31:54 Europe/Berlin] PHP Notice:  Undefined index: existing-url in /home/a166128/IdeaProjects/javascript_training/git/javascript_training/tools/simplecms/admin/changedata.php on line 201
