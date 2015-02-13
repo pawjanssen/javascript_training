@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 13 Feb 2015 11:03:09 +0100</pubDate><title><![CDATA[Case 5 - Inheritance &amp; Scoping]]></title><url><![CDATA[case-5-prototyping]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 5 - Inheritance &amp; Scoping]]></menu><menuOrder><![CDATA[11]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item><pubDate>Fri, 13 Feb 2015 16:12:29 +0100</pubDate><title><![CDATA[Case 5 - Inheritance &amp; Scoping]]></title><url><![CDATA[case-5-prototyping]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 5 - Inheritance &amp; Scoping]]></menu><menuOrder><![CDATA[11]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case5.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 5 staan.&lt;br /&gt;
-	&lt;a href=&quot;data/uploads/case5_inheritance_scoping.pdf&quot;&gt;Presentatie in PDF&lt;/a&gt;&lt;/p&gt;
+	&lt;a href=&quot;data/uploads/case6_Ajax.pdf&quot;&gt;Presentatie in PDF&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je inheritance via prototyping werkt in javascript en in welke scope objecten zitten die je aanmaakt. Tevens is je net uitgelegd hoe het module pattern werkt. Het doel van deze opdracht is het leren van omgaan met inheritence van objecten middels prototyping. Tevens leer je in deze opdracht hoe je ervoor zorgt dat niet alle objecten die je maakt in de global scope terecht komen.&lt;/p&gt;
-&lt;p&gt;Voer voor het uitvoeren van de opdracht het de commando&#039;s &quot;npm install&quot; en &quot;grunt watch&quot; uit. Zorg ervoor dat er gedurende de opdracht geen fouten van grunt op de console verschijnen. Je mag ook, i.p.v. het commando &quot;grunt watch&quot; na het uitvoeren van de opdrachten het &quot;grunt&quot; commando draaien, ook hierbij geldt, zorg ervoor dat grunt geen fouten aangeeft.&lt;/p&gt;
 &lt;h2&gt;Opdracht 1 - Inheritance via prototyping&lt;/h2&gt;
-&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case5/template.html&quot; om de zesde case te laden. Je ziet het todoscherm van de applicatie voor je.&lt;/p&gt;
+&lt;p&gt;Open in je browser de URL &quot;&lt;a href=&quot;http://localhost:8000/opdrachten/case5/template.html&quot;&gt;http://localhost:8000/opdrachten/case5/template.html&lt;/a&gt;&quot; om de zesde case te laden. Je ziet het todoscherm van de applicatie voor je.&lt;/p&gt;
 &lt;p&gt;Bekijk in WebStorm de javascript bestanden die bij deze opdracht horen. Doorloop onderstaande stappen om de opdracht te voltooien.&lt;/p&gt;
 &lt;h3&gt;Inheritance&lt;/h3&gt;
 &lt;ol&gt;
