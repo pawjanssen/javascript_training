@@ -4,52 +4,31 @@
     <title></title>
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/training.css"/>
+    <script type="text/javascript" src="/lib/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap.min.js"></script>
+
 </head>
 <body>
-<div id="header">
-    <div id="menu" class="container">
-        <ul>
-            <li id="todos" class="current_page_item"><a href="#" accesskey="1" title="">ToDo list</a></li>
-            <li><a id="gebruikers" href="#" accesskey="1" title="">Gebruikers</a></li>
-        </ul>
-    </div>
-</div>
-<div id="logo" class="container">
-    <h1><a href="#" id="pageTitle" class="icon icon-tasks"></a></h1>
-</div>
-<div id="page" class="container">
-    <div id="content">
-        <div class="title">
-            <h2>Todo's</h2>
-            <span class="byline">Bekijk de gebruikers en de todos</span>
-        </div>
-        <div class="row">
-            <div class="col-md-4"><h3>Gebruikers</h3>
-                <ul id="gebruikerslijst">
-                    <li class="clonable"><span class="gebruikersnaam"></span><span class="naam"></span></li>
-                </ul>
-            </div>
-            <div class="col-md-8"><h3>Todo's</h3>
-                <ul id="todolijst">
-                    <li class="clonable">
-                        <div class="alert">
-                            <span class="todoTitle">test</span>
-                            <span class="todoCreated">created: </span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <div id="header">
+        <div id="menu" class="container">
+            <ul>
+                <li id="todos" class="current_page_item"><a href="#" accesskey="1" title="">ToDo list</a></li>
+                <li><a id="gebruikers" href="#" accesskey="1" title="">Gebruikers</a></li>
+            </ul>
         </div>
     </div>
-</div>
-<div id="copyright" class="container">
-    <p>Javascript Training</p>
-</div>
-
-<script type="text/javascript" src="js/View.js"></script>
-<script type="text/javascript" src="js/TodoView.js"></script>
-<script type="text/javascript" src="js/gebruikers.js"></script>
-<script type="text/javascript" src="js/todos.js"></script>
-<script type="text/javascript" src="js/init.js"></script>
+    <div id="logo" class="container">
+        <h1><a href="#" id="pageTitle" class="icon icon-tasks"></a></h1>
+    </div>
+    <div id="page" class="container">
+    </div>
+    <div id="copyright" class="container">
+        <p>bla bla bla</p>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
 </body>
+<script type="text/javascript" src="js/TodoView.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
 </html>

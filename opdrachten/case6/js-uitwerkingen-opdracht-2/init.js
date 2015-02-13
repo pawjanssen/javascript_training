@@ -1,5 +1,4 @@
-(function(DataModuleAPI, ViewModuleAPI){
-    var todoViewInstance = new ViewModuleAPI.TodoView();
-    todoViewInstance.renderTodos(DataModuleAPI.todos);
-    todoViewInstance.renderGebruikers(DataModuleAPI.gebruikers);
-}(DataModule, ViewModule));
+var todoViewInstance = new TodoView();
+var todoStorageInstance = new TodoStorage();
+
+todoViewInstance.renderTemplate();

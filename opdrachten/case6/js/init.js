@@ -1,4 +1,4 @@
 var todoViewInstance = new TodoView();
+var todoStorageInstance = new TodoStorage();
 
-todoViewInstance.renderTodos(todos);
-todoViewInstance.renderGebruikers(gebruikers);
+todoViewInstance.renderTemplate();
