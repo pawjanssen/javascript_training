@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Fri, 13 Feb 2015 09:13:34 +0100</pubDate><title><![CDATA[Case 6 - Ajax Requests]]></title><url><![CDATA[case-6-ajax-requests]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 6 - Ajax Requests]]></menu><menuOrder><![CDATA[13]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;data/uploads/case6.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 6 staan.&lt;/p&gt;
+&lt;h2&gt;Omschrijving&lt;/h2&gt;
+&lt;p&gt;Zojuist is verteld hoe je met Ajax server requests maakt en ook met behulp van JQuery&lt;/p&gt;
+&lt;h2&gt;Opdracht 1 - Ajax&lt;/h2&gt;
+&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case6/template.html&quot; om de 6e case te laden. Je ziet&amp;nbsp; alleen de template van de site voor je.&lt;/p&gt;
+&lt;p&gt;Bekijk in WebStorm de javascript bestanden die bij deze opdracht horen. Doorloop onderstaande stappen om de opdracht te voltooien. Gebruik voor opdracht 1 nog geen JQuery.&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;Zorg ervoor dat in de todoView.js de &quot;todoPage.html&quot; in de &amp;lt;div&amp;gt; met id &quot;page&quot; word geladen.&lt;/li&gt;
+	&lt;li&gt;Zorg ervoor dat als er een verkeerde pagina word ingeladen die niet gevonden kan worden er een nette foutmelding in het scherm komt.&lt;/li&gt;
+	&lt;li&gt;Als het laden van de pagina wat langer zou duren, bouw een loading melding in. laat zien met een console.log dat hij in de loading state is geweest&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;&lt;br /&gt;
+	Opdracht 2 - JQuery&lt;/h2&gt;
+&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case6/template-opdracht-2.html&quot; om de 6e case te laden. Je ziet&amp;nbsp; alleen de template van de site voor je.&lt;/p&gt;
+&lt;p&gt;Bekijk in WebStorm de javascript bestanden die bij deze opdracht horen. Doorloop onderstaande stappen om de opdracht te voltooien.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pagina inladen&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;Nu mag &quot;todoPage.html&quot; aan de hand van JQuery worden ingeladen.&lt;/li&gt;
+	&lt;li&gt;zorg er ook voor &quot;todoTonenBewerken.html&quot; in de &amp;lt;div&amp;gt; met id &quot;myModal&quot;. Dit is de overlay die we dadelijk&amp;nbsp; nodig hebben voor het toevoegen van een todo.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Get, Post &amp;amp; JSON&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;We gaan de lege lijst van todo&#039;s vullen met todo&#039;s van de server. Maak in de todostorage een functie aan die ervoor zorgt dat de todo&#039;s worden opgehaald.&lt;/li&gt;
+	&lt;li&gt;Zorg ervoor dat de renderTodos in de todoview wordt aangeroepen en gevult met de todo&#039;s die van de server komt.&lt;/li&gt;
+	&lt;li&gt;Op de todo pagina staat een &#039;Todo toevoeg&#039; knop met daar achter een todo toevoeg formulier. Zorg ervoor dat er een nieuwe Todo wordt toegevoegd op het moment dat er op de save knop wordt geclickt.&lt;/li&gt;
+	&lt;li&gt;Als de nieuwe todo is toegevoegd mag de lijst worden gerefred met de nieuwe todo erbij.&lt;/li&gt;
+&lt;/ol&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
