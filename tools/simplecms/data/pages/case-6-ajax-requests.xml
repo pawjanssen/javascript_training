@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Fri, 13 Feb 2015 10:50:43 +0100</pubDate><title><![CDATA[Case 6 - Ajax Requests]]></title><url><![CDATA[case-6-ajax-requests]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 6 - Ajax Requests]]></menu><menuOrder><![CDATA[13]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item><pubDate>Fri, 20 Feb 2015 16:00:06 +0100</pubDate><title><![CDATA[Case 6 - Ajax Requests]]></title><url><![CDATA[case-6-ajax-requests]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 6 - Ajax Requests]]></menu><menuOrder><![CDATA[13]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case6.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 6 staan.&lt;br /&gt;
-&lt;a href=&quot;data/uploads/case2_selectors_en_dom.pdf&quot;&gt;Presentatie in PDF&lt;/a&gt;&lt;/p&gt;
+	&lt;a href=&quot;data/uploads/case6_Ajax.pdf&quot;&gt;Presentatie in PDF&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je met Ajax server requests maakt en ook met behulp van JQuery&lt;/p&gt;
 &lt;h2&gt;Opdracht 1 - Ajax&lt;/h2&gt;
