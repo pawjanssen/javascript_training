@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Thu, 27 Feb 2014 10:11:11 +0100</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case1-opzetten-omgeving]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[1]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
+<item><pubDate>Tue, 30 Jun 2015 10:46:30 +0200</pubDate><title><![CDATA[Case 1 - Opzet/draaien van omgeving]]></title><url><![CDATA[case1-opzetten-omgeving]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Opzet van omgeving]]></menu><menuOrder><![CDATA[1]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;&lt;strong&gt;Omschrijving&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe de Todo applicatie eruit ziet. Middels deze applicatie zul je alle cases in deze training gaan uitwerken.&lt;/p&gt;
 &lt;p&gt;Het doel van deze opdracht is te wennen aan de ontwikkelomgeving waarmee de cases ontwikkeld gaan worden. Na deze opdracht weet je hoe je bestanden kunt bewerken in de ontwikkelomgeving en weet je hoe je de webserver start waarmee in latere opdrachten data vandaan is te halen. Tevens weet je hoe je de Todo applicatie benaderd en hoe de REST service er globaal uitziet.&lt;/p&gt;
 &lt;h2&gt;Opdracht 1 - Configureren Virtual Machine&lt;/h2&gt;
@@ -22,19 +22,13 @@
 &lt;p&gt;Start de virtual machine op. Als het goed is kom je in een Linux desktop omgeving terecht.&lt;/p&gt;
 &lt;h2&gt;&lt;em&gt;Opdracht 2 - Opstarten ontwikkelomgeving&lt;/em&gt;&lt;/h2&gt;
 &lt;h3&gt;Stap 1&lt;/h3&gt;
-&lt;p&gt;Eerst dient de proxy geconfigureerd te worden.&lt;/p&gt;
+&lt;p&gt;Eerst dient gecontroleert te worden of je op internet komt.&lt;/p&gt;
 &lt;ol&gt;
-	&lt;li&gt;Open de terminal die op je desktop staat.&lt;/li&gt;
-	&lt;li&gt;Voer het commando &lt;em&gt;sudo cntlm -u &amp;lt;userid&amp;gt;@ww930 -H&lt;/em&gt; uit. Vervang hierbij het userid door je eigen A/NL-nummer. Het sudo wachtwoord is &quot;demo&quot;. Het wachtwoord dat je vervolgens in moet voeren is je Atos windows wachtwoord.&amp;nbsp;&amp;nbsp;&lt;/li&gt;
-	&lt;li&gt;Kopieer de hash regel die begint met &lt;em&gt;PassNTLMv2&lt;/em&gt;&lt;/li&gt;
-	&lt;li&gt;Voer het commando &lt;em&gt;sudo gedit /etc/cntlm.conf&lt;/em&gt; uit.&lt;/li&gt;
-	&lt;li&gt;In de editor die zich nu opent moet je twee regels aanpassen. Waar nu &amp;lt;username&amp;gt; staat dien je je eigen A/NL-nummer in te vullen. Waar nu &amp;lt;passhash&amp;gt; staat dien je de in stap 3 gekopieerde password hash te plakken. Sla het bestand op en sluit de editor vervolgens af.&lt;/li&gt;
-	&lt;li&gt;Voer het commando &lt;em&gt;sudo service cntlm restart&lt;/em&gt; uit.&lt;/li&gt;
 	&lt;li&gt;Open de browser en controleer of je op het internet komt (hint: probeer www.google.nl)&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;data/uploads/case1.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;Stap 2&lt;/h3&gt;
-&lt;p&gt;Op de desktop staat een icoon genaamd &quot;WebStorm&quot;, dit is de ontwikkelomgeving die we voor de training gebruiken. Start &quot;Webstorm&quot; op, bij een eventuele popup met de vraag of het programma in een terminal gedraaid moet worden, kies je voor de optie &quot;Run&quot;.&lt;/p&gt;
+&lt;p&gt;Op de desktop staat een icoon genaamd &quot;WebStorm&quot;, dit is de ontwikkelomgeving die we voor de training gebruiken. Start &quot;Webstorm&quot; op.&lt;/p&gt;
 &lt;h3&gt;Stap 3&lt;/h3&gt;
 &lt;p&gt;Links zie je alle project files staan. Hier staat nu een &quot;server&quot; directory en een lege &quot;opdrachten&quot; directory, hieraan voegen we per opdracht de sources toe. Open hiervoor middels het &quot;map&quot; icoontje in de balk onderaan in het scherm de file browser. Navigeer naar Downloads, als het goed is zie je hier de eerder gedownloade zip file die de sources voor deze case bevat.&lt;/p&gt;
 &lt;p&gt;Kopieer deze zip file naar de directory &quot;Home/WebstormProjects/javascript_training/opdrachten&quot;. Klik hierna met de rechter muisknop op de zip file en kies voor &quot;Extract here&quot;. Als je nu teruggaat naar WebStorm zie je in de &quot;opdrachten&quot; folder de zojuist uitgepakte sources van deze case erbij staan.&lt;/p&gt;
@@ -47,7 +41,7 @@
 &lt;p&gt;Beantwoord onderstaande vragen:&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Welke entiteiten kunnen opgeslagen worden?&lt;/li&gt;
-	&lt;li&gt;Op welk pad is de client benaderbaar?&lt;/li&gt;
+	&lt;li&gt;Op welk pad is de opdracht benaderbaar?&lt;/li&gt;
 	&lt;li&gt;Welke URL roep je vermoedelijk aan als je Todo &quot;1&quot; van gebruiker &quot;1&quot; wilt ophalen? Probeer dit tevens uit, en controleer of het resultaat is wat je verwacht.&lt;/li&gt;
 	&lt;li&gt;Welke URL roep je vermoedelijk aan als je een nieuwe Todo aan gebruiker &quot;1&quot; wilt toevoegen? Beargumenteer je keuze.&lt;/li&gt;
 &lt;/ol&gt;
@@ -64,7 +58,7 @@
 	&lt;li&gt;npm install&lt;/li&gt;
 	&lt;li&gt;grunt&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Probeer deze commando&#039;s uit via de command line in de directory &quot;opdrachten/case1&quot; en beantwoord onderstaande vragen/voer onderstaande taken uit:&lt;/p&gt;
+&lt;p&gt;Probeer deze commando&#039;s uit via de command line in de directory &quot;Home/WebstormProjects/javascript_training/opdrachten/case1&quot; en beantwoord onderstaande vragen/voer onderstaande taken uit:&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Waartoe dient het bestand package.json?&lt;/li&gt;
 	&lt;li&gt;Waartoe dient het bestand Gruntfile.js?&lt;/li&gt;

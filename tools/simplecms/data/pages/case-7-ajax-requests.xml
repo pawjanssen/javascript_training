@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Thu, 06 Mar 2014 11:17:38 +0100</pubDate><title><![CDATA[Case 7 - Ajax Requests]]></title><url><![CDATA[case-7-ajax-requests]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 7 - Ajax Requests]]></menu><menuOrder><![CDATA[13]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item><pubDate>Tue, 30 Jun 2015 10:51:39 +0200</pubDate><title><![CDATA[Case 7 - Ajax Requests]]></title><url><![CDATA[case-7-ajax-requests]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 7 - Ajax Requests]]></menu><menuOrder><![CDATA[13]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case7.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 7 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je met Ajax server requests maakt en ook met behulp van JQuery&lt;/p&gt;
 &lt;h2&gt;Opdracht 1 - Ajax&lt;/h2&gt;
-&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case7/template.html&quot; om de 7e case te laden. Je ziet&amp;nbsp; alleen de template van de site voor je.&lt;/p&gt;
+&lt;p&gt;Open in je browser de URL &quot;&lt;a href=&quot;http://localhost:8000/opdrachten/case7/template.html&quot;&gt;http://localhost:8000/opdrachten/case7/template.html&lt;/a&gt;&quot; om de 7e case te laden. Je ziet&amp;nbsp; alleen de template van de site voor je.&lt;/p&gt;
 &lt;p&gt;Bekijk in WebStorm de javascript bestanden die bij deze opdracht horen. Doorloop onderstaande stappen om de opdracht te voltooien. Gebruik voor opdracht 1 nog geen JQuery.&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Zorg ervoor dat in de todoView.js de &quot;todoPage.html&quot; in de &amp;lt;div&amp;gt; met id &quot;page&quot; word geladen.&lt;/li&gt;
@@ -13,7 +13,7 @@
 &lt;/ol&gt;
 &lt;h2&gt;&lt;br /&gt;
 	Opdracht 2 - JQuery&lt;/h2&gt;
-&lt;p&gt;Open in je browser de URL &quot;http://localhost:8000/opdrachten/case7/template-opdracht-2.html&quot; om de 7e case te laden. Je ziet&amp;nbsp; alleen de template van de site voor je.&lt;/p&gt;
+&lt;p&gt;Open in je browser de URL &quot;&lt;a href=&quot;http://localhost:8000/opdrachten/case7/template-opdracht-2.html&quot;&gt;http://localhost:8000/opdrachten/case7/template-opdracht-2.html&lt;/a&gt;&quot; om de 7e case te laden. Je ziet&amp;nbsp; alleen de template van de site voor je.&lt;/p&gt;
 &lt;p&gt;Bekijk in WebStorm de javascript bestanden die bij deze opdracht horen. Doorloop onderstaande stappen om de opdracht te voltooien.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pagina inladen&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;

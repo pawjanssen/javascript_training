@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Thu, 27 Feb 2014 10:35:45 +0100</pubDate><title><![CDATA[Case 1 - Uitwerkingen]]></title><url><![CDATA[case-1-uitwerkingen]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 1 - Uitwerkingen]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[case1-opzetten-omgeving]]></parent><content><![CDATA[&lt;h2&gt;Opdracht 2 - Starten van de server&lt;/h2&gt;
+<item>
+    <pubDate>Thu, 27 Feb 2014 10:35:45 +0100</pubDate>
+    <title><![CDATA[Case 1 - Uitwerkingen]]></title>
+    <url><![CDATA[case-1-uitwerkingen]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 1 - Uitwerkingen]]></menu>
+    <menuOrder><![CDATA[2]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[case1-opzetten-omgeving]]></parent>
+    <content><![CDATA[&lt;h2&gt;Opdracht 2 - Starten van de server&lt;/h2&gt;
 &lt;h3&gt;1. Welke entiteiten kunnen opgeslagen worden?&lt;/h3&gt;
 &lt;p&gt;Gebruikers en todos&lt;/p&gt;
 &lt;h3&gt;2. Op welk pad is de opdracht benaderbaar?&lt;/h3&gt;
@@ -27,4 +38,7 @@
 &lt;h3&gt;&lt;br /&gt;
 	6. Pas de template.html zo aan, dat er twee elementen zijn met hetzelfde id-attribuut. Voer grunt uit en beschrijf wat er gebeurd.&lt;/h3&gt;
 &lt;p&gt;Grunt zal een error geven omdat de htmlhint taak niet succesvol is uitgevoerd. Htmlhint geeft vervolgens aan dat er een id-attribuut dubbel is gedeclareerd in de html file.&lt;/p&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>
