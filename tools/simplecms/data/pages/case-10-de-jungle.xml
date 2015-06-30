@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Thu, 06 Mar 2014 16:25:50 +0100</pubDate><title><![CDATA[Case 10 - De Jungle]]></title><url><![CDATA[case-10-de-jungle]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 10 - De Jungle]]></menu><menuOrder><![CDATA[19]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item>
+    <pubDate>Thu, 06 Mar 2014 16:25:50 +0100</pubDate>
+    <title><![CDATA[Case 10 - De Jungle]]></title>
+    <url><![CDATA[case-10-de-jungle]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 10 - De Jungle]]></menu>
+    <menuOrder><![CDATA[19]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[]]></parent>
+    <content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case10.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 10 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld over enkele populaire javascript tools en frameworks. Tevens heb je zojuist gehoord over jasmine in grunt en client side dependencies met Bower. In deze opdracht ga je zelf de &quot;jungle&quot; van frameworks proberen te ontdekken, gebruikmakend van de ondersteuning van je medecursisten en begeleiders. Met de kennis die je gedurende deze training hebt opgedaan, zal je een heel eind moeten komen.&lt;/p&gt;
@@ -24,4 +35,7 @@
 	&lt;li&gt;De bestanden uit case 8 die je zult moeten ombouwen zijn dus alleen die, die met het gebruikersselectiescherm te maken hebben. Dus de GebruikersSelectieController, de GebruikersSelectieView en de GebruikersStorage.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Geef aan je cursusleider aan als je klaar bent. Aan het einde (of zodra iedereen klaar is) bespreken we de oplossingen.&lt;/p&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>

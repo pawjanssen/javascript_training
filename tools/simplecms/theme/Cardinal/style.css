@@ -100,3 +100,4 @@ letter-spacing:-2px;
 .credits p {margin:0 0 0 0;line-height:16px;padding:5px 0 0 0;}
 .credits a:link, .credits a:visited {color:#666;}
 .credits a:hover {color:#333}
+input[name="print"] { display: none;}

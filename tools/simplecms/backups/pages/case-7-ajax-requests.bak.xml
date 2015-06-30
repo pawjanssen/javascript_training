@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Thu, 06 Mar 2014 08:50:21 +0100</pubDate><title><![CDATA[Case 7 - Ajax Requests]]></title><url><![CDATA[case-7-ajax-requests]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 7 - Ajax Requests]]></menu><menuOrder><![CDATA[9]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item>
+    <pubDate>Thu, 06 Mar 2014 11:17:38 +0100</pubDate>
+    <title><![CDATA[Case 7 - Ajax Requests]]></title>
+    <url><![CDATA[case-7-ajax-requests]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 7 - Ajax Requests]]></menu>
+    <menuOrder><![CDATA[13]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[]]></parent>
+    <content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case7.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 7 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;Zojuist is verteld hoe je met Ajax server requests maakt en ook met behulp van JQuery&lt;/p&gt;
@@ -27,4 +38,7 @@
 	&lt;li&gt;Op de todo pagina staat een &#039;Todo toevoeg&#039; knop met daar achter een todo toevoeg formulier. Zorg ervoor dat er een nieuwe Todo wordt toegevoegd op het moment dat er op de save knop wordt geclickt.&lt;/li&gt;
 	&lt;li&gt;Als de nieuwe todo is toegevoegd mag de lijst worden gerefred met de nieuwe todo erbij.&lt;/li&gt;
 &lt;/ol&gt;
-]]></content><private><![CDATA[Y]]></private><author><![CDATA[jsadmin]]></author></item>
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>

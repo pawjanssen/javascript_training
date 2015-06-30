@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Thu, 06 Mar 2014 14:05:22 +0100</pubDate><title><![CDATA[Case 8 - AMD]]></title><url><![CDATA[case-8-amd]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Case 8 - AMD]]></menu><menuOrder><![CDATA[15]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
+<item>
+    <pubDate>Thu, 06 Mar 2014 14:30:01 +0100</pubDate>
+    <title><![CDATA[Case 8 - AMD]]></title>
+    <url><![CDATA[case-8-amd]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Case 8 - AMD]]></menu>
+    <menuOrder><![CDATA[15]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[]]></parent>
+    <content><![CDATA[&lt;h2&gt;Source&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;data/uploads/case8.zip&quot;&gt;Download de source&lt;/a&gt; voor deze opdracht om te beginnen met de case. Pak de zip file uit zoals je in case 1 hebt geleerd. Als het goed is zie je nu in WebStorm onder de folder &quot;opdrachten&quot; de sources van case 8 staan.&lt;/p&gt;
 &lt;h2&gt;Omschrijving&lt;/h2&gt;
 &lt;p&gt;In case 3 heb je geleerd hoe je functionaliteiten groepeerd in losse javascript files. In case 6 heb je geleerd hoe je met het module pattern scoping issues kunt voorkomen. Hoewel deze methodes een stuk in de juiste richting zijn voor de opzet van je applicatie zijn er toch nog enkele problemen:&lt;/p&gt;
@@ -41,5 +52,8 @@
 	&lt;li&gt;Voer de taak die de minification uitvoert uit en bekijk het resultaat. Wat valt je op aan de gegenereerde outputfile?&lt;/li&gt;
 	&lt;li&gt;Zonder de outputfile worden modules met AMD gevonden in een file die als naam gelijk is aan de modulenaam. Hoe denk je dat RequireJS de modules nu vind?&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Pas het bestand template.html zo aan, dat i.p.v. het init script de initialisatie van de applictatie plaats vind via de gegenereerde output file. Controleer in de browser wat er gebeurd. Als het goed zal alleen de gegenereerde javsacript file worden ingeladen met AMD, en niet meer alle losse modules.&lt;/p&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[jsadmin]]></author></item>
+&lt;p&gt;Pas het bestand template.html zo aan, dat i.p.v. het init script de initialisatie van de applictatie plaats vind via de gegenereerde output file. Controleer in de browser wat er gebeurd. Als het goed zal alleen de gegenereerde javascript file worden ingeladen met AMD, en niet meer alle losse modules.&lt;/p&gt;
+]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[jsadmin]]></author>
+</item>
